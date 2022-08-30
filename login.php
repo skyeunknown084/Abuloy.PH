@@ -1,20 +1,15 @@
 <?php
 $is_invalid = false;
-//check if can login again
-// if(isset($_SESSION['attempt_again'])){
-//     $now = time();
-//     if($now >= $_SESSION['attempt_again']){
-//         unset($_SESSION['attempt']);
-//         unset($_SESSION['attempt_again']);
-//     }
-// }
+// login query
+
+
+
 
 if($_SERVER['REQUEST_METHOD'] === "POST") {
     $mysqli = require __DIR__ . "./database.php";
 
-
     $sql = sprintf("SELECT * FROM abuloy_users
-                    WHERE email = '%s'",
+                    WHERE email = '%s' AND log_status = 0",
                     $mysqli->real_escape_string($_POST['email']));
     
     $result = $mysqli->query($sql);
@@ -25,23 +20,41 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
 
         if(password_verify($_POST['password'], $user['password_hash'])){
 
-            session_start();
-
-            session_regenerate_id();
-
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_email_status'] = $user['email_status'];
-
-            if($_SESSION['user_email_status']){
-                header("Location: /");
+            if($user['log_status'] == 3){
+                print_r('Attempt to login 3 times! <br/>Account is Locked! <br/>Please wait 5 mins to re-login');
                 exit;
             }
-            else{
-                // $err_login_msg_2 = "Email Not Verified";
-                // header('Location: /status/'. $err_login_msg_2);
-                print_r('Email not verified');
+            elseif($user['log_status'] == 0){
+                session_start();
+                session_regenerate_id();
+                $_SESSION['user_log'] = $user['log_status'];
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_email_status'] = $user['email_status'];
+
+                if($_SESSION['user_email_status'] && $user['log_status'] == 0){
+                    header("Location: /");
+                    exit;
+                }
+                else{
+                    // $err_login_msg_2 = "Email Not Verified";
+                    // header('Location: /status/'. $err_login_msg_2);
+                    print_r('Email not verified');
+                    exit;
+                }
+            }else{
+                print_r('You already login to our site with device name:');
+                echo '<br/>' . gethostbyaddr($_SERVER['REMOTE_ADDR']); 
+                $MAC = exec('getmac');  
+                // Storing 'getmac' value in $MAC
+                $MAC = strtok($MAC, ' ');                
+                // Updating $MAC value using strtok function, 
+                // strtok is used to split the string into tokens
+                // split character of strtok is defined as a space
+                // because getmac returns transport name after
+                // MAC address   
+                echo '<br/>' . "MAC address of Server is: $MAC";
                 exit;
-            }
+            }            
             
             
         }else{
