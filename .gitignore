@@ -10,3 +10,5 @@ package-lock.json
 composer.json
 composer.lock
 *.sql
+/node_modules
+/vendor
