@@ -1,0 +1,9 @@
+img#cimg{
+    height: 25vh;
+    width: 25vh;
+    object-fit: fill;
+    /* background: url('assets/img/no-logo.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* border-radius: 100% 100%; */
+}

@@ -1,0 +1,12 @@
+
+.env
+.env.example
+.htaccess
+routes.php
+database.php
+global_call.php
+package.json
+package-lock.json
+composer.json
+composer.lock
+*.sql
