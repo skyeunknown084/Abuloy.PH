@@ -1,10 +1,19 @@
 <?php
-$is_invalid = false;
+error_reporting(0);
+// limit login attempts 3x
+// if($_SERVER['REQUEST_METHOD'] === "POST"){
+//     $mysqli = require __DIR__ . "./database.php";
+
+//     echo '<pre>';
+//     // print_r($_POST);
+//     echo '</pre>';
+
+//     $email = $mysqli->real_escape_string($email);
+//     $password = $mysqli->real_escape_string($password);
+
+//     $sql = "SELECT * FROM abuloy_users WHERE email = '$email' AND password = password_hash('$password'";
+// }
 // login query
-
-
-
-
 if($_SERVER['REQUEST_METHOD'] === "POST") {
     $mysqli = require __DIR__ . "./database.php";
 
@@ -21,14 +30,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
         if(password_verify($_POST['password'], $user['password_hash'])){
 
             if($user['log_status'] === '3'){
-                print_r('Attempt to login 3 times! <br/>Account is Locked! <br/>Please wait 5 mins to re-login');
-                exit;
+                $_SESSION['error_login'] = 'Attempt to login 3 times! <br/>Account is Locked! <br/>Please wait 5 mins to re-login';
             }
             elseif($user['log_status'] === '2'){
-                session_start();
-                $_SESSION['email'] = $user['email'];
-                print_r('The email you tried to sign-in need to be verified first, to verify click <a href="/login-verification">here</a>');
-                exit;
+                $_SESSION['error_login'] = 'The email you tried to sign-in need to be verified. <br/>To verify please contact <a href="mailto:information@abuloy.ph">information@abuloy.ph</a>';
             }
             elseif($user['log_status'] === '0'){
                 session_start();
@@ -51,8 +56,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
                 else{
                     // $err_login_msg_2 = "Email Not Verified";
                     // header('Location: /status/'. $err_login_msg_2);
-                    print_r('Email not verified');
-                    exit;
+                    $_SESSION['error_login'] = 'Email not verified';
                 }
             }else{
                 print_r('You already login to our site with device name:');
@@ -66,6 +70,20 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
                 // because getmac returns transport name after
                 // MAC address   
                 echo '<br/>' . "MAC address of Server is: $MAC";
+                echo '<br/>';
+                function get_user_browser()
+                {
+                    $u_agent = $_SERVER['HTTP_USER_AGENT'];        $ub = '';
+                    if(preg_match('/MSIE/i',$u_agent))          {   $ub = "IE browser";     }
+                    elseif(preg_match('/Firefox/i',$u_agent))   {   $ub = "Moxilla Firefox";    }
+                    // elseif(preg_match('/Safari/i',$u_agent))    {   $ub = "Safari"; }
+                    elseif(preg_match('/Chrome/i',$u_agent))    {   $ub = "Chrome browser"; }
+                    elseif(preg_match('/Flock/i',$u_agent)) {   $ub = "Flock";      }
+                    elseif(preg_match('/Opera/i',$u_agent)) {   $ub = "Opera browser";      }
+                    return $ub;
+                }
+                echo get_user_browser();
+                echo '<br/>If you still having problem to login, please contact <a href="mailto:support@abuloy.ph">support@abuloy.ph</a> ';
                 exit;
             }            
             
@@ -74,15 +92,14 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
             session_start();
             session_unset();
             session_destroy();
-            print_r("Password is incorrect");
-            exit;
+            $_SESSION['login_attempts'] += 1;
+            $_SESSION['error_login'] = "Password is incorrect";
         }
-
     }
     
-    $is_invalid = true;
 }else{
-    $_SESSION['error_login'] = 'No account with that email';
+    $_SESSION['login_attempts'] += 1;
+    $_SESSION['error_log'] = 'No account with that email';
 }
 ?>
 <!DOCTYPE html>
@@ -96,28 +113,29 @@ include 'head.php';
 <!-- <link rel="stylesheet" href="./assets/dist/css/pages/register.css"> -->
 </head>
 <body>
-    <?php include 'header.php'; ?>
     
     <section id="login" class="">
         <div class="container mx-auto  login-form-height" >
             <div class="col-lg-12 col-md-12 col-sm-12 text-center">
                 <div class="d-flex justify-content-center align-items-center pt-5" style="margin: 65px 0">
-                    <span class="hide"> <?php if($is_invalid): ?> <em>Invalid Login</em><?php endif ?></span> 
+                    
                                    
                     <form action="" method="post" id="login-form">
+                    
                     <h1 class="h3 mb-3 fw-normal hide"><a class="navbar-brand nav-brand-box py-2" href="/"><span class="text-aquamarine text-underline fw-700 fs-larger ms-2">Abuloy</span></a></h1>
                     <p class="mt-5 text-muted"></p>
                         <div class="form-row lavander-form">
                             <div class="col">
-                            <input type="email" name="email" id="email" value="<?php htmlspecialchars($_POST['email'] ?? "") ?>" class="form-control my-3" placeholder="Email Address" required>
+                                <input type="email" name="email" id="email" value="<?php htmlspecialchars($_POST['email'] ?? "") ?>" class="form-control my-3" placeholder="Email Address" required>
                             </div>
                             <div class="col">
-                            <input type="password" name="password" id="password" class="form-control my-3" placeholder="Password" required>
+                                <input type="password" name="password" id="password" class="form-control my-3" placeholder="Password" required>
                             </div>
                         </div>
                         <div class="submit-btn text-center mb-5">
-                            <button type="submit" name="login_account" class="btn btn-lavander text-white text-uppercase fs-large py-2 rounded-pill text-dark px-5">Login</button>
+                            <button type="submit" name="login_account" class="btn btn-lavander text-white text-uppercase fs-large py-2 text-dark px-5">Login</button>
                         </div>
+                        
                         <small><a href="/forgot-password" class="text-left no-style">Forgot Password?</a></small><br/>
                         <small class="text-blackish">If you don't have any account? <a href="/register" class="no-style text-lavander">Sign-up</a></small>
                         <!-- <div class="gfm-embed" data-url="https://www.gofundme.com/f/ukraine-humanitarian-fund/widget/large/"></div>
