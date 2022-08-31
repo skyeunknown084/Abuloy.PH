@@ -18,7 +18,7 @@ include 'head.php';
                 <div class="card card-outline card-success">
                     <div class="card-body">
                         
-                        <form action="/process-signup" method="post" id="signup" novalidate>
+                        <form action="/register-fnc" method="post" id="signup" novalidate>
                             <div class="form-row col-md-12 lavander-form mx-auto">
                                 <div class="col-md-6 mx-auto">
                                     <div class="form-group  my-3">
