@@ -12,6 +12,8 @@ if(isset($_SESSION['user_id'])) {
     $result = $mysqli->query($sql);
 
     $user = $result->fetch_assoc();
+
+   
 }
 
 ?>
@@ -28,41 +30,18 @@ include 'head.php';
 <body>
     <?php include 'header.php'; ?>
     
-    <section class="mt-5 pt-5">
-        
+    <main>
         <?php 
-        function getIpAddr(){
-            if (!empty($_SERVER['HTTP_CLIENT_IP'])){
-            $ipAddr=$_SERVER['HTTP_CLIENT_IP'];
-            }elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-            $ipAddr=$_SERVER['HTTP_X_FORWARDED_FOR'];
-            }else{
-            $ipAddr=$_SERVER['REMOTE_ADDR'];
-            }
-            return $ipAddr;
-        }
-        
-
         if($user['user_type'] === '0'){ 
-            $ipAddress = getIpAddr();
-            print_r($ipAddress);
-            ?>
-            <p>Hello <?= htmlspecialchars(ucwords($user['firstname'])) ?> <?= htmlspecialchars(ucwords($user['lastname'])) ?>.</p>
-            <p>UserType: <?= $user['user_type'] ?></p>
-            <p>Email Status: <?= $user['email_status'] ?></p>
-            <p><a href="/logout">Log out</a></p>
-        <?php }elseif($user['user_type']  === '1'){ ?>
-            <p>Hello <?= htmlspecialchars(ucwords($user['firstname'])) ?> <?= htmlspecialchars(ucwords($user['lastname'])) ?>.</p>
-            <p>UserType: <?= $user['user_type'] ?></p>
-            <p>Email Status: <?= $user['email_status'] ?></p>
-        <?php }else{ ?>
-            
-            <p>UserType: <?= $user['firstname'] ?></p>
-            <p>Email Status: <?= $user['email_status'] ?></p>
-        <?php } ?>
-            
-    </section>
-
+            include 'views/dashboard-admin.php';
+        }elseif($user['user_type'] === '1'){ 
+            include 'views/dashboard-user.php';
+        }else{
+            include 'views/dashboard.php';
+        }
+        ?>
+    </main>
+    
     <!-- start Footer Area -->
     <?php include 'footer.php' ?>     
     <!-- end Footer Area -->
