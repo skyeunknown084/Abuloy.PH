@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
     $mysqli = require __DIR__ . "./database.php";
 
     $sql = sprintf("SELECT * FROM abuloy_users
-                    WHERE email = '%s' AND log_status = 0",
+                    WHERE email = '%s' AND email_status = 1",
                     $mysqli->real_escape_string($_POST['email']));
     
     $result = $mysqli->query($sql);
@@ -20,20 +20,33 @@ if($_SERVER['REQUEST_METHOD'] === "POST") {
 
         if(password_verify($_POST['password'], $user['password_hash'])){
 
-            if($user['log_status'] == 3){
+            if($user['log_status'] === '3'){
                 print_r('Attempt to login 3 times! <br/>Account is Locked! <br/>Please wait 5 mins to re-login');
                 exit;
             }
-            elseif($user['log_status'] == 0){
+            elseif($user['log_status'] === '2'){
+                session_start();
+                $_SESSION['email'] = $user['email'];
+                print_r('The email you tried to sign-in need to be verified first, to verify click <a href="/login-verification">here</a>');
+                exit;
+            }
+            elseif($user['log_status'] === '0'){
                 session_start();
                 session_regenerate_id();
                 $_SESSION['user_log'] = $user['log_status'];
                 $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_email'] = $user['email'];
                 $_SESSION['user_email_status'] = $user['email_status'];
 
-                if($_SESSION['user_email_status'] && $user['log_status'] == 0){
-                    header("Location: /");
-                    exit;
+                if($_SESSION['user_email_status']){
+                    $email = $user['email'];
+                    $update_log = $mysqli->prepare("UPDATE abuloy_users SET log_status = 1 WHERE email = '$email'");
+                    $update_log->execute();
+                    $login_result = $update_log->affected_rows;
+                    if($login_result > 0){
+                        header("Location: /");
+                        exit;
+                    }
                 }
                 else{
                     // $err_login_msg_2 = "Email Not Verified";
