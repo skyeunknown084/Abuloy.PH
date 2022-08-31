@@ -1,7 +1,8 @@
 <?php 
 error_reporting(0); 
 ?>
-<?php if($user['user_type'] === '0'){ ?>
+<!-- Admin -->
+<?php if($user['user_type'] === '0' && $user['email_status'] === '1'){ ?>
     <div class="header bb-aquamarine fixed-top nav-shadow">
         <div class="beta-nav container-fluid bg-lavander text-white pb-1" style="">
             <span class="align-center pt-1">
@@ -52,16 +53,17 @@ error_reporting(0);
                                 </span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 shadow w-220px">
-                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/dashboard-settings"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/funds-tracking" title=""><i class="fas fa-coins pe-2"></i> Funds Tracking </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/withdrawals-settings" title=""><i class="fas fa-money-check-alt pe-1"></i> Funds Withdrawal </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/emails-settings" title=""><i class="fa fa-envelope-open pe-2"></i> Emails Settings </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/account-settings"><i class="fas fa-users pe-1"></i> Manage Accounts</a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/member-settings" title=""><i class="fas fa-users-cog pe-2"></i> Members Settings </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/service-policy-settings" title=""><i class="fas fa-file-contract pe-2 ps-1"></i>&nbsp;Service & Pocily </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/images-setting" title=""><i class="fas fa-images pe-2"></i> Images Settings </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/themes-settings" title=""><i class="fas fa-palette pe-2"></i> Themes & Colors </a></li>
-                                <li><hr class="dropdown-divider"></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/dashboard-setting"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/funds-tracking" title=""><i class="fas fa-coins pe-2"></i> Funds Tracking </a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/withdrawals-setting" title=""><i class="fas fa-money-check-alt pe-1"></i> Funds Withdrawal </a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/emails-setting" title=""><i class="fa fa-envelope-open pe-2"></i> Emails Settings </a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/account-setting"><i class="fas fa-users pe-1"></i> Manage Accounts</a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/member-setting" title=""><i class="fas fa-users-cog pe-2"></i> Members Settings </a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/service-policy-setting" title=""><i class="fas fa-file-contract pe-2 ps-1"></i>&nbsp;Service & Pocily </a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/images-setting" title=""><i class="fas fa-images pe-2"></i> Images Settings </a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/themes-setting" title=""><i class="fas fa-palette pe-2"></i> Themes & Colors </a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/pages-setting" title=""><i class="fas fa-palette pe-2"></i> Pages Metas </a></li>
+                            <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/logout"><i class="fa fa-power-off pe-1 ps-1"></i>  Logout</a></li>
                             </ul>
                         </li>
@@ -70,11 +72,11 @@ error_reporting(0);
                             <i class="fa fa-cog mr-0 m-0 pt-0 text-lavander" style="font-size:25px;"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 shadow w-220px">
-                                <li><a class="dropdown-item rounded-2 text-blackish-aquamarine mb-1" href="/themes-settings"><i class="fas fa-chart-line pe-2"></i> Themes & Colors</a></li>
+                                <li><a class="dropdown-item rounded-2 text-blackish-aquamarine mb-1" href="/themes-setting"><i class="fas fa-chart-line pe-2"></i> Themes & Colors</a></li>
                                 <hr class="p-0 m-0">
-                                <li><a class="dropdown-item rounded-2 text-blackish-aquamarine mb-1" href="/images-settings"><i class="fas fa-donate pe-2"></i> Image Settings</a></li>
+                                <li><a class="dropdown-item rounded-2 text-blackish-aquamarine mb-1" href="/images-setting"><i class="fas fa-donate pe-2"></i> Image Settings</a></li>
                                 <hr class="p-0 m-0">
-                                <li><a class="dropdown-item rounded-2 text-blackish-aquamarine my-1" href="/page-settings"><b class="ps-1 pe-3 no-style">₱</b> Page Settings</a></li>
+                                <li><a class="dropdown-item rounded-2 text-blackish-aquamarine my-1" href="/pages-setting"><b class="ps-1 pe-3 no-style">₱</b> Page Settings</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -122,15 +124,16 @@ error_reporting(0);
                             <li class="nav-item dropdown px-3" id="myDropdown">
                                 <a class="nav-link dropdown-toggle text-blackish-lavander" href="#" data-bs-toggle="dropdown">  Admin Settings <i class="fa fa-angle-double-right pe-2"></i> </a>
                                 <ul class="dropdown-menu active show bg-aquamarine text-black px-2">
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/dashboard-settings"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/funds-tracking" title=""><i class="fas fa-coins pe-2"></i> Funds Tracking </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/withdrawals-settings" title=""><i class="fas fa-money-check-alt pe-1"></i> Fund Withdrawals </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/emails-settings" title=""><i class="fa fa-envelope-open pe-2"></i> Emails Settings </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/account-settings"><i class="fas fa-users pe-1"></i> Manage Accounts</a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0 hide" href="/member-settings" title=""><i class="fas fa-users-cog pe-2"></i> Members Settings </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/member-settings" title=""><i class="fas fa-file-contract pe-2"></i>&nbsp;&nbsp;Service & Pocily </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0 hide" href="/images-setting" title=""><i class="fas fa-images pe-2"></i> Images Settings </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0 hide" href="/themes-settings" title=""><i class="fas fa-palette pe-2"></i> Themes & Colors </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/dashboard-setting"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/funds-tracking" title=""><i class="fas fa-coins pe-2"></i> Funds Tracking </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/withdrawals-setting" title=""><i class="fas fa-money-check-alt pe-1"></i> Funds Withdrawal </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/emails-setting" title=""><i class="fa fa-envelope-open pe-2"></i> Emails Settings </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/account-setting"><i class="fas fa-users pe-1"></i> Manage Accounts</a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/member-setting" title=""><i class="fas fa-users-cog pe-2"></i> Members Settings </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/service-policy-setting" title=""><i class="fas fa-file-contract pe-2 ps-1"></i>&nbsp;Service & Pocily </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/images-setting" title=""><i class="fas fa-images pe-2"></i> Images Settings </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/themes-setting" title=""><i class="fas fa-palette pe-2"></i> Themes & Colors </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/pages-setting" title=""><i class="fas fa-palette pe-2"></i> Pages Metas </a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -152,7 +155,8 @@ error_reporting(0);
             </div>
         </nav>
     </div>
-<?php }elseif($user['user_type'] === '1'){ ?>
+<!-- User with Account -->
+<?php }elseif($user['user_type'] === '1' && $user['email_status'] === '1'){ ?>
     <div class="header bb-aquamarine fixed-top nav-shadow">
         <div class="beta-nav container-fluid bg-lavander text-white pb-1" style="">
             <span class="align-center pt-1">
@@ -292,6 +296,7 @@ error_reporting(0);
             </div>
         </nav>
     </div>
+<!-- Anonymous Donator & Sharer -->
 <?php }else{ ?>
     <div class="header bb-aquamarine fixed-top nav-shadow">
         <div class="beta-nav container-fluid bg-lavander text-white pb-1" style="">
