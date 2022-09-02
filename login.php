@@ -23,12 +23,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         $uid = $user['id'];
         if(password_verify($_POST['password'], $user['password_hash'])){
             if($user['log_status'] == 0 && $user['email_status'] == 1){
-                session_start();
-                session_regenerate_id();
-                $_SESSION['user_log'] = $user['log_status'];
-                $_SESSION['user_id'] = $user['id'];
-                $_SESSION['user_email'] = $user['email'];
-                $_SESSION['user_email_status'] = $user['email_status'];
+                
 
                 $update_log = $mysqli->prepare("UPDATE abuloy_users SET log_status = 1 WHERE email = '$email'");
                 $update_log->execute();
@@ -38,7 +33,12 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
                     $delete_log->bind_param('d', $uid);
                     $delete_log->execute();
 
-                    // $_SESSION['error_login'] = 'Yes';
+                    session_start();
+                    session_regenerate_id();
+                    $_SESSION['user_log'] = $user['log_status'];
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['user_email'] = $user['email'];
+                    $_SESSION['user_email_status'] = $user['email_status'];
                     header("Location: /");
                     // exit;
                 }
@@ -56,11 +56,6 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
             //         }
                     
                 // }
-                else{
-            //         // $err_login_msg_2 = "Email Not Verified";
-            //         // header('Location: /status/'. $err_login_msg_2);
-                    $_SESSION['error_login'] = 'Email not verified';
-                }
             
             }
             elseif($user['log_status'] == 3){

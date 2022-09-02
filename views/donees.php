@@ -1,23 +1,13 @@
 <?php
 
-session_start();
 require "./global_call.php";
-if(isset($_SESSION['user_id'])) {
-    
-    $mysqli = require "./database.php";
-    $user_id = $user['id'];
-    $sql = "SELECT * FROM abuloy_users
-            WHERE id = ". $_SESSION['user_id'] ." AND email_status = 1";
-    $result = $mysqli->prepare($sql);
-    $result->execute();
+require "./database.php";
+session_start();
 
-    $user = $result->fetch_assoc();
-    
-
-    
-   
-}
-
+$stmt_account = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE id = ".$_SESSION['user_id']);
+$stmt_account->execute();
+$result_account = $stmt_account->get_result();
+$account = $result_account->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,25 +21,10 @@ include './head_views.php';
 <body>
     <?php include './header.php'; ?>
     
-    <main>
-        
-        <ul>
-        <?php
-        $id = $user['id'];
-        $sql_account = "SELECT * FROM abuloy_accounts WHERE uid = ?";
-        $result_account = $mysqli->prepare();
-        $result_account->bind_param('d', $id);
-        $result_account->execute();
-        $accounts = $result_account->fetch_assoc();
-        while($accounts){
-        ?>
-            <li><?= $accounts['d_firstname'] ?></li>
-            <li><?= $accounts['d_middlename'] ?></li>
-            <li><?= $accounts['d_lastname'] ?></li>
-        <?php
-        }
-        ?>
-        </ul>
+    <main class="mt-5 py-5">
+        <div class="mt-5 py-5 text-blackish">
+            <h1><?= $account['d_firstname'] ?></h1>
+        </div>
         
     </main>
     
@@ -58,7 +33,7 @@ include './head_views.php';
     <!-- end Footer Area -->
 
     <!-- Plugins -->
-    <?php include '/plugin_views.php'; ?>
+    <?php include './plugin_views.php'; ?>
     <!-- Custom Script -->
     <!-- <script src="controllers/register.js"></script> -->
 </body>

@@ -10,7 +10,7 @@
                         <i>Hi <span class="text-lavander"><?php echo ucwords($user['firstname']) ?>! </span></i>
                     </h3>
                     <?php 
-                        $userqry = $mysqli->prepare("SELECT * FROM abuloy_users u INNER JOIN abuloy_accounts a ON u.id = a.uid WHERE a.uid = ".$user['id']);
+                        $userqry = $mysqli->prepare("SELECT * FROM  abuloy_accounts WHERE uid = ".$user['id']);
                         $user_stmt = $userqry->execute();
                         $user_result = $userqry->get_result();
                         $user_row = $user_result->fetch_assoc();

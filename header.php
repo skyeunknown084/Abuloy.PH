@@ -1,6 +1,3 @@
-<?php 
-error_reporting(0); 
-?>
 <!-- Admin -->
 <?php if($user['user_type'] === '0' && $user['email_status'] === '1'){ ?>
     <div class="header bb-aquamarine fixed-top nav-shadow">
@@ -297,7 +294,7 @@ error_reporting(0);
         </nav>
     </div>
 <!-- Anonymous Donator & Sharer -->
-<?php }else{ ?>
+<?php }elseif($user['user_type'] === '2' && $user['email_status'] === '1'){ ?>
     <div class="header bb-aquamarine fixed-top nav-shadow">
         <div class="beta-nav container-fluid bg-lavander text-white pb-1" style="">
             <span class="align-center pt-1">
