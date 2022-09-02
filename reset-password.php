@@ -7,8 +7,6 @@ require 'head.php';
 
     session_start();
     $email = $_SESSION['EMAIL'];
-    $stmt = $mysqli->query("SELECT * FROM abuloy_users WHERE email = '$email';");
-
     $stmt = $mysqli->prepare("SELECT * FROM abuloy_users WHERE email = '$email'");
     $stmt_result = $stmt->execute();
     $result = $stmt->get_result();

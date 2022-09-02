@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     $email  = $_POST['email'];
     $password  = $_POST['password'];
 
-    $sql = sprintf("SELECT * FROM abuloy_users WHERE email = '$email' AND email_status = 1");
+    $sql = sprintf("SELECT * FROM abuloy_users WHERE email = '$email'");
     
     $result = $mysqli->query($sql);
 
@@ -22,32 +22,56 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     if($user) {
         $uid = $user['id'];
         if(password_verify($_POST['password'], $user['password_hash'])){
-            if($user['log_status'] === '0'){
-                    session_start();
-                    session_regenerate_id();
-                    $_SESSION['user_log'] = $user['log_status'];
-                    $_SESSION['user_id'] = $user['id'];
-                    $_SESSION['user_email'] = $user['email'];
-                    $_SESSION['user_email_status'] = $user['email_status'];
+            if($user['log_status'] == 0 && $user['email_status'] == 1){
+                session_start();
+                session_regenerate_id();
+                $_SESSION['user_log'] = $user['log_status'];
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_email'] = $user['email'];
+                $_SESSION['user_email_status'] = $user['email_status'];
 
-                if($_SESSION['user_email_status']){
-                    $delete_log = $mysqli->query("DELETE * FROM abuloy_user_logins WHERE uid = $uid");
-                    // $delete_log->execute();
-                    $email = $user['email'];
-                    $update_log = $mysqli->prepare("UPDATE abuloy_users SET log_status = 1 WHERE email = '$email'");
-                    $update_log->execute();
-                    $login_result = $update_log->affected_rows;
-                    if($login_result > 0){
-                        header("Location: /");
-                        exit;
-                    }
+                $update_log = $mysqli->prepare("UPDATE abuloy_users SET log_status = 1 WHERE email = '$email'");
+                $update_log->execute();
+                $login_result = $update_log->affected_rows;
+                if($login_result > 0){
+                    $delete_log = $mysqli->prepare("DELETE FROM abuloy_user_logins WHERE uid = ?");
+                    $delete_log->bind_param('d', $uid);
+                    $delete_log->execute();
+
+                    // $_SESSION['error_login'] = 'Yes';
+                    header("Location: /");
+                    // exit;
                 }
+
+                // if($user['log_status']){
+            //         // $delete_log = $mysqli->query("DELETE FROM abuloy_user_logins WHERE uid = $uid");
+            //         // $delete_log->execute();
+            //         $email = $user['email'];
+            //         $update_log = $mysqli->prepare("UPDATE abuloy_users SET log_status = 1 WHERE email = '$email'");
+            //         $update_log->execute();
+            //         $login_result = $update_log->affected_rows;
+            //         if($login_result > 0){
+            //             header("Location: /");
+            //             exit;
+            //         }
+                    
+                // }
                 else{
-                    // $err_login_msg_2 = "Email Not Verified";
-                    // header('Location: /status/'. $err_login_msg_2);
+            //         // $err_login_msg_2 = "Email Not Verified";
+            //         // header('Location: /status/'. $err_login_msg_2);
                     $_SESSION['error_login'] = 'Email not verified';
                 }
+            
             }
+            elseif($user['log_status'] == 3){
+                $_SESSION['error_login'] = 'Your Account is Locked. <br/>To unlocked you may contact us or you can <br/>choose to reset your password <a href="/forgot-password">here</a>';
+            }
+            elseif($user['log_status'] == 2){
+                $_SESSION['error_login'] = 'Email not verified, you may contact us to <br/>verify your account <a href="mailto:information@abuloy.ph">here</a>';
+            }else{
+                $_SESSION['error_login'] = 'You already logged in.<br/>If your did not do this or something goes wrong <br/>please contact us <a href="mailto:information@abuloy.ph">here</a> immediately';
+            }
+            
         }
         else{
             $time = time(); //30 seconds cool down time
@@ -57,9 +81,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
             $user_id = $user['id'];
             // echo '<br/>user_id: ' . $user_id;
 
-            $sql_log = "SELECT * FROM abuloy_user_logins";
+            $sql_log = "SELECT * FROM abuloy_user_logins WHERE uid = $user_id";
     
             $result_log = $mysqli->query($sql_log);
+            $user_log = $result_log->fetch_assoc();
             $row_cnt = mysqli_num_rows($result_log);
             if($row_cnt > 2) {  
                 // $sql_log_count = "SELECT * FROM abuloy_user_logins WHERE uid = $user_id ORDER BY time_count DESC LIMIT 1";
@@ -71,22 +96,27 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
                 // if($timer){
                 //     echo 'timer exceeds 30 secs. You may attempt to login again';
                 // }
-
-                $update_log = "UPDATE abuloy_users SET log_status = 3, email_status = 0 WHERE id = $user_id";
-                $result_update = $mysqli->query($update_log);
-                print_r('Opps! Login attempt exceeded. Account locked. <br/>To unlocked you may contact us via <a href="mailto:information@abuloy.ph">information@abuloy.ph</a> or you may change your password by clicking <a href="/forgot-password">here</a>');
-                exit;
+                
+                $update_log = "UPDATE abuloy_users SET log_status = 3, email_status = 0 WHERE id = ?";
+                $result_update = $mysqli->prepare($update_log);
+                $result_update->bind_param('d', $user_id);
+                $result_update->execute();
+                $_SESSION['error_login'] = 'Opps! You’ve reached the maximum logon attempts.<br/> Your account will be locked.<br/> Do not fear, this is only for security purposes. <br/> To unlocked your account you may contact us <br/>via <a href="mailto:information@abuloy.ph">information@abuloy.ph</a> or you may change <br/>your password by clicking <a href="/forgot-password">here</a>';
             }
             else{
                 $insert_log = "INSERT INTO abuloy_user_logins (uid, ip_add, time_count, date_logged) VALUES ('$user_id', '$ip_address', '$time', NOW())";
                 $result_insert = $mysqli->query($insert_log);
-                print_r("Login attempted");
-                exit;
+                $_SESSION['error_login'] = "Login email or password is incorrect";
             }            
         }
     }
     else{
-
+        if($user['email_status'] == 0 && $user['log_status'] == 3){
+            $_SESSION['error_login'] = 'Account Locked. Please reset <a href="/forgot-password>here</a>"';
+        }
+        if($user['email_status'] == 0 && $user['log_status'] == 2){
+            $_SESSION['error_login'] = 'Account need to verify first, please check email for instructions';
+        }
     }
 
 
@@ -253,8 +283,8 @@ include 'head.php';
                     
                                    
                     <form action="" method="post" id="login-form">
-                        <?php if(isset($_SESSION['error_login']) && $user['email_status'] === '1'){ ?> 
-                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <?php if(isset($_SESSION['error_login'])){ ?> 
+                            <div class="alert alert-danger alert-dismissible fade show text-justify" role="alert">
                                 <?= $_SESSION['error_login'] ?>
                                 <a type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
                             </div>

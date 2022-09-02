@@ -15,7 +15,7 @@ session_start();
 if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['email'])){
     $email = $mysqli->real_escape_string($_POST['email']);
 
-    $stmt_update = $mysqli->prepare("UPDATE abuloy_users SET email_status = 0, user_type = 3 WHERE email = '$email'");
+    $stmt_update = $mysqli->prepare("UPDATE abuloy_users SET email_status = 0, log_status = 2, user_type = 3 WHERE email = '$email'");
     $stmt_update->execute();
     
     $sql = "SELECT * FROM abuloy_users WHERE email = '$email'";
@@ -25,6 +25,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['email'])){
     $user = $get_result->fetch_assoc();
 
     if($user) {
+
+        $uid = $user['id'];
+        $stmt_delete_log = $mysqli->prepare("DELETE FROM abuloy_user_logins WHERE uid = $uid");
+        $stmt_delete_log->execute();
 
         if($email == $user['email']){           
 

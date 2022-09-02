@@ -18,7 +18,7 @@
                         ?>
                         <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0 text-blackish">You haven't raised a fund yet.</h5></div>
                         <br/>
-                        <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0">Click button below create your first funds now! </h5></div>
+                        <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0">Click the button below to create your first fund now! </h5></div>
                         <a href="/start-new-fund" class="btn btn-lavander btn-round text-uppercase" id="showFundForm">Start A Fund <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i> </a>                    
                         <?php    
                         }elseif($row_user['id'] == 1){
