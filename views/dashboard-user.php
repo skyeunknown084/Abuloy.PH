@@ -10,24 +10,31 @@
                         <i>Hi <span class="text-lavander"><?php echo ucwords($user['firstname']) ?>! </span></i>
                     </h3>
                     <?php 
-                        $userqry = $mysqli->prepare("SELECT * FROM  abuloy_accounts WHERE uid = ".$user['id']);
+                        $user_id = $user['id'];
+                        $userqry = $mysqli->prepare("SELECT * FROM  abuloy_accounts WHERE uid = $user_id");
                         $user_stmt = $userqry->execute();
                         $user_result = $userqry->get_result();
-                        $user_row = $user_result->fetch_assoc();
-                        if($row_user['id'] == ''){
-                        ?>
-                        <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0 text-blackish">You haven't raised a fund yet.</h5></div>
-                        <br/>
-                        <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0">Click the button below to create your first fund now! </h5></div>
-                        <a href="/start-new-fund" class="btn btn-lavander btn-round text-uppercase" id="showFundForm">Start A Fund <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i> </a>                    
-                        <?php    
-                        }elseif($row_user['id'] == 1){
-                        ?>
-                        <div class="pe-5 pt-0"><h4 class="pe-5 pt-0 mt-0 text-blackish">You successfully raised your first fund for</h4></div>
-                        <br/>
-                        <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0">Click button below to see your funds now! </h5></div>
-                        <a href="/profile_list" class="btn btn-lavander btn-round text-uppercase" id="showFundForm">Go To My Fund <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i> </a>                    
-                        <?php 
+                        if($user_row = $user_result->fetch_assoc()){
+                        $id = $user_row['id'];
+                        $fname = $user_row['d_firstname'];
+                        $mname = $user_row['d_middlename'];
+                        $lname = $user_row['d_lastname'];
+                            if($id == ''){
+                            ?>
+                                <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0 text-blackish">You haven't raised a fund yet.</h5></div>
+                                <br/>
+                                <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0">Click the button below to create your first fund now! </h5></div>
+                                <a href="/start-new-fund" class="btn btn-lavander btn-round text-uppercase" id="showFundForm">Start A Fund <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i> </a>                    
+                            <?php    
+                            }
+                            elseif($id == 1){
+                            ?>
+                                <div class="pe-5 pt-0"><h4 class="pe-5 pt-0 mt-0 text-blackish">You successfully raised your first fund for <span class="text-lavander"><?= $fname ?> <?= $mname ?> <?= $lname ?></span></h4></div>
+                                <br/>
+                                <div class="pe-5 pt-0"><h5 class="pe-5 pt-0 mt-0">Click button below to see your funds now! </h5></div>
+                                <a href="/start-new-fund" class="btn btn-lavander btn-round text-uppercase" id="showFundForm">Go To My Fund <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i> </a>                    
+                            <?php 
+                            }
                         }
                         ?>
                     
