@@ -5,7 +5,7 @@ $uid = $user['id'];
 $sql = "SELECT * FROM abuloy_accounts WHERE uid = $uid";
 $result = $mysqli->query($sql);
     while($account = $result->fetch_assoc()){
-    $id = $account['id'];
+    $aid = $account['id'];
     $fname = $account['d_firstname'];
     $mname = $account['d_middlename'];
     $lname = $account['d_lastname'];
@@ -25,7 +25,7 @@ $result = $mysqli->query($sql);
         <div class="col">
           <div class="card shadow-sm">
             <!-- <img src="<?= $photo ?>" class="bd-placeholder-img card-img-top" width="225px" height="325px" /> -->
-            <a target="_blank" href="/donate?id=<?= $id ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
+            <a target="_blank" href="/donate?id=<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                 <?php if($photo == ''){ $no_image = 'assets/img/no-image-available.png'; ?>
                     <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px;">
                 <?php }else{ ?>
@@ -44,9 +44,9 @@ $result = $mysqli->query($sql);
                 
               </div>
               <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>
-                <p class="fw-bold pt-2 mb-0">
+              <p class="fw-bold pt-2 mb-0">
                 <?php
-                    $progqry = $conn->query("SELECT *,SUM(amount) as total_raised FROM account_payments WHERE aid = $aid and status = 1");            
+                    $progqry = $mysqli->query("SELECT *,SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and status = 1");            
                     while($progrow= $progqry->fetch_assoc()){
                 ?> 
                 <label for="goal-raised-progress" class="" style="font-size:15px">
@@ -54,11 +54,11 @@ $result = $mysqli->query($sql);
                     of ₱<?php echo number_format($goal_amount, 2, '.', ',');?> goal
                 </label>
                 <?php } 
-                $total_amount = $conn->query("SELECT SUM(amount) as total_raised FROM account_payments WHERE aid = $aid and status = 1")->fetch_array();
+                $total_amount = $mysqli->query("SELECT SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and status = 1")->fetch_array();
                 foreach($total_amount as $key => $raised){
                     $$key = $raised;
                 }
-                $the_goal_amount = $conn->query("SELECT d_goal_amount as the_goal_amount FROM account_payments WHERE id = $aid")->fetch_array();
+                $the_goal_amount = $mysqli->query("SELECT d_goal_amount as the_goal_amount FROM abuloy_accounts WHERE id = $aid")->fetch_array();
                 foreach($the_goal_amount as $k => $goal){
                     $$k = $goal;
                 }
@@ -85,7 +85,7 @@ $result = $mysqli->query($sql);
                         </div>
                     </div>
                 </div> 
-                </p>
+                </p>  
             </div>
           </div>
         </div>
@@ -98,3 +98,4 @@ $result = $mysqli->query($sql);
 <?php
 }
 ?>
+
