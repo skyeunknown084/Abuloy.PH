@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+error_reporting(0);
 require "global_call.php";
 require "database.php";
 if(isset($_SESSION['user_id'])) {
@@ -44,7 +45,13 @@ include 'head.php';
 
         switch ($path) {
             case "/":
-                include 'views/dashboard-user.php';
+                if($user['user_type'] === '0'){
+                    include 'views/dashboard-admin.php';
+                }elseif($user['user_type'] === '1'){
+                    include 'views/dashboard-user.php';
+                }elseif($user['user_type'] === '2'){
+                    include 'views/dashboard.php';
+                }
                 break;
             case "/start-new-fund":
                 include 'views/start-new-fund.php';
@@ -54,9 +61,16 @@ include 'head.php';
                 break;
             case "/donees":
                 include 'views/donees.php';
+                break;
+            case "/login":
+                include 'login.php';
+                break;
+            case "/logout":
+                include 'logout.php';
                 break;    
-            default:
+            default :
                 include '/404.php';
+                break;
         }
 
         function route(string $path, callable $callback) {
