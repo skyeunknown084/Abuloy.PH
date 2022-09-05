@@ -33,7 +33,7 @@
                                     <li><a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/how-it-works">How Abuloy PH works  <span class="ms-auto" title="Edit"><i class="fa fa-edit"></i></span></a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/faq">FAQs  <span class="ms-auto" title="Edit"><i class="fa fa-edit"></i></span></a></li>
-                                    <li><a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/contact-us">Contact Us  <span class="ms-auto" title="Edit"><i class="fa fa-edit"></i></span></a></li>
+                                    <li><a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/contact">Contact Us  <span class="ms-auto" title="Edit"><i class="fa fa-edit"></i></span></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -114,7 +114,7 @@
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/about-us"><i class="fas fa-edit ps-0 pe-2"></i> Who We Are? </a></li>
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/how-it-works"><i class="fas fa-edit ps-0 pe-2"></i> How Abuloy.PH Works? </a></li>
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/faq" title="Frequently Ask Questions"><i class="fas fa-edit ps-0 pe-2"></i> FAQs </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/contact-us" title="Frequently Ask Questions"><i class="fas fa-edit ps-0 pe-2"></i> Contact Us </a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 ms-0" href="/contact" title="Frequently Ask Questions"><i class="fas fa-edit ps-0 pe-2"></i> Contact Us </a></li>
                                 </ul>
                             </li>
                             <li class="p-0 m-0"><hr class="p-0 my-1"></li>
@@ -191,7 +191,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-blackish-lavander text-bold" href="/contact-us">Contact Us</a>
+                            <a class="nav-link text-blackish-lavander text-bold" href="/contact">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-blackish-lavander text-bold" href="/donees">Donate</a>
@@ -263,7 +263,7 @@
                             </li>
                             <li class="p-0 m-0"><hr class="p-0 my-1"></li>
                             <li class="nav-item dropdown px-3" id="myDropdown">
-                                <a class="nav-link dropdown-toggle text-blackish-lavander" href="/contact-us">  Contact Us: <i class="fa fa-angle-double-right pe-2 hide"></i> </a>
+                                <a class="nav-link dropdown-toggle text-blackish-lavander" href="/contact">  Contact Us: <i class="fa fa-angle-double-right pe-2 hide"></i> </a>
                                 <ul class="dropdown-menu active show bg-aquamarine text-black px-2">
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="mailto:information@abuloy.ph"><i class="fas fa-paper-plane pe-2"></i> information@abuloy.ph</a></li>
                                 </ul>
@@ -332,7 +332,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-blackish-lavander text-bold" href="/contact-us">Contact Us</a>
+                            <a class="nav-link text-blackish-lavander text-bold" href="/contact">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-blackish-lavander text-bold" href="/donees">Donate</a>
@@ -385,7 +385,7 @@
                             </li>
                             <li class="p-0 m-0"><hr class="p-0 my-1"></li>                            
                             <li class="nav-item dropdown px-3" id="myDropdown">
-                                <a class="nav-link dropdown-toggle text-blackish-lavander" href="/contact-us">  Contact Us: <i class="fa fa-angle-double-right pe-2 hide"></i> </a>
+                                <a class="nav-link dropdown-toggle text-blackish-lavander" href="/contact">  Contact Us: <i class="fa fa-angle-double-right pe-2 hide"></i> </a>
                                 <ul class="dropdown-menu active show bg-aquamarine text-black px-2">
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="mailto:information@abuloy.ph"><i class="fas fa-paper-plane pe-2"></i> information@abuloy.ph</a></li>
                                 </ul>
@@ -397,7 +397,6 @@
         </nav>
     </div>
 <?php } ?>
-
 
 <script>
     $('#toggleSearchL').on('click', function() {

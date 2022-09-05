@@ -24,65 +24,19 @@ include 'head.php';
 <!-- register css -->
 <!-- <link rel="stylesheet" href="./assets/dist/css/pages/register.css"> -->
 </head>
-<body class="bg-light">
+<body>
     <?php include 'header.php'; ?>
     
-    <main>
+    <main class="">
         <?php 
-        // $utype = $user['user_type']; 
-        // if($utype === '0'){
-        //     include 'views/dashboard-admin.php'; 
-        // }elseif($utype === '1'){
-        //     include 'views/dashboard-user.php';
-        // }elseif($utype === '2'){
-        //     include 'views/dashboard.php';
-        // }
-        
-        $routes = [];
-
-        $path = $_SERVER['REQUEST_URI'];
-
-        switch ($path) {
-            case "/":
-                include 'views/dashboard-user.php';
-                break;
-            case "/start-new-fund":
-                include 'views/start-new-fund.php';
-                break;
-            case "/contact":
-                include 'views/contact-us.php';
-                break;
-            case "/donees":
-                include 'views/donees.php';
-                break;    
-            default:
-                include '/404.php';
-        }
-
-        function route(string $path, callable $callback) {
-            global $routes;
-            $routes[$path] = $callback;
-          }
-          
-          run();
-          
-          function run() {
-            global $routes;
-            $uri = $_SERVER['REQUEST_URI'];
-            $found = false;
-            foreach ($routes as $path => $callback) {
-              if ($path !== $uri) continue;
-          
-              $found = true;
-              $callback;
-            }
-          
-            // if (!$found) {
-            //   $notFoundCallback = $routes['/404'];
-            //   $notFoundCallback();
-            //   include '404.php';
-            // }
-          }
+        $utype = $user['user_type']; 
+        if($utype === '0'){
+            include 'views/dashboard-admin.php'; 
+        }elseif($utype === '1'){
+            include 'views/dashboard-user.php';
+        }elseif($utype === '2'){
+            include 'views/dashboard.php';
+        }  
         ?>
     </main>
     
