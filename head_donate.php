@@ -1,6 +1,6 @@
 <?php 
-session_start();
-error_reporting(0); 
+// session_start();
+// error_reporting(0); 
 ?>
 <head>
     <meta charset="UTF-8">
@@ -9,10 +9,11 @@ error_reporting(0);
     
     <?php 
         // session_start();
-        include_once './config/db_connect.php';
+        include_once './global_call.php';
+        include_once './database.php';
 
-        $id;
-        $metaqry = $conn->query("SELECT * FROM accounts WHERE id = $id");
+        $aid;
+        $metaqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE id = $aid");
         if($row=$metaqry->fetch_assoc()){
             $acct_id = $row['id'];
             $fname = $row['d_firstname'];
