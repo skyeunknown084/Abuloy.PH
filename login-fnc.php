@@ -33,6 +33,7 @@
                 $_SESSION['user_email'] = $user['email'];
                 $_SESSION['user_email_status'] = $user['email_status'];
                 $_SESSION['user_type'] = $user['user_type'];
+                $_SESSION['user_firstname'] = $user['firstname'];
 
                 header("Location: /");
                 exit;

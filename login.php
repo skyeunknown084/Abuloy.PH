@@ -12,8 +12,8 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     // print_r($total_count);
     $email  = $_POST['email'];
     $password  = $_POST['password'];
-
-    $sql = sprintf("SELECT * FROM abuloy_users WHERE email = '$email'");
+    $utype = 1;
+    $sql = sprintf("SELECT * FROM abuloy_users WHERE email = '$email' AND user_type = $utype");
     
     $result = $mysqli->query($sql);
 
@@ -37,8 +37,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
                     session_regenerate_id();
                     $_SESSION['user_log'] = $user['log_status'];
                     $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['user_type'] = $user['user_type'];
                     $_SESSION['user_email'] = $user['email'];
                     $_SESSION['user_email_status'] = $user['email_status'];
+                    $_SESSION['user_log_status'] = $user['log_status'];
                     header("Location: /");
                     // exit;
                 }
@@ -270,7 +272,7 @@ include 'head.php';
 <!-- <link rel="stylesheet" href="./assets/dist/css/pages/register.css"> -->
 </head>
 <body>
-    
+    <?php include 'header.php'; ?>
     <section id="login" class="">
         <div class="container mx-auto  login-form-height" >
             <div class="col-lg-12 col-md-12 col-sm-12 text-center">

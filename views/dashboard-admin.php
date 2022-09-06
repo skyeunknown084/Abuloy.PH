@@ -1,6 +1,6 @@
 <?php
-$email = $user['email'];
-$update_log = $mysqli->prepare("UPDATE abuloy_users SET log_status = 1 WHERE email = '$email'");
+$admintype = 3;
+$update_log = $mysqli->prepare("UPDATE abuloy_users SET log_status = 1 WHERE user_type = $admintype");
 $update_log->execute();
 ?>
 <section class="py-3" id="">

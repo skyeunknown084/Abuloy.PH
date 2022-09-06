@@ -1,26 +1,52 @@
 <?php
-require './global_call.php';
-require './database.php';
-$uid = $user['id'];
-$sql = "SELECT * FROM abuloy_accounts WHERE uid = $uid";
-$result = $mysqli->query($sql);
-    while($account = $result->fetch_assoc()){
-    $aid = $account['id'];
-    $fname = $account['d_firstname'];
-    $mname = $account['d_middlename'];
-    $lname = $account['d_lastname'];
-    $photo = $account['avatar'];
-    $summary = $account['d_summary'];
-    $bdate = $account['d_birthdate'];
-    $ddate = $account['d_date_of_death'];
-    $goal_amount = $account['d_goal_amount'];
-    $link = $account['url_link'];
-    
+session_start();
+error_reporting(0);   
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<?php include './head_views.php'; ?>
+<body>
+    
+    <?php
+    require "./global_call.php";
+    require "./database.php";
+    $userid = $_SESSION['user_id'];
+    $usertype = $_SESSION['user_type'];
+
+    if(isset($usertype) == 1){
+        $sql = "SELECT * FROM abuloy_users WHERE user_type = 1 AND log_status = 1";
+        $result = $mysqli->query($sql);
+        $user = $result->fetch_assoc();
+        // generate session again
+        session_regenerate_id();
+        include 'header-user.php';
+    }
+    else{
+      include 'header.php';
+      session_unset();
+      session_destroy();
+    }
+
+    ?>
+
     <section class="my-5 pt-5">
     <div class="album py-5 ">
     <div class="container">
-
+      <?php
+      $sql = "SELECT * FROM abuloy_accounts";
+      $result = $mysqli->query($sql);
+      while($account = $result->fetch_assoc()){
+        $aid = $account['id'];
+        $fname = $account['d_firstname'];
+        $mname = $account['d_middlename'];
+        $lname = $account['d_lastname'];
+        $photo = $account['avatar'];
+        $summary = $account['d_summary'];
+        $bdate = $account['d_birthdate'];
+        $ddate = $account['d_date_of_death'];
+        $goal_amount = $account['d_goal_amount'];
+        $link = $account['url_link'];
+      ?>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4">
         <div class="col">
           <div class="card shadow-sm">
@@ -39,7 +65,7 @@ $result = $mysqli->query($sql);
               <div class="d-flex justify-content-between align-items-center">
                 <small class="text-muted hide">location</small>
                 <div class="btn-group col-12">
-                  <button type="button" class="btn btn-sm btn-lavander text-white py-2 px-5">Donate Now</button>
+                  <a href="/donate/<?= $aid ?>" type="button" class="btn btn-sm btn-lavander text-white py-2 px-5">Donate Now</a>
                 </div>
                 
               </div>
@@ -99,3 +125,13 @@ $result = $mysqli->query($sql);
 }
 ?>
 
+    <!-- start Footer Area -->
+    <?php include 'footer.php' ?>     
+    <!-- end Footer Area -->
+
+    <!-- Plugins -->
+    <?php include 'plugins.php'; ?>
+    <!-- Custom Script -->
+    <!-- <script src="controllers/register.js"></script> -->
+</body>
+</html>

@@ -2,19 +2,50 @@
 
 session_start();
 error_reporting(0);
-require "global_call.php";
-require "database.php";
-if(isset($_SESSION['user_id'])) {
+
+// if(isset($usertype) == 1){
+//     $sql = "SELECT * FROM abuloy_users WHERE id = $userid";
+
+//     $result = $mysqli->query($sql);
+
+//     $user = $result->fetch_assoc();
+//         $log_status = $user['log_status'];
+//     if($log_status == 1){
+//         echo 'success login';
+//         echo $user['firstname'];
+//         echo $user['user_type'];
+//     }else{
+//         echo 'failed login';
+//     }
+// }else{
+
+//     $
+
+//     // header('Location: /login');
+//     // session_unset();
+//     // session_destroy();
+// }
+// if(isset($_SESSION['user_id'])) {
     
-    $sql = "SELECT * FROM abuloy_users
-            WHERE id = " . $_SESSION['user_id'] ." AND email_status = 1";
+//     $sql = "SELECT * FROM abuloy_users
+//             WHERE id = " . $_SESSION['user_id'] ." AND email_status = 1";
 
-    $result = $mysqli->query($sql);
+//     $result = $mysqli->query($sql);
 
-    $user = $result->fetch_assoc();
+//     $user = $result->fetch_assoc();
 
-}
+    
 
+// }
+// else{
+    
+    // if($user == ''){
+    //     header("Location: /login");
+    // }else{
+    //     header("Location: /");
+    // }
+    
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,79 +57,32 @@ include 'head.php';
 <!-- <link rel="stylesheet" href="./assets/dist/css/pages/register.css"> -->
 </head>
 <body class="bg-light">
-    <?php include 'header.php'; ?>
     
-    <main>
-        <?php 
-        // $utype = $user['user_type']; 
-        // if($utype === '0'){
-        //     include 'views/dashboard-admin.php'; 
-        // }elseif($utype === '1'){
-        //     include 'views/dashboard-user.php';
-        // }elseif($utype === '2'){
-        //     include 'views/dashboard.php';
-        // }
+    <?php
+
+        require "global_call.php";
+        require "database.php";
+        $userid = $_SESSION['user_id'];
+        $usertype = $_SESSION['user_type'];
+
         
-        $routes = [];
-
-        $path = $_SERVER['REQUEST_URI'];
-
-        switch ($path) {
-            case "/":
-                if($user['user_type'] === '0'){
-                    include 'views/dashboard-admin.php';
-                }elseif($user['user_type'] === '1'){
-                    include 'views/dashboard-user.php';
-                }elseif($user['user_type'] === '2'){
-                    include 'views/dashboard.php';
-                }
-                break;
-            case "/start-new-fund":
-                include 'views/start-new-fund.php';
-                break;
-            case "/contact":
-                include 'views/contact-us.php';
-                break;
-            case "/donees":
-                include 'views/donees.php';
-                break;
-            case "/login":
-                include 'login.php';
-                break;
-            case "/logout":
-                include 'logout.php';
-                break;    
-            default :
-                include '/404.php';
-                break;
+        if(isset($usertype) == 1){
+            $sql = "SELECT * FROM abuloy_users WHERE user_type = 1 AND log_status = 1 AND id = $userid";
+            $result = $mysqli->query($sql);
+            $user = $result->fetch_assoc();
+            session_regenerate_id();
+            include 'header-user.php';
+            include 'views/dashboard.php';
         }
+        else{
+            include 'header.php';
+            include 'views/dashboard.php';
+            $_SESSION['user_type'] = 2;
+        }
+        
 
-        function route(string $path, callable $callback) {
-            global $routes;
-            $routes[$path] = $callback;
-          }
-          
-          run();
-          
-          function run() {
-            global $routes;
-            $uri = $_SERVER['REQUEST_URI'];
-            $found = false;
-            foreach ($routes as $path => $callback) {
-              if ($path !== $uri) continue;
-          
-              $found = true;
-              $callback;
-            }
-          
-            // if (!$found) {
-            //   $notFoundCallback = $routes['/404'];
-            //   $notFoundCallback();
-            //   include '404.php';
-            // }
-          }
-        ?>
-    </main>
+
+    ?>
     
     <!-- start Footer Area -->
     <?php include 'footer.php' ?>     
