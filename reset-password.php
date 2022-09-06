@@ -39,12 +39,12 @@ require 'head.php';
                         </div>
                         <div class="form-row lavander-form mt-1">
                             <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
-                                <input type="text" id="password" name="password" class="form-control my-3 text-center" placeholder="New Password">
+                                <input type="password" id="password" name="password" class="form-control my-3 text-center" placeholder="New Password">
                             </div>
                         </div>
                         <div class="form-row lavander-form mt-1">
                             <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
-                                <input type="text" id="password_confirmation" name="password_confirmation" class="form-control text-center" placeholder="Confirm New Password">
+                                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control text-center" placeholder="Confirm New Password">
                             </div>
                         </div>
                     </div>
