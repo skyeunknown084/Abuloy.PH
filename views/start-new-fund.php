@@ -1,4 +1,35 @@
 <?php
+session_start();
+error_reporting(0);   
+?>
+<!DOCTYPE html>
+<html lang="en">
+<?php include './head_views.php'; ?>
+<body>
+    
+    <?php
+    require "./global_call.php";
+    require "./database.php";
+    $userid = $_SESSION['user_id'];
+    $usertype = $_SESSION['user_type'];
+
+    if(isset($usertype) == 1){
+        $sql = "SELECT * FROM abuloy_users WHERE user_type = 1 AND log_status = 1";
+        $result = $mysqli->query($sql);
+        $user = $result->fetch_assoc();
+        // generate session again
+        session_regenerate_id();
+        include 'header-user.php';
+    }
+    else{
+      include 'header.php';
+      session_unset();
+      session_destroy();
+    }
+
+    ?>
+
+<?php
 if(isset($_SESSION['user_id'])){
 ?>
 <section class="py-5" id="">
