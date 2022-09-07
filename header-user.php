@@ -40,7 +40,7 @@
                             <a class="nav-link text-blackish-lavander" href="/donees">Donations</a>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link text-blackish-lavander me-2" href="/register">Register A Fund</a>
+                            <a class="nav-link text-blackish-lavander me-2" href="/start-new-fund">Register A Fund</a>
                         </li>
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -195,12 +195,13 @@
                             <a class="nav-link text-blackish-lavander text-bold" href="/donees">Donate</a>
                         </li>                    
                         <li class="nav-item">
-                            <a class="nav-link text-blackish-lavander text-bold" href="/register">Start A New Fund</a>
+                            <a class="nav-link text-blackish-lavander text-bold" href="/start-new-fund">Start A New Fund</a>
                         </li>                        
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="text-aquamarine py-0" style="font-size:15px">
-                                    <img src="assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="pe-1"><?php echo $user['firstname']; ?> </span>
+                                    <?php $username = $_SESSION['user_firstname']; ?>
+                                    <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="pe-1"><?php echo $username; ?> </span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 shadow w-220px">
