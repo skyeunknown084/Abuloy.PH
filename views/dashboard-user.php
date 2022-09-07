@@ -1,5 +1,5 @@
 <?php
-
+if(isset($user)){
 ?>
 <section class="py-5" id="">
     <div class="container py-5">
@@ -49,3 +49,6 @@
         </div>
         </div>
 </section>
+<?php
+}
+?>
