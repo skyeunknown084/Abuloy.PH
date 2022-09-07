@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-error_reporting(0);
+// error_reporting(0);
 
 // if(isset($usertype) == 1){
 //     $sql = "SELECT * FROM abuloy_users WHERE id = $userid";
@@ -62,22 +62,32 @@ include 'head.php';
 
         require "global_call.php";
         require "database.php";
-        $userid = $_SESSION['user_id'];
-        $usertype = $_SESSION['user_type'];
 
-        
-        if(isset($usertype) == 1){
-            $sql = "SELECT * FROM abuloy_users WHERE user_type = 1 AND log_status = 1 AND id = $userid";
-            $result = $mysqli->query($sql);
+        $uid = $_SESSION['user_id'];
+        if($_SERVER['REQUEST_METHOD'] === "GET" && isset($uid)){
+            $stmt = $mysqli->prepare("SELECT * FROM abuloy_users WHERE id = ?");
+            $stmt->bind_param('d', $uid);
+            $result = $stmt->execute();
+            $result = $stmt->get_result();
             $user = $result->fetch_assoc();
-            session_regenerate_id();
-            include 'header-user.php';
-            include 'views/dashboard.php';
+            if(isset($user)){
+                include 'header-user.php';
+                include 'views/dashboard-user.php';
+            }
+            else{
+                include 'header.php';
+                include 'views/dashboard.php';
+            }
         }
         else{
             include 'header.php';
             include 'views/dashboard.php';
-            $_SESSION['user_type'] = 2;
+        ?>
+        
+        <!-- Anonymous -->
+        
+
+        <?php
         }
         
 
@@ -85,7 +95,7 @@ include 'head.php';
     ?>
     
     <!-- start Footer Area -->
-    <?php include 'footer.php' ?>     
+    <?php include 'footer.php'; ?>     
     <!-- end Footer Area -->
 
     <!-- Plugins -->

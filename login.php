@@ -41,6 +41,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
                     $_SESSION['user_email'] = $user['email'];
                     $_SESSION['user_email_status'] = $user['email_status'];
                     $_SESSION['user_log_status'] = $user['log_status'];
+                    $_SESSION['user_firstname'] = $user['firstname'];
                     header("Location: /");
                     // exit;
                 }
@@ -279,7 +280,7 @@ include 'head.php';
                 <div class="d-flex justify-content-center align-items-center pt-5" style="margin: 65px 0">
                     
                                    
-                    <form action="" method="post" id="login-form">
+                    <form action="" method="POST" id="login-form">
                         <?php if(isset($_SESSION['error_login'])){ ?> 
                             <div class="alert alert-danger alert-dismissible fade show text-justify" role="alert">
                                 <?= $_SESSION['error_login'] ?>
