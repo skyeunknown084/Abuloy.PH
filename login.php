@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
     $email  = $_POST['email'];
     $password  = $_POST['password'];
     $utype = 1;
-    $sql = sprintf("SELECT * FROM abuloy_users WHERE email = '$email' AND user_type = $utype");
+    $sql = sprintf("SELECT * FROM abuloy_users WHERE email = '$email'");
     
     $result = $mysqli->query($sql);
 

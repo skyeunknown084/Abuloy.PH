@@ -1,6 +1,3 @@
-<?php
-if(isset($user)){
-?>
 <section class="py-5" id="">
     <div class="container py-5">
         <div class="row banner-content fullscreen align-items-center justify-content-start pb-4">
@@ -49,6 +46,3 @@ if(isset($user)){
         </div>
         </div>
 </section>
-<?php
-}
-?>

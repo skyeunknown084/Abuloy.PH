@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-// error_reporting(0);
+error_reporting(0);
 
 // if(isset($usertype) == 1){
 //     $sql = "SELECT * FROM abuloy_users WHERE id = $userid";
@@ -64,31 +64,53 @@ include 'head.php';
         require "database.php";
 
         $uid = $_SESSION['user_id'];
-        if($_SERVER['REQUEST_METHOD'] === "GET" && isset($uid)){
+        $utype = $_SESSION['user_type'];
+        if($utype == 1){
+            include 'header-user.php';
+            // Dashboard for User with Accounts
             $stmt = $mysqli->prepare("SELECT * FROM abuloy_users WHERE id = ?");
             $stmt->bind_param('d', $uid);
             $result = $stmt->execute();
             $result = $stmt->get_result();
             $user = $result->fetch_assoc();
             if(isset($user)){
-                include 'header-user.php';
                 include 'views/dashboard-user.php';
             }
-            else{
-                include 'header.php';
-                include 'views/dashboard.php';
+        }
+        elseif($utype == 3){
+            include 'header-admin.php';
+            // Dashboard for Admin
+            $stmt = $mysqli->prepare("SELECT * FROM abuloy_users WHERE id = ?");
+            $stmt->bind_param('d', $uid);
+            $result = $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+            if(isset($user)){
+                include 'views/dashboard-admin.php';
             }
         }
         else{
             include 'header.php';
             include 'views/dashboard.php';
+        }
+        // if(){
+            
+        //     else{
+        //         include 'header.php';
+        //         include 'views/dashboard.php';
+        //     }
+        // }
+        // else{
+        //     include 'header.php';
+        //     include 'views/dashboard.php';
+        // }
         ?>
         
         <!-- Anonymous -->
         
 
         <?php
-        }
+        // }
         
 
 

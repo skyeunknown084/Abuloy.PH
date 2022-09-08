@@ -51,7 +51,7 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 shadow w-220px">
-                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/dashboard-setting"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
+                            <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/dashboard-setting"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
                             <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/funds-tracking" title=""><i class="fas fa-coins pe-2"></i> Funds Tracking </a></li>
                             <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/withdrawals-setting" title=""><i class="fas fa-money-check-alt pe-1"></i> Funds Withdrawal </a></li>
                             <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/emails-setting" title=""><i class="fa fa-envelope-open pe-2"></i> Emails Settings </a></li>
@@ -122,7 +122,7 @@
                             <li class="nav-item dropdown px-3" id="myDropdown">
                                 <a class="nav-link dropdown-toggle text-blackish-lavander" href="#" data-bs-toggle="dropdown">  Admin Settings <i class="fa fa-angle-double-right pe-2"></i> </a>
                                 <ul class="dropdown-menu active show bg-aquamarine text-black px-2">
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/dashboard-setting"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
+                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine hide" href="/dashboard-setting"><i class="fas fa-chart-line pe-2"></i> Dashboard Settings</a></li>
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/funds-tracking" title=""><i class="fas fa-coins pe-2"></i> Funds Tracking </a></li>
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/withdrawals-setting" title=""><i class="fas fa-money-check-alt pe-1"></i> Funds Withdrawal </a></li>
                                     <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/emails-setting" title=""><i class="fa fa-envelope-open pe-2"></i> Emails Settings </a></li>
