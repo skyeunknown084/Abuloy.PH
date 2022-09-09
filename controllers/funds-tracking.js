@@ -5,7 +5,6 @@ function status_update($value,$id){
         method:'POST',
         data:{id:$id, value:$value},
         success:function(resp){
-            alert(resp);
             if(resp){
                 setTimeout(function(){
                 // end_load()

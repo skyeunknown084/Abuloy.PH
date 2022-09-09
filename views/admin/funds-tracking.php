@@ -104,7 +104,7 @@ require './database.php';
                                         <div class="vr"></div>
                                         <a href="#" class=""></a><i class="fa fa-edit text-lavander" title="edit transaction" style="font-size:24px"></i></a>
                                         <div class="vr"></div>
-                                        <a href="#" class=""></a><i class="fas fa-money-check-alt text-lavander" title="edit transaction" style="font-size:24px"></i></a>
+                                        <a href="#" class=""></a><i class="fas fa-money-check-alt text-lavander" title="withdraw transaction" style="font-size:24px"></i></a>
                                         <div class="vr"></div>
                                         <a href="#" class=""></a><i class="fa fa-trash text-lavander" title="delete transaction" style="font-size:24px"></i></a>
                                     </td>
