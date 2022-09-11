@@ -46,7 +46,7 @@
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="text-aquamarine py-0" style="font-size:15px">
                                     <?php $admin_user_qry = $mysqli->query("SELECT * FROM abuloy_users WHERE user_type = 3"); if($admin = $admin_user_qry->fetch_assoc()){ ?>
-                                    <img src="assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="pe-1"><?php echo $admin['firstname']; ?> </span>
+                                    <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="pe-1"><?php echo $admin['firstname']; ?> </span>
                                     <?php } ?>
                                 </span>
                             </a>
@@ -138,7 +138,7 @@
                         <div class="dropup-center dropup mx-3" style="position:absolute;bottom:20px">
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="text-aquamarine py-0 pe-2" style="font-size:15px">
-                                    <img src="assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><?php echo $user['firstname']; ?>!</span>
+                                    <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><?php echo $user['firstname']; ?>!</span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow w-220px">

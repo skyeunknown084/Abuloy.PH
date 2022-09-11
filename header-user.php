@@ -45,7 +45,7 @@
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="text-aquamarine py-0" style="font-size:15px">
-                                    <img src="assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="pe-1"><?php echo $user['firstname']; ?> </span>
+                                    <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="pe-1"><?php echo $user['firstname']; ?> </span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 shadow w-220px">
@@ -136,7 +136,7 @@
                         <div class="dropup-center dropup mx-3" style="position:absolute;bottom:20px">
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="text-aquamarine py-0 pe-2" style="font-size:15px">
-                                    <img src="assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><?php echo $user['firstname']; ?>!</span>
+                                    <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><?php echo $user['firstname']; ?>!</span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow w-220px">
@@ -200,7 +200,7 @@
                         <li class="nav-item dropdown active">
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="text-aquamarine py-0" style="font-size:15px">
-                                    <?php $username = $_SESSION['user_firstname']; ?>
+                                    <?php $username = $user['firstname']; ?>
                                     <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="pe-1"><?php echo $username; ?> </span>
                                 </span>
                             </a>
@@ -271,14 +271,14 @@
                         <div class="dropup-center dropup mx-3" style="position:absolute;bottom:20px">
                             <a class="nav-link dropdown-toggle btn btn-lavander btn-round px-2 py-1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="text-aquamarine py-0" style="font-size:15px">
-                                    <img src="assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><?php echo $user['firstname']; ?>!</span>
+                                    <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><?php echo $user['firstname']; ?>!</span>
                                 </span>
                             </a>
                             <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow w-220px">
                                 <li>
                                     <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 pe-1" href="/profile">
                                         <span class="text-aquamarine py-0 m-0 p-0" style="font-size:15px">
-                                            <img src="assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="text-blackish-aquamarine">My Profile</span>
+                                            <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="text-blackish-aquamarine">My Profile</span>
                                         </span>
                                     </a>
                                 </li>
