@@ -35,6 +35,7 @@
                 $_SESSION['user_type'] = $user['user_type'];
                 $_SESSION['user_firstname'] = $user['firstname'];
 
+                header("Location: /email-activation-success");
                 header("Location: /");
                 exit;
             }
