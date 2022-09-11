@@ -31,9 +31,6 @@ include './head_views.php';
           include 'header-user.php';
         }
       }
-      else{
-        include 'header.php';          
-      }
 
     ?>
 
@@ -68,12 +65,8 @@ include './head_views.php';
                 </a>
                 <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
                 <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
-                <div class="card-body pt-0">                  
-                  <?php if($summary === ''){ ?>
-                    <p class="card-text text-center pt-4">N/A</p>
-                  <?php }else{ ?>
-                    <p class="card-text text-justify pt-2"><?= substr($summary, 0, 70) . '...' ?></p>
-                  <?php } ?>    
+                <div class="card-body">
+                  <p class="card-text text-center"><?= $summary ?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <small class="text-muted hide">location</small>
                     <div class="btn-group col-12">
@@ -84,7 +77,7 @@ include './head_views.php';
                   <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>
                   <p class="fw-bold pt-2 mb-0">
                     <?php
-                        $progqry = $mysqli->query("SELECT *,SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1");            
+                        $progqry = $mysqli->query("SELECT *,SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and status = 1");            
                         while($progrow= $progqry->fetch_assoc()){
                     ?> 
                     <label for="goal-raised-progress" class="" style="font-size:15px">
@@ -92,7 +85,7 @@ include './head_views.php';
                         of ₱<?php echo number_format($goal_amount, 2, '.', ',');?> goal
                     </label>
                     <?php } 
-                    $total_amount = $mysqli->query("SELECT SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1")->fetch_array();
+                    $total_amount = $mysqli->query("SELECT SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and status = 1")->fetch_array();
                     foreach($total_amount as $key => $raised){
                         $$key = $raised;
                     }

@@ -41,7 +41,7 @@ include './head_views.php';
       <div class="album py-5 ">
         <div class="container">
           <?php
-          $sql = "SELECT * FROM abuloy_accounts";
+          $sql = "SELECT * FROM abuloy_accounts WHERE uid = $uid";
           $result = $mysqli->query($sql);
           while($account = $result->fetch_assoc()){
             $aid = $account['id'];
@@ -138,11 +138,11 @@ include './head_views.php';
 
     
     <!-- start Footer Area -->
-    <?php include 'footer.php' ?>     
+    <?php include './footer.php' ?>     
     <!-- end Footer Area -->
 
     <!-- Plugins -->
-    <?php include 'plugins.php'; ?>
+    <?php include './plugins.php'; ?>
     <!-- Custom Script -->
     <!-- <script src="controllers/register.js"></script> -->
 </body>

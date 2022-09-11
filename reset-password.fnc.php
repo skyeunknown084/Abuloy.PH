@@ -47,16 +47,18 @@
                     $_SESSION['user_email_status'] = $user['email_status'];
                     $_SESSION['user_type'] = $user['user_type'];
                     $_SESSION['user_log'] = $user['log_status'];
+                    $_SESSION['user_email'] = $user['email'];
 
                     // sendResetEmail($email);
-                    json_encode(['status' => 'success']);
-                    header("Location: /login");
+                    // json_encode(['status' => 'success']);
+                    header("Location: /reset-password-success");
+                    // header("Location: /login");
                     exit;
                     
                 }
                 else{
-                    json_encode(['status' => 'failure']);
-                    print_r('Failed verifying password.');
+                    // json_encode(['status' => 'failure']);
+                    header("Location: /reset-password-failed");
                     exit();
                 }
                 

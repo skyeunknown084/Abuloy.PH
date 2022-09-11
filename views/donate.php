@@ -13,6 +13,7 @@ if(isset($aid)){
     $bdate = $user['d_birthdate'];
     $dod = $user['d_date_of_death'];
     $goal_amount = $user['d_goal_amount'];
+    $uid = $user['uid'];
 
 ?>
 <!DOCTYPE html>
@@ -22,9 +23,7 @@ if(isset($aid)){
 
     <?php
     if($uid == $uid){
-        if(isset($user)){
         include 'header-user.php';
-        }
     }else{
         include 'header.php';
     }
