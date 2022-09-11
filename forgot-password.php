@@ -37,12 +37,13 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['email'])){
             $_SESSION['EMAIL'] = $user['email'];
             
             sendForgotEmail($email);                
-            
-            header("Location: /reset-password");
+            header("Location: /request-password-success");
+            // header("Location: /reset-password");
             exit;
         }
         else{
-            print_r("Error validating email for password reset");
+            header("Location: /request-password-failed");
+            // print_r("Error validating email for password reset");
         }
 
     }
@@ -98,7 +99,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['email'])){
                 </tr>
                 <tr><td style='padding: 0px 0 15px 0;'>You can change your password by clicking the link below:</td></tr>
                 <tr>
-                    <td style='padding: 0px 0 15px 0;'><a href='abuloy.ph/reset-password' style='height:50px;border-radius:25px;background-color:#A265E6;color:#94F7CF;padding:8px 15px;text-align:center;font-weight:500;font-family:Poppins'>Set a new password</a></td>
+                    <td style='padding: 0px 0 15px 0;'><a href='http://localhost/reset-password' style='height:50px;border-radius:25px;background-color:#A265E6;color:#94F7CF;padding:8px 15px;text-align:center;font-weight:500;font-family:Poppins'>Set a new password</a></td>
                 </tr>
                 <tr>
                     <td style='padding: 15px 0 0 0;'>However, if you did not request to reset your password.<br/>Please email us immediately by replying to this email.</td>
