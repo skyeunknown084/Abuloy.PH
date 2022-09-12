@@ -205,7 +205,7 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 shadow w-220px">
-                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/profile"><i class="fas fa-user pe-2"></i> Profile</a></li>
+                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/my-funds"><i class="fas fa-user pe-2"></i> Profile</a></li>
                                 <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/donees" title=""><i class="fas fa-coins pe-2"></i> My Abuloy Funds</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/logout"><i class="fa fa-power-off pe-2"></i>  Logout</a></li>
@@ -276,7 +276,7 @@
                             </a>
                             <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow w-220px">
                                 <li>
-                                    <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 pe-1" href="/profile">
+                                    <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 pe-1" href="/my-funds">
                                         <span class="text-aquamarine py-0 m-0 p-0" style="font-size:15px">
                                             <img src="http://localhost/assets/img/no-image-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="text-blackish-aquamarine">My Profile</span>
                                         </span>

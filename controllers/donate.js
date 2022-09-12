@@ -11,7 +11,11 @@ $(document).ready(function(){
     })	
     $("#donatebtn").prop("disabled", true);
     $("#agreement").click(function () {
+        if($(this).is(":checked")){
         $("#donatebtn").prop("disabled", false);
+        }else{
+        $("#donatebtn").prop("disabled", true);    
+        }
     });
 	$('#donatebtn').on('click', function() {  
         if(document.getElementById('agreement').checked == true && document.getElementById('amount').value > 0){
@@ -33,14 +37,15 @@ $(document).ready(function(){
         }        
     })
     $('#anonymous').on('click', function() {
+        // alert("anonymous check here");
         if($(this).is(":checked")){
-            $('#donator_name').val('');             
-            $(document.getElementById('donator_name')).addClass('hide');
-            $(document.getElementById('donator_name')).removeClass('show');             
+            $('#customer_name').val('');             
+            $(document.getElementById('customer_name')).addClass('hide');
+            $(document.getElementById('customer_name')).removeClass('show');             
             $(document.getElementById('note')).removeClass('hide');             
         }else {
-            $(document.getElementById('donator_name')).removeClass('hide');    
-            $(document.getElementById('donator_name')).addClass('show');
+            $(document.getElementById('customer_name')).removeClass('hide');    
+            $(document.getElementById('customer_name')).addClass('show');
             $(document.getElementById('note')).addClass('hide');   
         }
     })
@@ -52,7 +57,7 @@ $('#process_payment').submit(function(e){
     // var customer_name = $('#account_name').val();
     // console.log(customer_name);
     $.ajax({
-        url:'ajax?action=gcash_payment',
+        url:'/ajax?action=donation_payment',
         data: new FormData($(this)[0]),
         cache: false,
         contentType: false,
