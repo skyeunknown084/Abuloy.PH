@@ -90,6 +90,7 @@ Class Action {
 			$customer_email = $data['data']['customeremail'];
 			$customer_mobile = $data['data']['customermobile'];
 			$expiry = $data['data']['expiry'];
+			$date_added = $data['data']['dateadded'];
 
 			$env_af = 0.03; //3% - abuloy fee
 			$env_gcf = 0.02; //2% - gcash fee
@@ -100,7 +101,7 @@ Class Action {
 			$total_fee = $admin_fee + $gcash_fee; // total fee (gcash)+(abuloy) 
 
 
-			$save = $this->db->query("INSERT INTO abuloy_payments (aid, utype, account_name, code, amount, total_fee, gcash_fee, admin_fee, total_abuloy, customer_name, customer_mobile, customer_email, message, description, request_id, checkout_url, date_added) VALUES ('$aid', '$utype', '$account_name', '$code', '$amount', '$total_fee', '$gcash_fee', '$admin_fee', '$total_abuloy', '$customer_name', '$customer_mobile', '$customer_email', '$message', '$description', '$request_id', '$checkout_url', NOW())");
+			$save = $this->db->query("INSERT INTO abuloy_payments (aid, utype, account_name, code, amount, total_fee, gcash_fee, admin_fee, total_abuloy, customer_name, customer_mobile, customer_email, message, description, request_id, checkout_url, date_added) VALUES ('$aid', '$utype', '$account_name', '$code', '$amount', '$total_fee', '$gcash_fee', '$admin_fee', '$total_abuloy', '$customer_name', '$customer_mobile', '$customer_email', '$message', '$description', '$request_id', '$checkout_url', '$date_added')");
 
 			
 		}else{
