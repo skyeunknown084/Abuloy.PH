@@ -12,21 +12,22 @@
         include_once './global_call.php';
         include_once './database.php';
 
-        $aid;
-        $metaqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE id = $aid");
-        if($row=$metaqry->fetch_assoc()){
-            $acct_id = $row['id'];
+        $metaqry = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE id = ?");
+        $metaqry->bind_param('d', $aid);
+        $result_metaqry = $metaqry->execute();
+        $result_metaqry = $metaqry->get_result();
+        if($row=$result_metaqry->fetch_assoc()){
             $fname = $row['d_firstname'];
             $lname = $row['d_lastname'];
             $description = $row['d_summary'];
             $image = $row['avatar'];
             ?>
-            <title>In Loving Memory of <?php echo $fname ?> <?php echo $lname ?></title>
-            <meta property="og:url"          content="https://abuloy.ph/donate?id=<?php echo $acct_id ?>" />
+            <title>In Loving Memory of <?= $fname ?> <?= $lname ?></title>
+            <meta property="og:url"          content="https://abuloy.ph/donate/<?= $aid ?>" />
             <meta property="og:type"         content="article" />
-            <meta property="og:title"        content="In Loving Memory of <?php echo $fname ?> <?php echo $lname ?>" />
-            <meta property="og:description"  content="<?php echo $description ?>" />
-            <meta property="og:image" content="https://abuloy.ph/assets/uploads/<?php echo $image ?>" />
+            <meta property="og:title"        content="In Loving Memory of <?= $fname ?> <?= $lname ?>" />
+            <meta property="og:description"  content="<?= htmlspecialchars($description) ?>" />
+            <meta property="og:image" content="https://abuloy.ph/assets/uploads/<?= $image ?>" />
         <?php
         }    
     ?>

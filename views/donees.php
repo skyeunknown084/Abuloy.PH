@@ -83,9 +83,9 @@ include './head_views.php';
             <div class="card mt-3">
               <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                 <?php if($photo == ''){ $no_image = 'assets/img/no-image-available.png'; ?>
-                  <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px;">
+                  <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain">
                 <?php }else{ ?>
-                  <img src="<?= $photo ?>" alt="" style="width:70%; height: 275px;">
+                  <img src="<?= $photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain">
                 <?php } ?>
               </a>
               <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>

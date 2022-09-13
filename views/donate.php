@@ -6,7 +6,7 @@ error_reporting(0);
 <html lang="en">
 <?php
 // include_once './global_call.php';
-include './head_views.php';
+include './head_donate.php';
 ?>
 <!-- register css -->
 <!-- <link rel="stylesheet" href="./assets/dist/css/pages/register.css"> -->
@@ -39,7 +39,7 @@ include './head_views.php';
     ?>
 
     <section class="my-5">
-        <div class="container-fluid p-5 text-center">
+        <div class="container-fluid p-5 pt-0 text-center">
             <div class="row">
                 <div class="align-center col-lg-12 pb-1">             
                 <div class="col-12 align-right pt-4 pb-2">
@@ -53,9 +53,11 @@ include './head_views.php';
             <div class="row " id="donate_user">
                 
                 <?php
-                $sql = "SELECT * FROM abuloy_accounts a INNER JOIN abuloy_payments p ON a.id = p.aid WHERE p.aid = $aid";
-                $result = $mysqli->query($sql);
-                if($account = $result->fetch_assoc()){
+                $acct_sql = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE id = ?");
+                $acct_sql->bind_param('d', $aid);
+                $result_acct = $acct_sql->execute();
+                $result_acct = $acct_sql->get_result();
+                if($account = $result_acct->fetch_assoc()){
                     $aid = $account['id'];
                     $fname = $account['d_firstname'];
                     $mname = $account['d_middlename'];
@@ -71,9 +73,9 @@ include './head_views.php';
                 <div class="card">
                     <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                     <?php if($photo == ''){ $no_image = 'assets/img/no-image-available.png'; ?>
-                        <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px;">
+                        <img src="<?= $no_image ?>" alt="" style="width:75%; height: 580px; object-fit: scale-down">
                     <?php }else{ ?>
-                        <img src="<?= $photo ?>" alt="" style="width:70%; height: 375px;">
+                        <img src="<?= $photo ?>" alt="" style="width:70%; height: 580px; object-fit: scale-down">
                     <?php } ?>
                     </a>
                     <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
@@ -82,8 +84,10 @@ include './head_views.php';
                     <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>
                     <p class="fw-bold pt-2 mb-0">
                         <?php
-                            $progqry = $mysqli->query("SELECT *,SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1");            
-                            while($progrow= $progqry->fetch_assoc()){
+                            $progqry = $mysqli->prepare("SELECT *,SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1"); 
+                            $result_progqry = $progqry->execute();
+                            $result_progqry = $progqry->get_result();           
+                            while($progrow= $result_progqry->fetch_assoc()){
                         ?> 
                         <label for="goal-raised-progress" class="" style="font-size:15px">
                             <span class="">₱<?php echo number_format($progrow['total_raised'],2, '.', ',') ?></span>
@@ -127,7 +131,7 @@ include './head_views.php';
                 </div>
                 <div class="col-lg-5 mb-3 pe-lg-5">
                     <div class="card align-m px-2">
-                        <div class="card-body py-4">
+                        <div class="card-body pt-4">
                             <form action="" id="process_payment" method="POST">
                                 <input type="hidden" name="aid" id="aid" value="<?php echo $aid ?>">
                                 <input type="hidden" name="account_name" id="account_name" value="<?= $fname ?> <?= $mname[0] ?>. <?= $lname ?>">
@@ -213,22 +217,49 @@ include './head_views.php';
                                         </div>
                                     </div>
                                 </div>
-
+                                
+                                
                             </form>
-                            <div id="sharenow" class="">
-                                <div class="hide text-lavander text-center text-uppercase mt-3 fw-bold">or share to</div>
-                                <div class="text-blackish text-center mt-1 fw-bold"></div>
-                                <a target="_blank" data-href="https://abuloy.ph/donate/<?php echo $aid ?>&scrape=true" data-layout="button_count" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fabuloy.ph%2Fdonate%26id%3D<?php echo $aid ?>&scrape=true" 
-                                    class="hide btn btn-aquamarine btn-default text-lavander btn-social btn-facebook btn-sm disableIfNotLive fw-bold col-12 mt-3" id="facebook" name="provider" value="Share On Facebook" title="Share On Facebook" style="margin-top:0px;">
-                                    <i class="fab fa-facebook" style="margin-top: 0px;font-size:19px"></i>
-                                    <span style="font-size:19px">SHARE</span>
+                            <div class="text-lavander text-center text-uppercase mt-3 fw-bold">or share to</div>
+                            <hr class="m-0 p-0">
+                            <div id="sharenow" class="hstack my-3">                                
+                                <a target="blank" href="https://www.facebook.com/dialog/share?app_id=959404248753205&display=popup&href=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                <i class="fab fa-facebook fa-2x "></i></i>
                                 </a>
-                                <hr>
-                                <a data-bs-toggle="modal" data-bs-target="#share-to-social-media" class="btn btn-lavander col-12 text-uppercase fs-larger fw-bold">
-                                    Share <i class="fas fa-hand-holding-heart ps-2"></i>
+                                <a target="blank" href="https://twitter.com/intent/tweet?url=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                <i class="fab fa-twitter fa-2x"></i></i>
                                 </a>
+                                <a target="blank" href="whatsapp://send?text=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                <i class="fab fa-whatsapp fa-2x"></i></i>
+                                </a>
+                                <?php 
+                                    $emailshareqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE id = $aid");
+                                    if($emailshare = $emailshareqry->fetch_assoc()):
+                                        $bodymsg = "Hello, %0D%0A%0D%0APlease share this link below to help spread the news about the passing of ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] . 
+                                        "%0D%0A%0D%0A
+                                        " . $emailshare['url_link'] ."%0D%0A%0D%0AEvery donation counts and it will mean a lot to ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] ." family. As the fund to be reached here will help on the last expense for ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] . ". However, if you can't make a donation, sharing this fundraise for " . $emailshare['d_firstname'] . " " . $emailshare['d_lastname'] . " will help a lot too.%0D%0A%0D%0AThanks you for taking a time to view this fund."
+                                ?>
+                                <a target="blank" href="mailto:?subject=In loving memory of <?php echo $emailshare['d_firstname'] ?> <?php echo $emailshare['d_lastname'] ?>&amp;body=<?= htmlspecialchars($bodymsg) ?>" class="col-3 text-uppercase fs-larger fw-bold me-auto">
+                                <i class="fa fa-envelope fa-2x"></i></i>
+                                </a>
+                                <?php endif; ?>
                                 
                             </div>
+                            <div class="col-12 copy-btn-container">
+                                <div class="input-group mb-3">
+                                    <?php 
+                                        $linkqry = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE id = ?");
+                                        $linkqry->bind_param('d', $aid);
+                                        $result_linkqry = $linkqry->execute();
+                                        $result_linkqry = $linkqry->get_result();
+                                        if($link_url = $result_linkqry->fetch_assoc()){
+                                    ?>
+                                    <input type="text" name="url_link" class="form-control copy-link-input" id="copy-link-input" value="<?= $link_url['url_link']; ?>" placeholder="Copy URL Link To Share" aria-label="Copy URL Link To Share" aria-describedby="copy-link-button">
+                                    <button class="btn btn-lavander copy-link-button" type="button" id="copy-link-button">COPY</button>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -261,7 +292,8 @@ include './head_views.php';
                     <div class="accordion-item">
                         <div class="accordion-button bg-aquamarine text-blackish" id="panelsStayOpen-headingOne">
                             <button class="bg-aquamarine text-purple fw-bold" type="button">
-                                <?php $num_donators = $mysqli->query("SELECT * FROM abuloy_payments WHERE customer_name != '' and aid =".$aid)->num_rows; ?>
+                                <?php 
+                                $num_donators = $mysqli->query("SELECT * FROM abuloy_payments WHERE customer_name != '' AND aid =$aid AND payment_status = 1")->num_rows; ?>
                                 Funders (<?= $num_donators ?>)
                             </button>
                         </div>
@@ -269,8 +301,12 @@ include './head_views.php';
                             <table class="table table-bordered" style="border: 1px solid #A265E6">
                                 <?php
                                 // echo "List of Donators"
-                                $donatorsqry = $mysqli->query("SELECT * FROM abuloy_payments WHERE aid =".$aid." ORDER BY id desc LIMIT 10");
-                                while($row=$donatorsqry->fetch_assoc()){
+                                $paystat = 1;
+                                $donatorsqry = $mysqli->prepare("SELECT * FROM abuloy_payments WHERE aid = ? AND payment_status = ? ORDER BY id desc LIMIT 10");
+                                $donatorsqry->bind_param('dd', $aid, $paystat);
+                                $result_donatorsqry = $donatorsqry->execute();
+                                $result_donatorsqry = $donatorsqry->get_result();
+                                while($row=$result_donatorsqry->fetch_assoc()){
                                     $funders = $row['customer_name'];
                                     if($funders != ''){
                                 ?>
@@ -299,5 +335,14 @@ include './head_views.php';
     <?php include './plugins.php'; ?>
     <!-- Custom Script -->
     <script src="http://localhost/controllers/donate.js"></script>
+    <script>
+        const copyBtn = document.getElementById('copy-link-button')
+        const copyText = document.getElementById('copy-link-input')
+
+        copyBtn.onclick = () => {
+            copyText.select();
+            document.execCommand('copy');
+        }
+    </script>
 </body>
 </html>
