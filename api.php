@@ -26,7 +26,8 @@ Class Action {
 			exit;
 		}
 		if(empty($id)){
-		
+			$utype = 2;
+
 			require_once 'global_call.php';
 			$gcash_public_key = $_ENV['GCASH_PK'];
 
@@ -42,6 +43,9 @@ Class Action {
 				'amount' => $amount,
 				'description' => $description,
 				'customername' => $customer_name,
+				'customermobile' => $customer_mobile,
+				'customeremail' => $customer_email,
+				'expiry' => $expiry,
 				'webhooksuccessurl' => $webhooksuccessurl,
 				'redirectsuccessurl' => $redirectsuccessurl,
 				'redirectfailurl' => $redirectfailurl
@@ -62,8 +66,9 @@ Class Action {
 				'amount' => $amount,
 				'description' => $description,
 				'customername' => $customer_name,
-				'customeremail' => $customer_email,
 				'customermobile' => $customer_mobile,
+				'customeremail' => $customer_email,
+				'expiry' => $expiry,
 				'webhooksuccessurl' => $webhooksuccessurl,
 				'redirectsuccessurl' => $redirectsuccessurl,
 				'redirectfailurl' => $redirectfailurl
@@ -84,6 +89,7 @@ Class Action {
 			$customer_name = $data['data']['customername'];
 			$customer_email = $data['data']['customeremail'];
 			$customer_mobile = $data['data']['customermobile'];
+			$expiry = $data['data']['expiry'];
 
 			$env_af = 0.03; //3% - abuloy fee
 			$env_gcf = 0.02; //2% - gcash fee
@@ -93,12 +99,27 @@ Class Action {
 			$total_abuloy = $total_gcash - $admin_fee; // total fund raise minus admin fees
 			$total_fee = $admin_fee + $gcash_fee; // total fee (gcash)+(abuloy) 
 
-			$save = $this->db->query("INSERT INTO abuloy_payments (aid, utype, account_name, request_code, amount, fee, gross_amount, total_fee, gcash_fee, admin_fee, total_abuloy, customer_name, customer_email, customer_mobile, request_id, checkout_url, date_added) VALUES ('$account_id', '$account_name', '$user_type', '$donator_name', '$code', '$amount', '$description', '$status', '$total_fee', '$gcash_fee', '$admin_fee', '$total_abuloy', '$customer_name', '$customer_email', '$customer_mobile', '$request_id', '$checkout_url', NOW())");
+
+			$save = $this->db->query("INSERT INTO abuloy_payments (aid, utype, account_name, code, amount, total_fee, gcash_fee, admin_fee, total_abuloy, customer_name, customer_mobile, customer_email, message, description, request_id, checkout_url, date_added) VALUES ('$aid', '$utype', '$account_name', '$code', '$amount', '$total_fee', '$gcash_fee', '$admin_fee', '$total_abuloy', '$customer_name', '$customer_mobile', '$customer_email', '$message', '$description', '$request_id', '$checkout_url', NOW())");
 
 			
 		}else{
 			// $save = $this->db->query("UPDATE abuloy_payments (account_id, user_type, gcash_amount, gcash_fee, gcash_abuloy_fee) VALUES ('$account_id', '$user_type', '$gcash_amount', '$gcash_fee', '$gcash_abuloy_fee') WHERE id = $id");
 			echo "Insert query failed to create new data for this id !";
+		}
+	}
+
+	// GCash Payment Success Update Code
+	function update_code(){
+		extract($_POST);
+		$check_id = $this->db->query("SELECT * FROM abuloy_payments ORDER BY id DESC")->num_rows;
+		$code_id = $check_id; 
+		if($code_id > 0){
+			// status pending=0,paid=2,refund=2,expired=3,cancelled=4
+			$update = $this->db->query("UPDATE abuloy_payments SET code='$code' WHERE id = $code_id");
+		}
+		if($update){
+			return 1;
 		}
 	}
 

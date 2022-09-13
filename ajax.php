@@ -13,6 +13,12 @@ if($action == 'donation_payment'){
 		echo $save;
 }
 
+if($action == 'update_code'){
+	$update = $crud->update_code();
+	if($update)
+		echo $update;
+}
+
 //===============================================
 // Admin Functions
 if($action == 'update_all_fund_status'){

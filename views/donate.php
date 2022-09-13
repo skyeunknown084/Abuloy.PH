@@ -131,10 +131,11 @@ include './head_views.php';
                     <form action="" id="process_payment" method="POST">
                         <input type="hidden" name="aid" id="aid" value="<?php echo $aid ?>">
                         <input type="hidden" name="account_name" id="account_name" value="<?= $fname ?> <?= $mname[0] ?>. <?= $lname ?>">
-                        <input type="hidden" name="user_type" id="user_type" value="2">
+                        <input type="hidden" name="utype" id="utype" value="2">
                         <input type="hidden" name="payment_status" id="payment_status" value="0">
                         <input type="hidden" name="request_id" id="request_id" value="pending"> 
                         <input type="hidden" name="description" id="description" value="Payment for services rendered"> 
+                        <input type="hidden" name="expiry" id="expiry" value="24"> 
                         
                         <!-- <input type="hidden" name="gcash_abuloy_fee" id="gcash_abuloy_fee" value="0"> -->
                         <label for="amount" id="donate_label" class="d-flex text-lavander fw-800 justify-content-center fs-larger">Enter Amount</label>
@@ -152,8 +153,8 @@ include './head_views.php';
                         <div class="pb-1 hide" id="note">
                             <small>NOTE: </small><small>As you wish to be an anonymous donator your name and donation will not be listed in public view under Funders list.<br/><span class="text-lavander">For GCash payments options, a customer information is required.</span></small>
                         </div>                                                        
-                        <input type="text" class="form-control text-blackish mb-3 text-center" name="customer_name" id="customer_name" placeholder="Add Your Name">
                         <div class="gcash-form pb-2 pt-0" id="gcashFormReq">
+                            <input type="text" class="form-control text-blackish mb-3 text-center" name="customer_name" id="customer_name" placeholder="Add Your Name">
                             <input type="email" class="form-control text-blackish mb-3 text-center" name="customer_email" id="customer_email" placeholder="Email Address">
                             <input type="text" class="form-control text-blackish mb-3 text-center" name="customer_mobile" id="customer_mobile" placeholder="Mobile Number">
                         </div>
@@ -174,7 +175,7 @@ include './head_views.php';
                             DONATED
                         </button> -->                            
                         <a id="paynow" class="btn btn-lavander fw-bold fs-larger text-uppercase px-2 my-1 py-1 align-center hide">
-                            <img src="assets/img/gcash.png" height="40px"> Pay Now
+                            <img src="http://localhost/assets/img/gcash.png" height="40px"> Pay Now
                         </a>
 
                         

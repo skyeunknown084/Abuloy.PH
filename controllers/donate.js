@@ -41,11 +41,19 @@ $(document).ready(function(){
         if($(this).is(":checked")){
             $('#customer_name').val('');             
             $(document.getElementById('customer_name')).addClass('hide');
-            $(document.getElementById('customer_name')).removeClass('show');             
+            $(document.getElementById('customer_name')).removeClass('show');
+            $(document.getElementById('customer_email')).addClass('hide');
+            $(document.getElementById('customer_email')).removeClass('show');
+            $(document.getElementById('customer_mobile')).addClass('hide');
+            $(document.getElementById('customer_mobile')).removeClass('show');             
             $(document.getElementById('note')).removeClass('hide');             
         }else {
             $(document.getElementById('customer_name')).removeClass('hide');    
             $(document.getElementById('customer_name')).addClass('show');
+            $(document.getElementById('customer_email')).removeClass('hide');    
+            $(document.getElementById('customer_email')).addClass('show');
+            $(document.getElementById('customer_mobile')).removeClass('hide');    
+            $(document.getElementById('customer_mobile')).addClass('show');
             $(document.getElementById('note')).addClass('hide');   
         }
     })
