@@ -9,7 +9,7 @@ error_reporting(0);
 include './head_donate.php';
 ?>
 <!-- register css -->
-<!-- <link rel="stylesheet" href="./assets/dist/css/pages/register.css"> -->
+<link rel="stylesheet" href="http://localhost/assets/dist/css/pages/donate.css">
 </head>
 <body class="bg-light">
     
@@ -38,8 +38,8 @@ include './head_donate.php';
 
     ?>
 
-    <section class="my-5">
-        <div class="container-fluid p-5 pt-0 text-center">
+    <section class="mb-5">
+        <div class="container-fluid p-lg-5 p-md-5 pt-0 text-center">
             <div class="row">
                 <div class="align-center col-lg-12 pb-1">             
                 <div class="col-12 align-right pt-4 pb-2">
@@ -70,68 +70,79 @@ include './head_donate.php';
                     $link = $account['url_link'];
                 ?>
                 <div class="col-lg-7 mb-3 ps-lg-5 donate_user_search">
-                <div class="card">
-                    <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
-                    <?php if($photo == ''){ $no_image = 'assets/img/no-image-available.png'; ?>
-                        <img src="<?= $no_image ?>" alt="" style="width:75%; height: 580px; object-fit: scale-down">
-                    <?php }else{ ?>
-                        <img src="<?= $photo ?>" alt="" style="width:70%; height: 580px; object-fit: scale-down">
-                    <?php } ?>
-                    </a>
-                    <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
-                    <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
-                    <div class="card-body pt-0">
-                    <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>
-                    <p class="fw-bold pt-2 mb-0">
-                        <?php
-                            $progqry = $mysqli->prepare("SELECT *,SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1"); 
-                            $result_progqry = $progqry->execute();
-                            $result_progqry = $progqry->get_result();           
-                            while($progrow= $result_progqry->fetch_assoc()){
-                        ?> 
-                        <label for="goal-raised-progress" class="" style="font-size:15px">
-                            <span class="">₱<?php echo number_format($progrow['total_raised'],2, '.', ',') ?></span>
-                            of ₱<?php echo number_format($goal_amount, 2, '.', ',');?> goal
-                        </label>
-                        <?php } 
-                        $total_amount = $mysqli->query("SELECT SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1")->fetch_array();
-                        foreach($total_amount as $key => $raised){
-                            $$key = $raised;
-                        }
-                        $the_goal_amount = $mysqli->query("SELECT d_goal_amount as the_goal_amount FROM abuloy_accounts WHERE id = $aid")->fetch_array();
-                        foreach($the_goal_amount as $k => $goal){
-                            $$k = $goal;
-                        }
-                        $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
-                        ?> 
-                        <div class="col-lg-12 align-center mx-auto mt-1">          
-                            <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
-                                    <?php
-                                    if($raised_percent < 10){ ?>
-                                        <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
-                                    <?php 
-                                    }elseif($raised_percent <= 15){ ?>
-                                        <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
-                                    <?php 
-                                    }elseif($raised_percent <= 21){ ?>
-                                        <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
-                                    <?php 
-                                    }else{ ?>
-                                    <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
-                                    <?php
-                                    }
-                                    ?>                                            
+                    <div class="bg-white shadow">
+                    <p class="no-mobile-donate-photo">
+                        <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
+                        <?php if($photo == ''){ $no_image = 'assets/img/no-image-available.png'; ?>
+                            <img src="<?= $no_image ?>" alt="" class="donate-photo">
+                        <?php }else{ ?>
+                            <img src="<?= $photo ?>" alt="" class="donate-photo" style="width:70%; height: 580px; object-fit: scale-down">
+                        <?php } ?>
+                        </a>
+                        </p>
+                        <p class="mobile-donate-photo">
+                        <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
+                        <?php if($photo == ''){ $no_image = 'assets/img/no-image-available.png'; ?>
+                            <img src="<?= $no_image ?>" alt="" style="width:100%; height: 360px; object-fit: contain">
+                        <?php }else{ ?>
+                            <img src="<?= $photo ?>" alt="" style="width:100%; height: 360px; object-fit: contain">
+                        <?php } ?>
+                        </a>
+                        </p>
+                        <legend class="text-lavander fw-bold text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?php if($mname != ''){ echo $mname[0]. "."; }else{ echo $mname; } ?> <?= $lname ?></legend>
+                        <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
+                        <div class="card-body pt-0">
+                        <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>
+                        <p class="fw-bold pt-2 mb-0">
+                            <?php
+                                $progqry = $mysqli->prepare("SELECT *,SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1"); 
+                                $result_progqry = $progqry->execute();
+                                $result_progqry = $progqry->get_result();           
+                                while($progrow= $result_progqry->fetch_assoc()){
+                            ?> 
+                            <label for="goal-raised-progress" class="" style="font-size:15px">
+                                <span class="">₱<?php echo number_format($progrow['total_raised'],2, '.', ',') ?></span>
+                                of ₱<?php echo number_format($goal_amount, 2, '.', ',');?> goal
+                            </label>
+                            <?php } 
+                            $total_amount = $mysqli->query("SELECT SUM(amount) as total_raised FROM abuloy_payments WHERE aid = $aid and payment_status = 1")->fetch_array();
+                            foreach($total_amount as $key => $raised){
+                                $$key = $raised;
+                            }
+                            $the_goal_amount = $mysqli->query("SELECT d_goal_amount as the_goal_amount FROM abuloy_accounts WHERE id = $aid")->fetch_array();
+                            foreach($the_goal_amount as $k => $goal){
+                                $$k = $goal;
+                            }
+                            $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
+                            ?> 
+                            <div class="col-lg-12 align-center mx-auto mt-1 px-4 py-3">          
+                                <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                        <?php
+                                        if($raised_percent < 10){ ?>
+                                            <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 15){ ?>
+                                            <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 21){ ?>
+                                            <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }else{ ?>
+                                        <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                        <?php
+                                        }
+                                        ?>                                            
+                                    </div>
                                 </div>
-                            </div>
-                        </div> 
-                    </p>  
+                            </div> 
+                        </p>  
+                        </div>
                     </div>
                 </div>
-                </div>
                 <div class="col-lg-5 mb-3 pe-lg-5">
-                    <div class="card align-m px-2">
-                        <div class="card-body pt-4">
+                    <div class="bg-white shadow align-m px-2">
+                        <div class="bg-white p-3 pt-4">
                             <form action="" id="process_payment" method="POST">
                                 <input type="hidden" name="aid" id="aid" value="<?php echo $aid ?>">
                                 <input type="hidden" name="account_name" id="account_name" value="<?= $fname ?> <?= $mname[0] ?>. <?= $lname ?>">
@@ -164,11 +175,11 @@ include './head_donate.php';
                                 </div>
                                 
                                 <textarea name="message" id="message" class="form-control text-blackish text-center" rows="3" placeholder="A short message" required></textarea>
-                                <div class="form-check pt-4 pb-0" id="terms">
+                                <div class="form-check pt-2 pb-0" id="terms">
                                     <input type="checkbox" class="form-check-input" id="agreement" required>
-                                    <label class="form-check-label pt-1 ps-2 align-left" for="agreement">I agree to <a href="/terms-and-conditions">Terms & Conditions</a></label>
+                                    <label class="form-check-label pt-1 ps-2 align-left" for="agreement">I agree to &nbsp;<a href="/terms-and-conditions" class="no-style">Terms & Conditions</a></label>
                                 </div>
-                                <div class="pb-1 hide" id="paynote">
+                                <div class="text-left" id="paynote">
                                     <small>NOTE: </small><small>For a moment we only accept GCash payment.</small>
                                 </div>   
                                 <a id="acct_id_lnk" href="/donate/<?php echo $aid ?>" class="hide"></a>                        
@@ -223,13 +234,13 @@ include './head_donate.php';
                             <div class="text-lavander text-center text-uppercase mt-3 fw-bold">or share to</div>
                             <hr class="m-0 p-0">
                             <div id="sharenow" class="hstack my-3">                                
-                                <a target="blank" href="https://www.facebook.com/dialog/share?app_id=959404248753205&display=popup&href=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
-                                <i class="fab fa-facebook fa-2x "></i></i>
+                                <a title="Facebook" target="blank" href="https://www.facebook.com/dialog/share?app_id=959404248753205&display=popup&href=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                    <i class="fab fa-facebook fa-2x "></i></i>                                 
                                 </a>
-                                <a target="blank" href="https://twitter.com/intent/tweet?url=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                <a title="Twitter" target="blank" href="https://twitter.com/intent/tweet?url=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
                                 <i class="fab fa-twitter fa-2x"></i></i>
                                 </a>
-                                <a target="blank" href="whatsapp://send?text=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                <a title="WhatsApp" target="blank" href="whatsapp://send?text=https://abuloy.ph/donate/<?php echo $aid ?>" class="col-3 text-uppercase fs-larger fw-bold">
                                 <i class="fab fa-whatsapp fa-2x"></i></i>
                                 </a>
                                 <?php 
@@ -239,7 +250,7 @@ include './head_donate.php';
                                         "%0D%0A%0D%0A
                                         " . $emailshare['url_link'] ."%0D%0A%0D%0AEvery donation counts and it will mean a lot to ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] ." family. As the fund to be reached here will help on the last expense for ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] . ". However, if you can't make a donation, sharing this fundraise for " . $emailshare['d_firstname'] . " " . $emailshare['d_lastname'] . " will help a lot too.%0D%0A%0D%0AThanks you for taking a time to view this fund."
                                 ?>
-                                <a target="blank" href="mailto:?subject=In loving memory of <?php echo $emailshare['d_firstname'] ?> <?php echo $emailshare['d_lastname'] ?>&amp;body=<?= htmlspecialchars($bodymsg) ?>" class="col-3 text-uppercase fs-larger fw-bold me-auto">
+                                <a title="e-Mail" target="blank" href="mailto:?subject=In loving memory of <?php echo $emailshare['d_firstname'] ?> <?php echo $emailshare['d_lastname'] ?>&amp;body=<?= htmlspecialchars($bodymsg) ?>" class="col-3 text-uppercase fs-larger fw-bold me-auto">
                                 <i class="fa fa-envelope fa-2x"></i></i>
                                 </a>
                                 <?php endif; ?>
@@ -264,32 +275,28 @@ include './head_donate.php';
                     </div>
                 </div>
                 <div class="col-lg-7 mb-3 ps-lg-5">
-                <div class="card-desc">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Who is <?= $fname ?> <?= $mname[0] ?> <?= $lname ?>?
+                    <div class="accordion-item bg-white shadow-sm">
+                        <div class="bg-aquamarine" id="headingOne" style="border-radius:0">
+                            <button class="bg-aquamarine text-purple fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                            <span class="text-lavander fw-bold">Who's <?= $fname ?> <?= $mname[0] ?>. <?= $lname ?>?</span>
                             </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <?php if($summary === ''){ ?>
-                                <p class="card-text text-center pt-4">N/A</p>
-                                <?php }else{ ?>
-                                <p class="card-text text-justify pt-2"><?= $summary ?></p>
-                                <?php } ?> 
-                            </div>
-                            </div>
+                        </div>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body px-4 py-2">
+                            <?php if($summary === ''){ ?>
+                            <p class="card-text text-center pt-4">N/A</p>
+                            <?php }else{ ?>
+                            <p class="card-text text-justify pt-2"><?= $summary ?></p>
+                            <?php } ?> 
+                        </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <?php
                 }
                 ?>
                 <div class="col-lg-5 mb-3 pe-lg-5 text-left">
-                    <div class="accordion-item">
+                    <div class="accordion-item bg-white shadow-sm">
                         <div class="accordion-button bg-aquamarine text-blackish" id="panelsStayOpen-headingOne">
                             <button class="bg-aquamarine text-purple fw-bold" type="button">
                                 <?php 

@@ -180,9 +180,9 @@ h5 { font-size: calc(0.5vw + 0.5vh + 1vmin) !important; }
 .fw-bolder { font-weight: bolder !important; }
 .fw-bolder { font-weight: bolder !important; }
 /* no-styles */
-.no-style { text-decoration: none; }
-.no-style:hover { text-decoration: none; }
-.no-style:focus { text-decoration: none; }
+.no-style { text-decoration: none !important; }
+.no-style:hover { text-decoration: none !important; }
+.no-style:focus { text-decoration: none !important; }
 /* border-radius */
 .b-radius-1 { border-radius: 1px !important;}
 .b-radius-2 { border-radius: 2px !important;}
@@ -194,6 +194,17 @@ h5 { font-size: calc(0.5vw + 0.5vh + 1vmin) !important; }
 .b-radius-8 { border-radius: 8px !important;}
 .b-radius-9 { border-radius: 9px !important;}
 .b-radius-10 { border-radius: 10px !important;}
+/* border-radius-RT-LT */
+.b-radius-rlt-1 { border-radius: 1px 1px 0 0 !important;}
+.b-radius-rlt-2 { border-radius: 2px 2px 0 0 !important;}
+.b-radius-rlt-3 { border-radius: 3px 3px 0 0 !important;}
+.b-radius-rlt-4 { border-radius: 4px 4px 0 0 !important;}
+.b-radius-rlt-5 { border-radius: 5px 5px 0 0 !important;}
+.b-radius-rlt-6 { border-radius: 6px 6px 0 0 !important;}
+.b-radius-rlt-7 { border-radius: 7px 7px 0 0 !important;}
+.b-radius-rlt-8 { border-radius: 8px 8px 0 0 !important;}
+.b-radius-rlt-9 { border-radius: 9px 9px 0 0 !important;}
+.b-radius-rlt-10 { border-radius: 10px 10px 0 0 !important;}
 /* buttons */
 .btn-square { border-radius: 0; }
 .btn-r-square { border-radius: 5px; }
