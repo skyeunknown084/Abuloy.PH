@@ -10,49 +10,74 @@ include './head_donate.php';
 ?>
 <!-- register css -->
 <link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/pages/donate.css">
+<style>
+    .exp-donate-div {
+        pointer-events: none;
+        opacity: 80%;
+    }
+</style>
 </head>
 <body class="bg-light">
     
     <?php
 
-      require "./global_call.php";
-      require "./database.php";
+        require "./global_call.php";
+        require "./database.php";
 
-      $uid = $_SESSION['user_id'];
-      if($_SERVER['REQUEST_METHOD'] === "GET" && isset($code)){
-        $stmt = $mysqli->prepare("SELECT * FROM abuloy_users WHERE id = ?");
-        $stmt->bind_param('d', $uid);
-        $result = $stmt->execute();
-        $result = $stmt->get_result();
-        $user = $result->fetch_assoc();
-        // generate session again
-        // session_regenerate_id();
-        if(isset($user)){
-          include 'header-user.php';
+        $uid = $_SESSION['user_id'];
+        $today = date('Y-m-d');
+        if($_SERVER['REQUEST_METHOD'] === "GET" && isset($code)){
+            $stmt = $mysqli->prepare("SELECT * FROM abuloy_users WHERE id = ?");
+            $stmt->bind_param('d', $uid);
+            $result = $stmt->execute();
+            $result = $stmt->get_result();
+            $user = $result->fetch_assoc();
+            // generate session again
+            // session_regenerate_id();
+            if(isset($user)){
+            include './header-user.php';
+            }
+            else{
+                include './header.php';          
+            }
+
+            
         }
-        else{
-            include './header.php';          
-          }
-      }
-      
+        
+        
 
     ?>
 
-    <section class="mb-5">
-        <div class="container-fluid p-lg-5 p-md-5 pt-0 text-center">
+    <section class="my-5">
+        <div class="container-fluid p-lg-5 p-md-5 pt-5 text-center">
             <div class="row">
+            <?php 
+                $expqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE short_code = '$code'");
+                $exp = $expqry->fetch_assoc();
+                $expiry = $exp['expiration']; 
+                if($today > $expiry){ ?>
+            <div class="exp-notif container-fluid bg-purple text-white fw-400 pb-1" style="">
+                <span class="align-center pt-2 pb-1 ">
+                <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                    <small class="align-items-center"> We're Sorry! This Abuloy Fund has ended and can no longer accept donations</small>
+                    <a id="exp-notif-btn" class="ms-2" title="close"><i class="fa fa-window-close text-white" aria-hidden="true"></i></a>
+                </span>
+            </div>
+            <?php } ?>
                 <div class="align-center col-lg-12 pb-1">             
-                <div class="col-12 align-right pt-4 pb-2">
-                    <a href="/donees" type="button" class="btn btn-lavander px-3 py-2">
-                        <i class="fa fa-users pe-1 text-aquamarine"></i>  View Other Funds 
-                    </a>
-                </div>                
+                    <div class="col-12 align-right pt-4 pb-2">
+                        <a href="/donees" type="button" class="btn btn-lavander px-3 py-2">
+                            <i class="fa fa-users pe-1 text-aquamarine"></i>  View Other Funds 
+                        </a>
+                    </div>                
                 </div>
                 <hr class="text-purple">
             </div>
-            <div class="row " id="donate_user">
+            <div class="row" id="donate_user">
                 
                 <?php
+                $today = date('Y-m-d');
+                // AND expiration > '$today';
                 $acct_sql = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE short_code = ?");
                 $acct_sql->bind_param('s', $code);
                 $result_acct = $acct_sql->execute();
@@ -70,6 +95,7 @@ include './head_donate.php';
                     $goal_amount = $account['d_goal_amount'];
                     $link = $account['url_link'];
                     $code = $account['short_code'];
+                    $expiry = $account['expiration'];
 
                 ?>
                 <div class="col-lg-7 ps-lg-5 donate_user_search">
@@ -116,11 +142,13 @@ include './head_donate.php';
                             foreach($the_goal_amount as $k => $goal){
                                 $$k = $goal;
                             }
-                            $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
+                            $percent_max_100 = 100;
+                            $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;                            
                             ?> 
                             <div class="col-lg-12 align-center mx-auto mt-1 px-4 pb-5 mb-0">          
                                 <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                <?php if($raised_percent > $percent_max_100){ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $percent_max_100  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
                                         <?php
                                         if($raised_percent < 10){ ?>
                                             <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
@@ -137,13 +165,37 @@ include './head_donate.php';
                                         }
                                         ?>                                            
                                     </div>
+                                <?php }else{ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                        <?php
+                                        if($raised_percent < 10){ ?>
+                                            <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 15){ ?>
+                                            <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 21){ ?>
+                                            <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }else{ ?>
+                                        <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                        <?php
+                                        }
+                                        ?>                                            
+                                    </div>
+                                <?php } ?>
                                 </div>
                             </div> 
                         </p>  
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 mb-3 pe-lg-5">
+                <?php 
+                $expqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE short_code = '$code'");
+                $exp = $expqry->fetch_assoc();
+                $expiry = $exp['expiration']; 
+                if($today > $expiry){ ?>
+                <div class="col-lg-5 mb-3 pe-lg-5 exp-donate-div" title="We're Sorry! This Abuloy Fund has ended and you can no longer donate">
                     <div class="bg-white shadow align-m px-2">
                         <div class="bg-white p-3 pt-4">
                             <form action="" id="process_payment" method="POST">
@@ -160,7 +212,7 @@ include './head_donate.php';
                                 <label for="amount" id="donate_label" class="d-flex text-lavander fw-800 justify-content-center fs-larger">Enter Amount</label>
                                 <label for="amount" id="paynow_label" class="d-flex text-lavander fw-800 justify-content-center fs-larger hide">You will donate an Amount of</label>
                                 <div class="input-group mb-3 mt-3">
-                                    <span class="input-group-text fw-bold fs-larger px-auto px-4">₱</span>
+                                    <span class="input-group-text fw-bold fs-larger px-auto px-4"><i class="fa-sharp fa-solid fa-peso-sign"></i></span>
                                     <input type="number" name="amount" id="amount" class="form-control text-blackish amount-input fw-bold fs-larger py-0 px-auto text-center" aria-label="Amount (to the nearest peso)" style="height:60px;font-size:50px" required>
                                     <span class="input-group-text fw-bold fs-larger px-auto px-4">.00</span>
                                     <small for="amount" id="amountnote" class="text-black fs-small hide">Please enter any amount that is more than ₱0.00</small>
@@ -278,6 +330,143 @@ include './head_donate.php';
                         </div>
                     </div>
                 </div>
+                <?php }else{ ?>
+                <div class="col-lg-5 mb-3 pe-lg-5">
+                    <div class="bg-white shadow align-m px-2">
+                        <div class="bg-white p-3 pt-4">
+                            <form action="" id="process_payment" method="POST">
+                                <input type="hidden" name="aid" id="aid" value="<?= $aid ?>">
+                                <input type="hidden" name="short_code" id="short_code" value="<?= $code ?>">
+                                <input type="hidden" name="account_name" id="account_name" value="<?= $fname ?> <?= $mname[0] ?>. <?= $lname ?>">
+                                <input type="hidden" name="utype" id="utype" value="2">
+                                <input type="hidden" name="payment_status" id="payment_status" value="0">
+                                <input type="hidden" name="request_id" id="request_id" value="pending"> 
+                                <input type="hidden" name="description" id="description" value="Payment for services rendered"> 
+                                <input type="hidden" name="expiry" id="expiry" value="24"> 
+                                
+                                <!-- <input type="hidden" name="gcash_abuloy_fee" id="gcash_abuloy_fee" value="0"> -->
+                                <label for="amount" id="donate_label" class="d-flex text-lavander fw-800 justify-content-center fs-larger">Enter Amount</label>
+                                <label for="amount" id="paynow_label" class="d-flex text-lavander fw-800 justify-content-center fs-larger hide">You will donate an Amount of</label>
+                                <div class="input-group mb-3 mt-3">
+                                    <span class="input-group-text fw-bold fs-larger px-auto px-4"><i class="fa-sharp fa-solid fa-peso-sign"></i></span>
+                                    <input type="number" name="amount" id="amount" class="form-control text-blackish amount-input fw-bold fs-larger py-0 px-auto text-center" aria-label="Amount (to the nearest peso)" style="height:60px;font-size:50px" required>
+                                    <span class="input-group-text fw-bold fs-larger px-auto px-4">.00</span>
+                                    <small for="amount" id="amountnote" class="text-black fs-small hide">Please enter any amount that is more than ₱0.00</small>
+                                </div>
+                                <div class="form-check pb-2 pt-0" id="makeMeAnonymous">
+                                    <input type="checkbox" class="form-check-input" name="anonymous" id="anonymous">
+                                    <label class="form-check-label pt-1 ps-2 align-left" for="anonymous">Make my donation anonymous</label>
+                                </div>
+                                <div class="pb-1 hide" id="note">
+                                    <small>NOTE: </small><small>As you wish to be an anonymous donator your name and donation will not be listed in public view under Funders list.<br/><span class="text-lavander">For GCash payments options, a customer information is required.</span></small>
+                                </div>                                                        
+                                <div class="gcash-form pb-2 pt-0" id="gcashFormReq">
+                                    <input type="text" class="form-control text-blackish mb-3 text-center" name="customer_name" id="customer_name" placeholder="Add Your Name">
+                                    <input type="email" class="form-control text-blackish mb-3 text-center" name="customer_email" id="customer_email" placeholder="Email Address">
+                                    <input type="text" class="form-control text-blackish mb-3 text-center" name="customer_mobile" id="customer_mobile" placeholder="Mobile Number">
+                                </div>
+                                
+                                <textarea name="message" id="message" class="form-control text-blackish text-center" rows="3" placeholder="A short message" required></textarea>
+                                <div class="form-check pt-2 pb-0" id="terms">
+                                    <input type="checkbox" class="form-check-input" id="agreement" required>
+                                    <label class="form-check-label pt-1 ps-2 align-left" for="agreement">I agree to &nbsp;<a href="/terms-and-conditions" class="no-style">Terms & Conditions</a></label>
+                                </div>
+                                <div class="text-left" id="paynote">
+                                    <small>NOTE: </small><small>For a moment we only accept GCash payment.</small>
+                                </div>   
+                                <a id="acct_id_lnk" href="/donate/<?php echo $aid ?>" class="hide"></a>                        
+                                <button type="submit" id="donatebtn" class="btn btn-lavander fw-bold col-12 fs-larger text-uppercase p-2 mt-3 my-2 align-center" >
+                                    DONATE
+                                </button>
+                                <!-- <button type="submit" id="donated" class="btn btn-lavander col-12 fs-larger text-uppercase my-2 align-center" >
+                                    DONATED
+                                </button> -->                            
+                                <a id="paynow" class="btn btn-lavander fw-bold fs-larger text-uppercase px-2 my-1 py-1 align-center hide">
+                                    <img src="http://abuloy.ph/assets/img/gcash.png" height="40px"> Pay Now
+                                </a>
+
+                                
+                                <!-- <a href="https://www.paypal.com/donate/?hosted_button_id=RW46D3593NK74#" class="col-lg-4 col-md-6 col-sm-12 hide"><img src="https://craftindustryalliance.org/wp-content/uploads/2019/04/PayPal_logo_logotype_emblem.png" alt="" height="25px" class="text-center align-center mx-auto pe-2"></a> -->
+
+                                
+                                <div id="otherpayments" class="hide">
+                                <div class="text-lavander mt-5 mb-3 text-center">Other payment methods that will be available soon</div>
+                                <div class="col-12 d-flex">
+                                    <a class="col-lg-4 col-md-6 col-sm-12"><img src="https://www.ppro.com/wp-content/uploads/2021/06/pay-Maya-logo.png" alt="" height="25px" class="text-center align-center mx-auto pe-2"></a>
+                                    <a href="https://www.paypal.com/donate/?hosted_button_id=RW46D3593NK74" target="_blank" class="col-lg-4 col-md-6 col-sm-12"><img src="./assets/img/paypal.png" alt="" height="25px" class="text-center align-center mx-auto pe-2"></a>
+                                </div>
+                                </div>
+                                                    
+                                <!-- <button onclick="facebook_share()" class="btn btn-aquamarine btn-default text-lavander btn-social btn-facebook btn-sm disableIfNotLive col-12 mt-3" id="facebook" name="provider" value="Share On Facebook" title="Share On Facebook" style="margin-top:0px;">
+                                    <i class="fab fa-facebook" style="margin-top: 0px;font-size:19px"></i>
+                                    <span style="font-size:19px">SHARE</span>
+                                </button> -->
+
+                                <!-- Modal -->
+                                <div class="modal fade " id="gcashSaveConfirm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gcashSaveConfirmLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                        <div class="modal-header hide">
+                                            <h5 class="modal-title" id="gcashSaveConfirmLabel"></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to donate an amount of Php <?= $amount ?></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelDonate">No</button>
+                                            <button type="submit" class="btn btn-primary" id="yes_donate_btn" data-bs-dismiss="modal">Yes</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </form>
+                            <div class="text-lavander text-center text-uppercase mt-3 fw-bold">or share to</div>
+                            <hr class="m-0 p-0">
+                            <div id="sharenow" class="hstack my-3">                                
+                                <a title="Facebook" target="blank" href="https://www.facebook.com/dialog/share?app_id=959404248753205&display=popup&href=https://abuloy.ph/donate/<?php echo $code ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                    <i class="fab fa-facebook fa-2x "></i></i>                                 
+                                </a>
+                                <a title="Twitter" target="blank" href="https://www.twitter.com/intent/tweet?url=https://abuloy.ph/donate/<?php echo $code ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                <i class="fab fa-twitter fa-2x"></i></i>
+                                </a>
+                                <a title="WhatsApp" target="blank" href="whatsapp://send?text=https://abuloy.ph/donate/<?php echo $code ?>" class="col-3 text-uppercase fs-larger fw-bold">
+                                <i class="fab fa-whatsapp fa-2x"></i></i>
+                                </a>
+                                <?php 
+                                    $emailshareqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE short_code = '$code'");
+                                    if($emailshare = $emailshareqry->fetch_assoc()):
+                                        $bodymsg = "Hello, %0D%0A%0D%0APlease share this link below to help spread the news about the passing of ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] . 
+                                        "%0D%0A%0D%0A
+                                        " . $emailshare['url_link'] ."%0D%0A%0D%0AEvery donation counts and it will mean a lot to ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] ." family. As the fund to be reached here will help on the last expense for ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] . ". However, if you can't make a donation, sharing this fundraise for " . $emailshare['d_firstname'] . " " . $emailshare['d_lastname'] . " will help a lot too.%0D%0A%0D%0AThanks you for taking a time to view this fund."
+                                ?>
+                                <a title="e-Mail" target="blank" href="mailto:?subject=In loving memory of <?php echo $emailshare['d_firstname'] ?> <?php echo $emailshare['d_lastname'] ?>&amp;body=<?= htmlspecialchars($bodymsg) ?>" class="col-3 text-uppercase fs-larger fw-bold me-auto">
+                                <i class="fa fa-envelope fa-2x"></i></i>
+                                </a>
+                                <?php endif; ?>
+                                
+                            </div>
+                            <div class="col-12 copy-btn-container">
+                                <div class="input-group mb-3">
+                                    <?php 
+                                        $linkqry = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE short_code = ?");
+                                        $linkqry->bind_param('s', $code);
+                                        $result_linkqry = $linkqry->execute();
+                                        $result_linkqry = $linkqry->get_result();
+                                        if($link_url = $result_linkqry->fetch_assoc()){
+                                    ?>
+                                    <input type="text" name="url_link" class="form-control copy-link-input" id="copy-link-input" value="<?= $link_url['url_link']; ?>" placeholder="Copy URL Link To Share" aria-label="Copy URL Link To Share" aria-describedby="copy-link-button">
+                                    <button class="btn btn-lavander copy-link-button" type="button" id="copy-link-button">COPY</button>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
                 <div class="col-lg-7 mb-3 ps-lg-5">
                     <div class="accordion-item bg-white shadow-sm">
                         <div class="bg-aquamarine" id="headingOne" style="border-radius:0">
@@ -362,6 +551,12 @@ include './head_donate.php';
     <?php include './plugins.php'; ?>
     <!-- Custom Script -->
     <script src="https://abuloy.ph/controllers/donate.js"></script>
-    
+    <script>
+        $('#exp-notif-btn').on('click', function(){
+            $('.exp-notif').remove();
+            var today = new Date();
+            // alert(today);
+        });
+    </script>
 </body>
 </html>

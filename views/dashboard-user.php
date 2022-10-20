@@ -77,6 +77,8 @@
             </div>
             <div class="row px-lg-5 " id="new_donees_user">
                 <?php
+                $today = date('Y-m-d');
+                // AND expiration > '$today';
                 $sql = "SELECT * FROM abuloy_accounts WHERE account_status = 1 ORDER BY id DESC";
                 $result = $mysqli->query($sql);
                 while($account = $result->fetch_assoc()){
@@ -92,6 +94,7 @@
                     $goal_amount = $account['d_goal_amount'];
                     $link = $account['url_link'];
                     $code = $account['short_code'];
+                    $expiry = $account['expiration'];
                 ?>
                 <div class="col-lg-4 col-md-6 col-sm-12 px-md-2 donee">
                 <div class="bg-white border shadow-sm mt-3" onclick="location.href='/donate/<?= $code ?>'">
@@ -103,7 +106,7 @@
                                 <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain">
                             <?php } ?>
                         </a>
-                        <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
+                        <legend class="text-blackish text-center pb-0 mb-0" x="42%" y="90%"><?= ucfirst($fname) ?> <?= ucfirst($lname) ?></legend>
                         <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
                         <div class="card-body py-0 px-3">
                             <div class="my-2" style="height:59px">
@@ -138,11 +141,13 @@
                                 foreach($the_goal_amount as $k => $goal){
                                     $$k = $goal;
                                 }
+                                $percent_max_100 = 100;
                                 $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
                                 ?> 
                                 <div class="col-lg-12 align-center mx-auto mt-1">          
                                     <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                    <?php if($raised_percent > $percent_max_100){ ?>    
+                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $percent_max_100 ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
                                             <?php
                                             if($raised_percent < 10){ ?>
                                                 <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
@@ -159,6 +164,25 @@
                                             }
                                             ?>                                            
                                         </div>
+                                        <?php }else{ ?>
+                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                            <?php
+                                            if($raised_percent < 10){ ?>
+                                                <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }elseif($raised_percent <= 15){ ?>
+                                                <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }elseif($raised_percent <= 21){ ?>
+                                                <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }else{ ?>
+                                            <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                            <?php
+                                            }
+                                            ?>                                            
+                                        </div>
+                                    <?php } ?>
                                     </div>
                                 </div> 
                             </p>  
@@ -181,6 +205,8 @@
             </div>
             <div class="row px-lg-5 hide" id="old_donees_user">
                 <?php
+                $today = date('Y-m-d');
+                // AND expiration > '$today';
                 $sql = "SELECT * FROM abuloy_accounts WHERE account_status = 1 ORDER BY id ASC";
                 $result = $mysqli->query($sql);
                 while($account = $result->fetch_assoc()){
@@ -196,6 +222,7 @@
                     $goal_amount = $account['d_goal_amount'];
                     $link = $account['url_link'];
                     $code = $account['short_code'];
+                    $expiry = $account['expiration'];
                 ?>
                 <div class="col-lg-4 col-md-6 col-sm-12 px-md-2 donee">
                 <div class="bg-white border shadow-sm mt-3" onclick="location.href='/donate/<?= $aid ?>'">
@@ -207,7 +234,7 @@
                                 <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain">
                             <?php } ?>
                         </a>
-                        <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
+                        <legend class="text-blackish text-center pb-0 mb-0" x="42%" y="90%"><?= ucfirst($fname) ?> <?= ucfirst($lname) ?></legend>
                         <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
                         <div class="card-body py-0 px-3">
                             <div class="my-2" style="height:59px">
@@ -242,11 +269,13 @@
                                 foreach($the_goal_amount as $k => $goal){
                                     $$k = $goal;
                                 }
+                                $percent_max_100 = 100;
                                 $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
                                 ?> 
                                 <div class="col-lg-12 align-center mx-auto mt-1">          
                                     <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                    <?php if($raised_percent > $percent_max_100){ ?>    
+                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $percent_max_100 ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
                                             <?php
                                             if($raised_percent < 10){ ?>
                                                 <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
@@ -263,6 +292,25 @@
                                             }
                                             ?>                                            
                                         </div>
+                                        <?php }else{ ?>
+                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                            <?php
+                                            if($raised_percent < 10){ ?>
+                                                <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }elseif($raised_percent <= 15){ ?>
+                                                <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }elseif($raised_percent <= 21){ ?>
+                                                <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }else{ ?>
+                                            <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                            <?php
+                                            }
+                                            ?>                                            
+                                        </div>
+                                    <?php } ?>
                                     </div>
                                 </div> 
                             </p>  
@@ -285,6 +333,8 @@
             </div>        
             <div class="row px-lg-5 hide" id="filter_donees_user">
                 <?php
+                $today = date('Y-m-d');
+                // AND expiration > '$today';
                 $sql = "SELECT * FROM abuloy_accounts WHERE d_firstname LIKE '{$input}%'";
                 $result = $mysqli->query($sql);
                 while($account = $result->fetch_assoc()){
@@ -300,6 +350,7 @@
                     $goal_amount = $account['d_goal_amount'];
                     $link = $account['url_link'];
                     $code = $account['short_code'];
+                    $expiry = $account['expiration'];
                 ?>
                 <div class="col-lg-4 col-md-6 col-sm-12 px-md-2">
                 <div class="bg-white border shadow-sm mt-3" onclick="location.href='/donate/<?= $aid ?>'">
@@ -311,7 +362,7 @@
                                 <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain">
                             <?php } ?>
                         </a>
-                        <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
+                        <legend class="text-blackish text-center pb-0 mb-0" x="42%" y="90%"><?= ucfirst($fname) ?> <?= ucfirst($lname) ?></legend>
                         <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
                         <div class="card-body py-0 px-3">
                             <div class="my-2" style="height:59px">
@@ -346,11 +397,13 @@
                                 foreach($the_goal_amount as $k => $goal){
                                     $$k = $goal;
                                 }
+                                $percent_max_100 = 100;
                                 $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
                                 ?> 
                                 <div class="col-lg-12 align-center mx-auto mt-1">          
                                     <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                    <?php if($raised_percent > $percent_max_100){ ?>    
+                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $percent_max_100 ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
                                             <?php
                                             if($raised_percent < 10){ ?>
                                                 <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
@@ -367,6 +420,25 @@
                                             }
                                             ?>                                            
                                         </div>
+                                        <?php }else{ ?>
+                                        <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                            <?php
+                                            if($raised_percent < 10){ ?>
+                                                <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }elseif($raised_percent <= 15){ ?>
+                                                <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }elseif($raised_percent <= 21){ ?>
+                                                <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                            <?php 
+                                            }else{ ?>
+                                            <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                            <?php
+                                            }
+                                            ?>                                            
+                                        </div>
+                                    <?php } ?>
                                     </div>
                                 </div> 
                             </p>  

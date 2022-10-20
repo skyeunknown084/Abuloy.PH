@@ -1,51 +1,6 @@
 <?php
-
 session_start();
 error_reporting(0);
-
-// if(isset($usertype) == 1){
-//     $sql = "SELECT * FROM abuloy_users WHERE id = $userid";
-
-//     $result = $mysqli->query($sql);
-
-//     $user = $result->fetch_assoc();
-//         $log_status = $user['log_status'];
-//     if($log_status == 1){
-//         echo 'success login';
-//         echo $user['firstname'];
-//         echo $user['user_type'];
-//     }else{
-//         echo 'failed login';
-//     }
-// }else{
-
-//     $
-
-//     // header('Location: /login');
-//     // session_unset();
-//     // session_destroy();
-// }
-// if(isset($_SESSION['user_id'])) {
-    
-//     $sql = "SELECT * FROM abuloy_users
-//             WHERE id = " . $_SESSION['user_id'] ." AND email_status = 1";
-
-//     $result = $mysqli->query($sql);
-
-//     $user = $result->fetch_assoc();
-
-    
-
-// }
-// else{
-    
-    // if($user == ''){
-    //     header("Location: /login");
-    // }else{
-    //     header("Location: /");
-    // }
-    
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,31 +8,8 @@ error_reporting(0);
 include 'head.php';
 ?>
 <!-- register css -->
-<!-- <link rel="stylesheet" href="./assets/dist/css/pages/register.css"> -->
-<style>
-    /* .typewriter h2{
-        display:flex;
-        justify-content: start;
-        align-items: start;
-        overflow: hidden;
-        border-right: .15em solid #94F7CF;
-        white-space: no-wrap;
-        margin: 0 auto;
-        letter-spacing: .15em;
-        animation: 
-            typing 3.5s steps(8, end),
-            blink-caret .5s step-end infinite;
-        height: 80px;
-        max-height: 80px;
-    }
-    @keyframes typing {
-    from { width: 0 }
-    to { width: 50% }
-    }
-    @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #94F7CF }
-    } */
+<!-- <link rel="stylesheet" href="./assets/dist/css/pages/dashboard.css"> -->
+<style>    
 </style>
 </head>
 <body class="bg-light">
@@ -117,27 +49,6 @@ include 'head.php';
             include 'header.php';
             include 'views/dashboard.php';
         }
-        // if(){
-            
-        //     else{
-        //         include 'header.php';
-        //         include 'views/dashboard.php';
-        //     }
-        // }
-        // else{
-        //     include 'header.php';
-        //     include 'views/dashboard.php';
-        // }
-        ?>
-        
-        <!-- Anonymous -->
-        
-
-        <?php
-        // }
-        
-
-
     ?>
     
     <!-- start Footer Area -->
