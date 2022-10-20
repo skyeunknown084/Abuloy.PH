@@ -1,7 +1,7 @@
 <?php 
 // session_start();
 error_reporting(0);
-include_once './config/db_connect.php';
+include_once './database.php';
 
 $short_url;
 $sql = $conn->query("SELECT * FROM accounts WHERE short_url = '$short_url'");
@@ -43,17 +43,17 @@ if($row=$sql->fetch_assoc()){
 <!-- Fonts Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="https://abuloy.ph/assets/bootstrap/dist/css/bootstrap.css">
 <!-- Custom css -->
-<link rel="stylesheet" href="./assets/dist/css/main.css">
-<link rel="stylesheet" href="./assets/dist/css/style.css">
+<link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/main.css">
+<link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/style.css">
 <!-- Media-Device Sizes css -->
-<link rel="stylesheet" href="./assets/dist/css/sizes.css">
+<link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/sizes.css">
 <!-- Scrollbar css -->
-<link rel="stylesheet" href="./assets/dist/css/scrollbar.css">
+<link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/scrollbar.css">
 <!-- Plugins -->
-<link rel="stylesheet" href="./assets/plugins/toastr/toastr.css">
+<link rel="stylesheet" href="https://abuloy.ph/assets/plugins/toastr/toastr.css">
 <!-- JQuery -->
-<script src="./assets/plugins/jquery/jquery.min.js"></script>
+<script src="https://abuloy.ph/assets/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="./assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="https://abuloy.ph/assets/plugins/jquery-ui/jquery-ui.min.js"></script>

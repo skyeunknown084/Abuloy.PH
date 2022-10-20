@@ -1,8 +1,13 @@
-.donate-photo{
-    width:70%;
-    height: 580px;
-    object-fit: scale-down;
+img#cimg{
+    height: 25vh;
+    width: 25vh;
+    object-fit: fill;
+    /* background: url('assets/img/no-logo.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* border-radius: 100% 100%; */
 }
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media screen and (max-width: 767px) {

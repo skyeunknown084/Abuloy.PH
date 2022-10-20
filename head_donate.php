@@ -1,6 +1,6 @@
 <?php 
-session_start();
-error_reporting(0); 
+// session_start();
+// error_reporting(0); 
 ?>
 <head>
     <meta charset="UTF-8">
@@ -9,23 +9,26 @@ error_reporting(0);
     
     <?php 
         // session_start();
-        include_once './config/db_connect.php';
+        include_once './global_call.php';
+        include_once './database.php';
 
-        $id;
-        $metaqry = $conn->query("SELECT * FROM accounts WHERE id = $id");
-        if($row=$metaqry->fetch_assoc()){
-            $acct_id = $row['id'];
+        $metaqry = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE short_code = ?");
+        $metaqry->bind_param('s', $code);
+        $result_metaqry = $metaqry->execute();
+        $result_metaqry = $metaqry->get_result();
+        if($row=$result_metaqry->fetch_assoc()){
             $fname = $row['d_firstname'];
             $lname = $row['d_lastname'];
             $description = $row['d_summary'];
             $image = $row['avatar'];
             ?>
-            <title>In Loving Memory of <?php echo $fname ?> <?php echo $lname ?></title>
-            <meta property="og:url"          content="https://abuloy.ph/donate?id=<?php echo $acct_id ?>" />
+            <title>In Loving Memory of <?= $fname ?> <?= $lname ?></title>
+            <meta name="twitter:card" content="summary" />
+            <meta property="og:url"          content="https://abuloy.ph/donate/<?= $code ?>" />
             <meta property="og:type"         content="article" />
-            <meta property="og:title"        content="In Loving Memory of <?php echo $fname ?> <?php echo $lname ?>" />
-            <meta property="og:description"  content="<?php echo $description ?>" />
-            <meta property="og:image" content="https://abuloy.ph/assets/uploads/<?php echo $image ?>" />
+            <meta property="og:title"        content="In Loving Memory of <?= $fname ?> <?= $lname ?>" />
+            <meta property="og:description"  content="<?= htmlspecialchars($description) ?>" />
+            <meta property="og:image" content="https://abuloy.ph/assets/uploads/<?= $image ?>" />
         <?php
         }    
     ?>
@@ -37,17 +40,17 @@ error_reporting(0);
     <!-- Fonts Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://abuloy.ph/assets/bootstrap/dist/css/bootstrap.css">
     <!-- Custom css -->
-    <link rel="stylesheet" href="./assets/dist/css/main.css">
-    <link rel="stylesheet" href="./assets/dist/css/style.css">
+    <link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/main.css">
+    <link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/style.css">
     <!-- Media-Device Sizes css -->
-    <link rel="stylesheet" href="./assets/dist/css/sizes.css">
+    <link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/sizes.css">
     <!-- Scrollbar css -->
-    <link rel="stylesheet" href="./assets/dist/css/scrollbar.css">
+    <link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/scrollbar.css">
     <!-- Plugins -->
-    <link rel="stylesheet" href="./assets/plugins/toastr/toastr.css">
+    <link rel="stylesheet" href="https://abuloy.ph/assets/plugins/toastr/toastr.css">
     <!-- JQuery -->
-    <script src="./assets/plugins/jquery/jquery.min.js"></script>
+    <script src="https://abuloy.ph/assets/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src="./assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="https://abuloy.ph/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
