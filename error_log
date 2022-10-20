@@ -1,0 +1,1514 @@
+[24-Jul-2022 01:27:13 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home2/francisreyes/public_html/config/db_connect.php on line 5
+[24-Jul-2022 01:27:13 America/Chicago] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home2/francisreyes/public_html/index.php on line 10
+[24-Jul-2022 01:27:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on bool in /home2/francisreyes/public_html/index.php:10
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(39): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#2 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/index.php on line 10
+[24-Jul-2022 01:28:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[24-Jul-2022 01:28:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 01:28:30 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:30:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:30:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:35:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:35:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/head_donate.php on line 7
+[24-Jul-2022 01:35:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:35:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/head_donate.php on line 7
+[24-Jul-2022 01:37:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:37:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:39:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:46:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:47:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:47:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(22): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[24-Jul-2022 01:47:08 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:47:08 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(22): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[24-Jul-2022 01:48:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 01:48:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:48:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:49:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:51:08 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 01:52:12 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 02:54:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 02:55:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 02:55:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 02:56:40 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 02:58:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 02:58:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:08:28 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:13:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:25:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:25:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:25:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:29:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:30:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:30:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:39:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:39:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:30 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:33 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:44 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:45 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:46 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:54 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 03:41:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 04:16:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 04:19:20 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 04:51:28 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 04:51:35 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 04:51:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 04:51:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 06:27:44 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:42:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:42:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:43:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:43:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:35 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:45 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:47 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:49 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:55 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:54:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 07:55:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 08:37:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[24-Jul-2022 08:37:30 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[24-Jul-2022 08:37:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[24-Jul-2022 08:37:40 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[24-Jul-2022 08:37:40 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[24-Jul-2022 08:37:45 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 08:37:47 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 08:37:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[24-Jul-2022 08:37:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[24-Jul-2022 08:37:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[24-Jul-2022 08:37:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[24-Jul-2022 08:37:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[24-Jul-2022 08:37:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[24-Jul-2022 08:37:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[24-Jul-2022 19:55:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 19:56:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 22:42:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 22:44:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 22:44:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[24-Jul-2022 22:51:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:51:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:51:54 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:51:55 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:51:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:51:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:51:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:51:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:02 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:08 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:52:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:53:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:53:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:53:18 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:53:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 22:54:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 23:05:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[24-Jul-2022 23:51:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 23:51:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(22): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[24-Jul-2022 23:51:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 23:51:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 23:51:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 23:51:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(22): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[24-Jul-2022 23:54:26 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[24-Jul-2022 23:54:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(22): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[24-Jul-2022 23:54:46 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:04:31 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:04:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(22): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[25-Jul-2022 00:04:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:20:17 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:20:18 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:24:49 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:31:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[25-Jul-2022 00:31:55 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[25-Jul-2022 00:32:02 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:33:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:33:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:33:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:34:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:34:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:34:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 00:35:17 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:01:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:01:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:05:28 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:05:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:05:49 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:11:02 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[25-Jul-2022 01:11:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:11:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:28 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:34 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:35 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:40 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:29:45 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[25-Jul-2022 01:30:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[25-Jul-2022 01:30:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[25-Jul-2022 01:30:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[25-Jul-2022 03:34:22 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:34:33 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:34:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:34:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:35:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:36:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:36:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:36:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login.php on line 4
+[25-Jul-2022 03:38:37 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/funds.php:44
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/funds', 'views/funds.php')
+#2 /home2/francisreyes/public_html/routes.php(33): get('/funds', 'views/funds.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/funds.php on line 44
+[25-Jul-2022 15:18:43 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/funds.php:44
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/funds', 'views/funds.php')
+#2 /home2/francisreyes/public_html/routes.php(33): get('/funds', 'views/funds.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/funds.php on line 44
+[25-Jul-2022 15:18:51 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/funds.php:44
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/funds', 'views/funds.php')
+#2 /home2/francisreyes/public_html/routes.php(33): get('/funds', 'views/funds.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/funds.php on line 44
+[25-Jul-2022 15:19:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/funds.php on line 4
+[25-Jul-2022 15:20:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/about-us.php on line 4
+[26-Jul-2022 04:49:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 04:49:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 04:51:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 04:51:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 04:52:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:16:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:18:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:33 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:44 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:46 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:49 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:54 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:34:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:35:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:35:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:35:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:17 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:33 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:40 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:42 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:45 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:46 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:36:49 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:08 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:18 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:37:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:38:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 05:38:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[26-Jul-2022 08:41:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[26-Jul-2022 08:41:02 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[26-Jul-2022 08:41:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[26-Jul-2022 08:41:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[26-Jul-2022 08:41:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/how-it-works.php on line 4
+[26-Jul-2022 08:41:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[27-Jul-2022 05:30:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[27-Jul-2022 05:31:05 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[27-Jul-2022 08:33:52 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/donees.php:491
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/donees', 'views/donees.ph...')
+#2 /home2/francisreyes/public_html/routes.php(27): get('/donees', 'views/donees.ph...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/donees.php on line 491
+[27-Jul-2022 08:33:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[27-Jul-2022 08:34:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 4
+[27-Jul-2022 08:34:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[27-Jul-2022 19:45:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[27-Jul-2022 19:45:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[27-Jul-2022 19:45:57 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/donees.php:491
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/donees', 'views/donees.ph...')
+#2 /home2/francisreyes/public_html/routes.php(27): get('/donees', 'views/donees.ph...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/donees.php on line 491
+[28-Jul-2022 03:17:49 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 03:17:49 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 03:18:26 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 03:18:26 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 07:26:23 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 07:26:23 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 07:26:23 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 07:26:23 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 07:26:54 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 07:26:54 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 08:01:31 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 08:01:31 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 08:33:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[28-Jul-2022 08:33:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/how-it-works.php on line 4
+[28-Jul-2022 08:33:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[28-Jul-2022 08:33:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/profile_list.php:289
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/profile-list', 'views/profile_l...')
+#2 /home2/francisreyes/public_html/routes.php(36): get('/profile-list', 'views/profile_l...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/profile_list.php on line 289
+[28-Jul-2022 08:33:24 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/account-settings.php:28
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/account-settin...', 'views/account-s...')
+#2 /home2/francisreyes/public_html/routes.php(45): get('/account-settin...', 'views/account-s...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/account-settings.php on line 28
+[28-Jul-2022 19:56:00 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:00 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:00 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:00 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:01 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:01 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:01 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:01 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 288
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 304
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 288
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 304
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:14 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:15 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 288
+[28-Jul-2022 19:56:15 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 304
+[28-Jul-2022 19:56:15 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:56:15 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:58:34 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 288
+[28-Jul-2022 19:58:34 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 304
+[28-Jul-2022 19:58:34 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 19:58:34 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 20:01:00 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 288
+[28-Jul-2022 20:01:00 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 304
+[28-Jul-2022 20:01:00 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 20:01:00 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 20:08:17 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 288
+[28-Jul-2022 20:08:17 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/donate.php on line 304
+[28-Jul-2022 20:08:17 America/Chicago] PHP Warning:  include_once(./plugins.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/donate.php on line 513
+[28-Jul-2022 20:08:17 America/Chicago] PHP Warning:  include_once(): Failed opening './plugins.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/donate.php on line 513
+[29-Jul-2022 08:32:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[29-Jul-2022 08:32:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/donees.php:491
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/donees', 'views/donees.ph...')
+#2 /home2/francisreyes/public_html/routes.php(27): get('/donees', 'views/donees.ph...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/donees.php on line 491
+[29-Jul-2022 08:32:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[29-Jul-2022 08:32:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[30-Jul-2022 01:59:27 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[30-Jul-2022 01:59:27 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:27 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:27 America/Chicago] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:30 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[30-Jul-2022 01:59:30 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:30 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:30 America/Chicago] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/index.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 01:59:32 America/Chicago] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:01:45 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:01:45 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:01:45 America/Chicago] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:05:08 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:05:08 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:05:08 America/Chicago] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:05:53 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:05:53 America/Chicago] PHP Warning:  require(vendor/autoload.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:05:53 America/Chicago] PHP Fatal error:  require(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/global_call.php on line 4
+[30-Jul-2022 02:10:20 America/Chicago] PHP Warning:  require(/home2/francisreyes/public_html/vendor/composer/../symfony/polyfill-ctype/bootstrap.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/vendor/composer/autoload_real.php on line 71
+[30-Jul-2022 02:10:20 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home2/francisreyes/public_html/vendor/composer/../symfony/polyfill-ctype/bootstrap.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/vendor/composer/autoload_real.php on line 71
+[30-Jul-2022 02:12:16 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home2/francisreyes/public_html/config/db_connect.php on line 11
+[30-Jul-2022 02:12:26 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[30-Jul-2022 02:12:26 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home2/francisreyes/public_html/config/db_connect.php on line 11
+[30-Jul-2022 02:15:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[30-Jul-2022 02:16:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[30-Jul-2022 03:49:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/success.php on line 83
+[30-Jul-2022 03:51:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/success.php on line 83
+[30-Jul-2022 08:35:08 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[30-Jul-2022 08:35:08 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[30-Jul-2022 08:35:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[30-Jul-2022 08:35:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[30-Jul-2022 08:35:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[30-Jul-2022 08:35:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[31-Jul-2022 04:48:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[31-Jul-2022 04:48:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[31-Jul-2022 04:49:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[31-Jul-2022 05:04:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[31-Jul-2022 05:07:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[31-Jul-2022 05:10:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[31-Jul-2022 07:02:44 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donate.php on line 4
+[31-Jul-2022 08:34:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[31-Jul-2022 08:34:54 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[31-Jul-2022 08:34:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[31-Jul-2022 08:35:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[31-Jul-2022 10:15:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[31-Jul-2022 10:21:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[31-Jul-2022 10:51:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/donees.php on line 4
+[31-Jul-2022 11:07:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 11:11:03 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[31-Jul-2022 15:55:16 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[31-Jul-2022 22:07:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 22:11:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 22:11:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 22:11:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 22:11:12 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 22:11:14 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 22:11:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[31-Jul-2022 22:11:18 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[01-Aug-2022 08:31:25 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[01-Aug-2022 08:31:25 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[01-Aug-2022 08:31:26 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[01-Aug-2022 08:31:30 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(7): include()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[01-Aug-2022 08:31:31 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[01-Aug-2022 09:14:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[02-Aug-2022 08:37:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[03-Aug-2022 07:10:55 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/views/profile.php:8
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/profile', 'views/profile.p...')
+#2 /home2/francisreyes/public_html/routes.php(34): get('/profile', 'views/profile.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/profile.php on line 8
+[03-Aug-2022 07:11:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[03-Aug-2022 08:35:03 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[03-Aug-2022 08:35:03 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[03-Aug-2022 08:35:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[03-Aug-2022 08:35:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[03-Aug-2022 08:42:38 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/success.php on line 13
+[03-Aug-2022 08:42:38 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/success.php on line 13
+[03-Aug-2022 08:42:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on string in /home2/francisreyes/public_html/views/success.php:31
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 31
+[03-Aug-2022 08:44:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on string in /home2/francisreyes/public_html/views/success.php:31
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 31
+[03-Aug-2022 08:46:51 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:31
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 31
+[03-Aug-2022 08:47:52 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:31
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 31
+[03-Aug-2022 08:50:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:31
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 31
+[03-Aug-2022 08:50:50 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:34
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 34
+[03-Aug-2022 08:53:08 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:34
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 34
+[03-Aug-2022 08:54:13 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:32
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 32
+[03-Aug-2022 10:12:32 America/Chicago] PHP Warning:  strrev() expects exactly 1 parameter, 3 given in /home2/francisreyes/public_html/views/success.php on line 32
+[03-Aug-2022 10:12:32 America/Chicago] PHP Warning:  substr() expects at least 2 parameters, 1 given in /home2/francisreyes/public_html/views/success.php on line 32
+[03-Aug-2022 10:12:39 America/Chicago] PHP Warning:  strrev() expects exactly 1 parameter, 3 given in /home2/francisreyes/public_html/views/success.php on line 32
+[03-Aug-2022 10:12:39 America/Chicago] PHP Warning:  substr() expects at least 2 parameters, 1 given in /home2/francisreyes/public_html/views/success.php on line 32
+[03-Aug-2022 10:13:52 America/Chicago] PHP Warning:  strtoupper() expects exactly 1 parameter, 3 given in /home2/francisreyes/public_html/views/success.php on line 32
+[03-Aug-2022 10:13:52 America/Chicago] PHP Warning:  substr() expects at least 2 parameters, 1 given in /home2/francisreyes/public_html/views/success.php on line 32
+[04-Aug-2022 05:23:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[04-Aug-2022 05:23:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[04-Aug-2022 05:23:39 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[04-Aug-2022 05:23:39 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[04-Aug-2022 05:23:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[04-Aug-2022 05:23:44 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[04-Aug-2022 05:23:47 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[04-Aug-2022 08:34:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[04-Aug-2022 08:34:22 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[04-Aug-2022 10:23:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[04-Aug-2022 10:23:46 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[04-Aug-2022 10:23:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[05-Aug-2022 14:59:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[05-Aug-2022 15:21:35 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[05-Aug-2022 15:21:37 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[05-Aug-2022 15:21:37 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[05-Aug-2022 15:21:40 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[06-Aug-2022 00:16:39 America/Chicago] PHP Parse error:  syntax error, unexpected '"https://api.twitter.com/2/twe' (T_CONSTANT_ENCAPSED_STRING) in /home2/francisreyes/public_html/twitterapi.php on line 3
+[06-Aug-2022 00:34:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[06-Aug-2022 01:15:46 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[06-Aug-2022 01:15:46 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[06-Aug-2022 01:50:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::fetch_assoc() in /home2/francisreyes/public_html/views/success.php:28
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(84): post('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 28
+[06-Aug-2022 01:50:40 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_stmt::fetch_assoc() in /home2/francisreyes/public_html/views/success.php:28
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(83): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 28
+[06-Aug-2022 02:03:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[06-Aug-2022 02:43:54 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[06-Aug-2022 02:43:54 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[06-Aug-2022 03:01:37 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[06-Aug-2022 09:58:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[07-Aug-2022 06:40:53 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[07-Aug-2022 06:40:53 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[07-Aug-2022 06:40:59 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[07-Aug-2022 06:41:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[07-Aug-2022 06:41:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[07-Aug-2022 06:41:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[07-Aug-2022 08:42:40 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[07-Aug-2022 08:42:40 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[07-Aug-2022 08:42:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[07-Aug-2022 08:42:46 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[07-Aug-2022 20:32:25 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[07-Aug-2022 20:32:25 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[07-Aug-2022 20:35:45 America/Chicago] PHP Warning:  include_once(./config/global_call.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/views/about-us.php on line 6
+[07-Aug-2022 20:35:45 America/Chicago] PHP Warning:  include_once(): Failed opening './config/global_call.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/views/about-us.php on line 6
+[08-Aug-2022 03:21:06 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/header.php on line 2
+[08-Aug-2022 03:21:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/header.php on line 2
+[08-Aug-2022 03:21:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/header.php on line 2
+[08-Aug-2022 08:39:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[08-Aug-2022 22:48:18 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[08-Aug-2022 22:48:25 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[09-Aug-2022 08:37:22 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[09-Aug-2022 08:37:24 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[09-Aug-2022 08:37:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[09-Aug-2022 21:25:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[09-Aug-2022 21:25:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[10-Aug-2022 00:19:17 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/contact.php on line 4
+[10-Aug-2022 08:37:49 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[10-Aug-2022 08:37:52 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[11-Aug-2022 01:27:05 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:16) in /home2/francisreyes/public_html/views/share.php on line 20
+[11-Aug-2022 01:28:20 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:16) in /home2/francisreyes/public_html/views/share.php on line 20
+[11-Aug-2022 01:31:08 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:16) in /home2/francisreyes/public_html/views/share.php on line 20
+[11-Aug-2022 01:32:14 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:16) in /home2/francisreyes/public_html/views/share.php on line 20
+[11-Aug-2022 01:43:37 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 01:44:01 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 01:47:42 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 16
+[11-Aug-2022 01:47:43 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 16
+[11-Aug-2022 01:49:02 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 16
+[11-Aug-2022 01:49:19 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 16
+[11-Aug-2022 01:51:33 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 01:52:43 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 01:52:51 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 01:53:33 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 01:57:10 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 01:57:46 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 16
+[11-Aug-2022 01:58:16 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 16
+[11-Aug-2022 01:58:38 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:6) in /home2/francisreyes/public_html/views/share.php on line 16
+[11-Aug-2022 01:59:46 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:7) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 02:00:39 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:7) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 02:01:05 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:7) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 02:01:28 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:7) in /home2/francisreyes/public_html/views/share.php on line 17
+[11-Aug-2022 02:01:41 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/views/share.php:8) in /home2/francisreyes/public_html/views/share.php on line 18
+[11-Aug-2022 02:34:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/head_redirect.php on line 2
+[11-Aug-2022 02:34:23 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[11-Aug-2022 02:35:27 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/head_redirect.php on line 2
+[11-Aug-2022 02:37:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/head_redirect.php on line 2
+[11-Aug-2022 02:37:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/head_redirect.php on line 2
+[11-Aug-2022 08:35:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[11-Aug-2022 08:35:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[11-Aug-2022 22:02:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[12-Aug-2022 01:26:02 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[12-Aug-2022 03:54:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[12-Aug-2022 03:55:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[12-Aug-2022 08:36:34 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[12-Aug-2022 08:36:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[13-Aug-2022 08:32:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[13-Aug-2022 08:32:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[14-Aug-2022 08:40:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[14-Aug-2022 08:40:43 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(29): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[14-Aug-2022 09:08:28 America/Chicago] PHP Warning:  include_once(/home2/francisreyes/public_html/views/testmail.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/router.php on line 60
+[14-Aug-2022 09:08:28 America/Chicago] PHP Warning:  include_once(): Failed opening '/home2/francisreyes/public_html/views/testmail.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/router.php on line 60
+[14-Aug-2022 12:54:58 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 12:54:59 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 12:55:00 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 12:55:01 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:36 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:36 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:37 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:53 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:53 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:55 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:55 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:58 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:18:58 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:32:30 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 20:38:18 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 22:30:02 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 22:44:00 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 22:58:56 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 22:59:33 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 23:00:31 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 23:00:34 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 23:00:35 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 23:07:18 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 23:14:37 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[14-Aug-2022 23:55:05 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[15-Aug-2022 00:44:28 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/global_call.php:5
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(5): include_once()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(12): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/global_call.php on line 5
+[15-Aug-2022 03:52:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[15-Aug-2022 04:54:46 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[15-Aug-2022 08:37:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[15-Aug-2022 08:37:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[16-Aug-2022 08:31:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[17-Aug-2022 03:20:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[17-Aug-2022 08:39:55 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[18-Aug-2022 08:38:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[18-Aug-2022 09:30:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[19-Aug-2022 08:37:51 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[19-Aug-2022 08:37:55 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[20-Aug-2022 08:39:54 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[20-Aug-2022 08:39:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[21-Aug-2022 01:15:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate/$id', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(32): get('/donate/$id', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[21-Aug-2022 01:16:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[21-Aug-2022 01:18:12 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[21-Aug-2022 01:23:20 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[21-Aug-2022 01:57:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[21-Aug-2022 08:36:28 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[21-Aug-2022 08:36:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[21-Aug-2022 23:07:02 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[21-Aug-2022 23:07:24 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[22-Aug-2022 08:35:30 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[23-Aug-2022 08:31:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[23-Aug-2022 08:32:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[23-Aug-2022 08:32:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[23-Aug-2022 08:32:10 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[23-Aug-2022 08:32:27 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[23-Aug-2022 08:32:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[24-Aug-2022 08:34:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[25-Aug-2022 08:31:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[25-Aug-2022 08:31:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[25-Aug-2022 08:31:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[26-Aug-2022 08:39:05 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[27-Aug-2022 08:36:49 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[28-Aug-2022 08:31:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[29-Aug-2022 00:23:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[29-Aug-2022 08:34:15 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[29-Aug-2022 08:34:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[30-Aug-2022 08:39:12 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[31-Aug-2022 08:41:26 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[01-Sep-2022 08:36:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[01-Sep-2022 15:14:20 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[02-Sep-2022 08:39:50 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[02-Sep-2022 08:39:57 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[03-Sep-2022 08:34:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[04-Sep-2022 06:51:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[04-Sep-2022 06:51:43 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[04-Sep-2022 06:51:45 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[04-Sep-2022 08:33:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[05-Sep-2022 08:31:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[05-Sep-2022 08:31:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[05-Sep-2022 10:03:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[06-Sep-2022 08:13:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[06-Sep-2022 08:45:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(32): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[07-Sep-2022 08:32:17 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[07-Sep-2022 08:32:19 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[08-Sep-2022 08:30:47 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[08-Sep-2022 08:30:52 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(32): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[09-Sep-2022 08:34:21 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[09-Sep-2022 08:34:27 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[09-Sep-2022 08:34:32 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[10-Sep-2022 08:33:42 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(32): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[11-Sep-2022 08:22:39 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[11-Sep-2022 08:22:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[11-Sep-2022 08:23:41 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[11-Sep-2022 08:34:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[11-Sep-2022 08:34:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[11-Sep-2022 22:07:26 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[11-Sep-2022 22:07:29 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[11-Sep-2022 22:07:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[12-Sep-2022 08:38:09 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[12-Sep-2022 11:44:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[12-Sep-2022 11:44:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/startnewfund.php on line 4
+[12-Sep-2022 11:44:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/head_donate.php:12
+Stack trace:
+#0 /home2/francisreyes/public_html/views/donate.php(6): include_once()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/donate', 'views/donate.ph...')
+#3 /home2/francisreyes/public_html/routes.php(32): get('/donate', 'views/donate.ph...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/head_donate.php on line 12
+[12-Sep-2022 20:34:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/terms-and-conditions.php on line 4
+[13-Sep-2022 01:25:45 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/register.php on line 4
+[13-Sep-2022 23:33:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/start-new-fund.php on line 15
+[13-Sep-2022 23:48:55 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/views/start-new-fund.php on line 14
+[14-Sep-2022 01:57:30 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:30
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(114): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 30
+[14-Sep-2022 01:58:47 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:30
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(114): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 30
+[14-Sep-2022 02:01:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:30
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(115): post('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 30
+[14-Sep-2022 02:01:35 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/success.php:30
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/success', 'views/success.p...')
+#2 /home2/francisreyes/public_html/routes.php(114): get('/success', 'views/success.p...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/views/success.php on line 30
+[14-Sep-2022 02:09:30 America/Chicago] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home2/francisreyes/public_html/views/success.php on line 29
+[14-Sep-2022 02:10:34 America/Chicago] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home2/francisreyes/public_html/views/success.php on line 29
+[14-Sep-2022 02:11:08 America/Chicago] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home2/francisreyes/public_html/views/success.php on line 29
+[14-Sep-2022 02:11:39 America/Chicago] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home2/francisreyes/public_html/views/success.php on line 29
+[14-Sep-2022 02:11:45 America/Chicago] PHP Warning:  mysqli_stmt::bind_param(): Number of variables doesn't match number of parameters in prepared statement in /home2/francisreyes/public_html/views/success.php on line 29
+[14-Sep-2022 02:15:46 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 14
+[14-Sep-2022 02:15:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 14
+[14-Sep-2022 02:15:52 America/Chicago] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /home2/francisreyes/public_html/forgot-password.php on line 35
+[14-Sep-2022 02:15:54 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 40
+[14-Sep-2022 02:19:04 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 14
+[14-Sep-2022 02:19:05 America/Chicago] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /home2/francisreyes/public_html/forgot-password.php on line 35
+[14-Sep-2022 02:19:07 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 40
+[14-Sep-2022 02:21:37 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 14
+[14-Sep-2022 02:21:37 America/Chicago] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /home2/francisreyes/public_html/forgot-password.php on line 35
+[14-Sep-2022 02:21:40 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 40
+[14-Sep-2022 02:21:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 11
+[14-Sep-2022 02:21:58 America/Chicago] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /home2/francisreyes/public_html/forgot-password.php on line 32
+[14-Sep-2022 02:21:58 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 37
+[14-Sep-2022 02:22:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 11
+[14-Sep-2022 02:22:16 America/Chicago] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /home2/francisreyes/public_html/forgot-password.php on line 32
+[14-Sep-2022 02:22:18 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 37
+[14-Sep-2022 02:22:30 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 13
+[14-Sep-2022 02:22:30 America/Chicago] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /home2/francisreyes/public_html/forgot-password.php on line 33
+[14-Sep-2022 02:22:31 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[14-Sep-2022 02:22:33 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/forgot-password.php on line 13
+[14-Sep-2022 02:22:33 America/Chicago] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - session is not active in /home2/francisreyes/public_html/forgot-password.php on line 33
+[14-Sep-2022 02:22:33 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[14-Sep-2022 02:23:18 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[14-Sep-2022 02:23:28 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[14-Sep-2022 02:32:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/hooks/request-password-success.php on line 8
+[14-Sep-2022 22:37:25 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/logout.php:16) in /home2/francisreyes/public_html/logout.php on line 25
+[14-Sep-2022 22:37:25 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/logout.php:16) in /home2/francisreyes/public_html/logout.php on line 54
+[14-Sep-2022 22:39:21 America/Chicago] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/francisreyes/public_html/logout.php on line 43
+[14-Sep-2022 22:39:21 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/logout.php:43) in /home2/francisreyes/public_html/logout.php on line 44
+[14-Sep-2022 22:39:21 America/Chicago] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/francisreyes/public_html/logout.php on line 48
+[14-Sep-2022 22:39:21 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/logout.php:43) in /home2/francisreyes/public_html/logout.php on line 49
+[15-Sep-2022 00:22:58 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[19-Sep-2022 20:55:52 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'francisr_rootph'@'localhost' (using password: YES) in /home2/francisreyes/public_html/database.php on line 12
+[25-Sep-2022 22:22:33 America/Chicago] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home2/francisreyes/public_html/logout.php on line 11
+[25-Sep-2022 22:22:33 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/logout.php:11) in /home2/francisreyes/public_html/logout.php on line 12
+[25-Sep-2022 23:56:15 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/router.php:63) in /home2/francisreyes/public_html/logout.php on line 35
+[26-Sep-2022 01:56:02 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/start-new-fund.php on line 32
+[26-Sep-2022 15:50:34 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function random_strings() in /home2/francisreyes/public_html/api.php:37
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->save_account()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(108): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 37
+[26-Sep-2022 15:54:07 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function random_strings() in /home2/francisreyes/public_html/api.php:37
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->save_account()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(108): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 37
+[26-Sep-2022 16:07:31 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function random_strings() in /home2/francisreyes/public_html/api.php:37
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->start_new_fund_user()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(108): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 37
+[26-Sep-2022 16:07:38 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function random_strings() in /home2/francisreyes/public_html/api.php:37
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->start_new_fund_user()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(108): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 37
+[26-Sep-2022 04:51:39 America/Chicago] PHP Warning:  require(/home2/francisreyes/public_htmldatabase.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/register.php on line 63
+[26-Sep-2022 04:51:39 America/Chicago] PHP Fatal error:  require(): Failed opening required '/home2/francisreyes/public_htmldatabase.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/register.php on line 63
+[26-Sep-2022 04:53:23 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 82
+[26-Sep-2022 04:53:23 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/router.php:63) in /home2/francisreyes/public_html/register.php on line 84
+[26-Sep-2022 08:42:44 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 14
+[26-Sep-2022 22:28:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/francisreyes/public_html/login-verification.php:25
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/login-verifica...', 'login-verificat...')
+#2 /home2/francisreyes/public_html/routes.php(27): get('/login-verifica...', 'login-verificat...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/login-verification.php on line 25
+[26-Sep-2022 23:07:29 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/francisreyes/public_html/login-verification.php:25
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/login-verifica...', 'login-verificat...')
+#2 /home2/francisreyes/public_html/routes.php(27): get('/login-verifica...', 'login-verificat...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/login-verification.php on line 25
+[26-Sep-2022 23:12:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home2/francisreyes/public_html/login-verification.php:24
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/login-verifica...', 'login-verificat...')
+#2 /home2/francisreyes/public_html/routes.php(27): get('/login-verifica...', 'login-verificat...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/login-verification.php on line 24
+[27-Sep-2022 01:03:00 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, array given in /home2/francisreyes/public_html/register.php on line 72
+[27-Sep-2022 01:03:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 89
+[27-Sep-2022 01:03:00 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:72) in /home2/francisreyes/public_html/register.php on line 91
+[27-Sep-2022 01:03:53 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, array given in /home2/francisreyes/public_html/register.php on line 72
+[27-Sep-2022 01:03:53 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 89
+[27-Sep-2022 01:03:53 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:72) in /home2/francisreyes/public_html/register.php on line 91
+[27-Sep-2022 01:03:56 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, array given in /home2/francisreyes/public_html/register.php on line 72
+[27-Sep-2022 01:03:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 89
+[27-Sep-2022 01:03:56 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:72) in /home2/francisreyes/public_html/register.php on line 91
+[27-Sep-2022 01:05:34 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, array given in /home2/francisreyes/public_html/register.php on line 74
+[27-Sep-2022 01:05:34 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:74) in /home2/francisreyes/public_html/register.php on line 92
+[27-Sep-2022 01:06:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 13
+[27-Sep-2022 01:15:48 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/start-new-fund.php on line 32
+[27-Sep-2022 01:20:23 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/start-new-fund.php on line 32
+[27-Sep-2022 01:21:16 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/start-new-fund.php on line 32
+[27-Sep-2022 01:21:24 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/start-new-fund.php on line 32
+[27-Sep-2022 01:21:46 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/start-new-fund.php on line 32
+[27-Sep-2022 01:23:47 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home2/francisreyes/public_html/register.php on line 74
+[27-Sep-2022 01:23:47 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:74) in /home2/francisreyes/public_html/register.php on line 92
+[27-Sep-2022 01:42:06 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/register.php:78
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 78
+[27-Sep-2022 01:55:50 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home2/francisreyes/public_html/register.php on line 79
+[27-Sep-2022 01:55:50 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:79) in /home2/francisreyes/public_html/register.php on line 99
+[27-Sep-2022 01:56:11 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home2/francisreyes/public_html/register.php on line 79
+[27-Sep-2022 01:56:11 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:79) in /home2/francisreyes/public_html/register.php on line 99
+[27-Sep-2022 01:57:19 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home2/francisreyes/public_html/register.php on line 79
+[27-Sep-2022 01:57:19 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register.php:79) in /home2/francisreyes/public_html/register.php on line 99
+[27-Sep-2022 02:11:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 13
+[27-Sep-2022 02:19:20 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 9
+[27-Sep-2022 02:58:52 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, array given in /home2/francisreyes/public_html/router.php on line 63
+[27-Sep-2022 03:52:39 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, array given in /home2/francisreyes/public_html/register.php on line 72
+[27-Sep-2022 03:54:38 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, array given in /home2/francisreyes/public_html/register.php on line 72
+[27-Sep-2022 04:10:48 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home2/francisreyes/public_html/register.php:115
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 115
+[27-Sep-2022 04:24:15 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home2/francisreyes/public_html/register.php:118
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 118
+[27-Sep-2022 04:35:58 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home2/francisreyes/public_html/register.php:118
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 118
+[27-Sep-2022 04:36:18 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home2/francisreyes/public_html/register.php:118
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 118
+[27-Sep-2022 05:15:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function sendEmail() in /home2/francisreyes/public_html/register.php:118
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 118
+[27-Sep-2022 05:17:29 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/francisreyes/public_html/register.php:78
+Stack trace:
+#0 /home2/francisreyes/public_html/register.php(170): sendEmail('urnmanilaph@gma...', 570289)
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#3 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 78
+[27-Sep-2022 05:32:10 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/francisreyes/public_html/register.php:82
+Stack trace:
+#0 /home2/francisreyes/public_html/register.php(174): sendEmail('urnmanilaph@gma...', 731322)
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/register', 'register.php')
+#3 /home2/francisreyes/public_html/routes.php(16): post('/register', 'register.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 82
+[27-Sep-2022 20:20:47 America/Chicago] PHP Warning:  include(start-new-fund-content-user.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/start-new-fund.php on line 35
+[27-Sep-2022 20:20:47 America/Chicago] PHP Warning:  include(start-new-fund-content-user.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/start-new-fund.php on line 35
+[27-Sep-2022 20:20:47 America/Chicago] PHP Warning:  include(): Failed opening 'start-new-fund-content-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/start-new-fund.php on line 35
+[27-Sep-2022 20:47:41 America/Chicago] PHP Warning:  include(start-new-fund-user.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/start-new-fund.php on line 36
+[27-Sep-2022 20:47:41 America/Chicago] PHP Warning:  include(start-new-fund-user.php): failed to open stream: No such file or directory in /home2/francisreyes/public_html/start-new-fund.php on line 36
+[27-Sep-2022 20:47:41 America/Chicago] PHP Warning:  include(): Failed opening 'start-new-fund-user.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home2/francisreyes/public_html/start-new-fund.php on line 36
+[27-Sep-2022 22:24:14 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[28-Sep-2022 12:47:29 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home2/francisreyes/public_html/api.php:119
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(23): Action->start_new_fund_user()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(109): post('/ajax', 'ajax.php')
+#4 {main}
+
+Next Error: Call to a member function close() on null in /home2/francisreyes/public_html/api.php:14
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(9): Action->__destruct()
+#1 /home2/francisreyes/public_html/routes.php(109): post('/ajax', 'ajax.php')
+#2 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 14
+[28-Sep-2022 01:54:46 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 4
+[28-Sep-2022 01:55:44 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 4
+[28-Sep-2022 01:56:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 4
+[28-Sep-2022 01:56:16 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 4
+[28-Sep-2022 01:57:36 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register.php on line 4
+[28-Sep-2022 15:10:18 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function send_email_otp_verification() in /home2/francisreyes/public_html/api.php:44
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->create_account()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(109): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 44
+[28-Sep-2022 15:24:06 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function send_email_otp_verification() in /home2/francisreyes/public_html/api.php:84
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->create_account()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(109): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 84
+[28-Sep-2022 16:12:36 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function send_email_otp_verification() in /home2/francisreyes/public_html/api.php:84
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->create_account()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(109): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 84
+[28-Sep-2022 16:38:15 Asia/Manila] PHP Fatal error:  Uncaught Error: Call to undefined function send_email_otp_verification() in /home2/francisreyes/public_html/api.php:84
+Stack trace:
+#0 /home2/francisreyes/public_html/ajax.php(11): Action->create_account()
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/ajax', 'ajax.php')
+#3 /home2/francisreyes/public_html/routes.php(109): post('/ajax', 'ajax.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/api.php on line 84
+[30-Sep-2022 01:24:52 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[30-Sep-2022 01:24:53 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 38
+[30-Sep-2022 03:49:54 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/register.php:3
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(15): get('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 3
+[30-Sep-2022 03:59:53 America/Chicago] PHP Fatal error:  Uncaught Error: Class 'Dotenv\Dotenv' not found in /home2/francisreyes/public_html/register.php:3
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(6): route('/register', 'register.php')
+#2 /home2/francisreyes/public_html/routes.php(15): get('/register', 'register.php')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/register.php on line 3
+[30-Sep-2022 06:29:38 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[30-Sep-2022 06:30:56 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[30-Sep-2022 09:16:13 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[30-Sep-2022 09:17:52 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[30-Sep-2022 21:22:00 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[30-Sep-2022 21:24:02 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[30-Sep-2022 21:48:09 America/Chicago] PHP Warning:  session_id(): Cannot change session id when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[30-Sep-2022 22:36:55 America/Chicago] PHP Warning:  session_id(): Cannot change session id when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 6
+[01-Oct-2022 01:40:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 5
+[01-Oct-2022 02:27:06 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/francisreyes/public_html/views/donate.php on line 372
+[01-Oct-2022 03:23:58 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/login-verification.php on line 5
+[04-Oct-2022 00:08:11 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/reset-password.php on line 8
+[04-Oct-2022 01:36:01 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register-email-verification.php on line 22
+[04-Oct-2022 01:36:01 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register-email-verification.php:1) in /home2/francisreyes/public_html/register-email-verification.php on line 33
+[04-Oct-2022 01:36:22 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register-email-verification.php:1) in /home2/francisreyes/public_html/register-email-verification.php on line 33
+[04-Oct-2022 01:36:48 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register-email-verification.php on line 22
+[04-Oct-2022 01:36:48 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register-email-verification.php:1) in /home2/francisreyes/public_html/register-email-verification.php on line 33
+[04-Oct-2022 01:39:07 America/Chicago] PHP Warning:  session_start(): Cannot start session when headers already sent in /home2/francisreyes/public_html/register-email-verification.php on line 22
+[04-Oct-2022 01:39:07 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/register-email-verification.php:1) in /home2/francisreyes/public_html/register-email-verification.php on line 33
+[04-Oct-2022 02:04:15 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/start-new-fund.php on line 31
+[04-Oct-2022 03:35:24 America/Chicago] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function sendForgotEmail(), 1 passed in /home2/francisreyes/public_html/forgot-password.php on line 99 and exactly 2 expected in /home2/francisreyes/public_html/forgot-password.php:16
+Stack trace:
+#0 /home2/francisreyes/public_html/forgot-password.php(99): sendForgotEmail('jesseledm@gmail...')
+#1 /home2/francisreyes/public_html/router.php(60): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(9): route('/forgot-passwor...', 'forgot-password...')
+#3 /home2/francisreyes/public_html/routes.php(35): post('/forgot-passwor...', 'forgot-password...')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/forgot-password.php on line 16
+[04-Oct-2022 04:14:27 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 32
+[04-Oct-2022 04:17:08 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 28
+[04-Oct-2022 04:17:18 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 28
+[04-Oct-2022 04:21:00 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 27
+[04-Oct-2022 04:21:09 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 27
+[04-Oct-2022 04:23:48 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 29
+[08-Oct-2022 05:03:31 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 31
+[08-Oct-2022 05:35:00 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 31
+[08-Oct-2022 06:48:50 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function execute() on bool in /home2/francisreyes/public_html/forgot-password.php:29
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/forgot-passwor...', 'forgot-password...')
+#2 /home2/francisreyes/public_html/routes.php(35): post('/forgot-passwor...', 'forgot-password...')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/forgot-password.php on line 29
+[08-Oct-2022 07:07:04 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/forgot-password.php:1) in /home2/francisreyes/public_html/forgot-password.php on line 32
+[12-Oct-2022 02:37:29 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home2/francisreyes/public_html/start-new-fund.php on line 8
+[12-Oct-2022 02:40:56 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home2/francisreyes/public_html/start-new-fund.php on line 8
+[14-Oct-2022 00:29:22 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/francisreyes/public_html/start-new-fund.php on line 144
+[14-Oct-2022 22:24:45 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[14-Oct-2022 22:24:45 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[14-Oct-2022 22:26:50 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[14-Oct-2022 22:26:50 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[14-Oct-2022 22:28:52 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[14-Oct-2022 22:28:52 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:05:27 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:05:27 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:18:51 America/Chicago] PHP Warning:  htmlspecialchars() expects parameter 1 to be string, object given in /home2/francisreyes/public_html/router.php on line 63
+[15-Oct-2022 00:21:29 America/Chicago] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /home2/francisreyes/public_html/views/dashboard.php:135
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(93): include()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(9): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/views/dashboard.php on line 135
+[15-Oct-2022 00:33:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on bool in /home2/francisreyes/public_html/views/dashboard.php:53
+Stack trace:
+#0 /home2/francisreyes/public_html/index.php(93): include()
+#1 /home2/francisreyes/public_html/router.php(39): include_once('/home2/francisr...')
+#2 /home2/francisreyes/public_html/router.php(6): route('/', 'index.php')
+#3 /home2/francisreyes/public_html/routes.php(9): get('/', 'index.php')
+#4 {main}
+  thrown in /home2/francisreyes/public_html/views/dashboard.php on line 53
+[15-Oct-2022 00:56:16 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/francisreyes/public_html/views/dashboard.php on line 138
+[15-Oct-2022 01:16:50 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/francisreyes/public_html/views/dashboard.php on line 207
+[15-Oct-2022 01:59:20 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/francisreyes/public_html/views/dashboard.php on line 208
+[17-Oct-2022 01:09:07 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:27) in /home2/francisreyes/public_html/start-new-fund.php on line 135
+[17-Oct-2022 01:12:22 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:27) in /home2/francisreyes/public_html/start-new-fund.php on line 135
+[17-Oct-2022 01:12:41 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:27) in /home2/francisreyes/public_html/start-new-fund.php on line 135
+[17-Oct-2022 05:21:55 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:141) in /home2/francisreyes/public_html/start-new-fund.php on line 266
+[17-Oct-2022 20:05:10 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:141) in /home2/francisreyes/public_html/start-new-fund.php on line 266
+[17-Oct-2022 20:57:37 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:141) in /home2/francisreyes/public_html/start-new-fund.php on line 266
+[17-Oct-2022 21:14:04 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:141) in /home2/francisreyes/public_html/start-new-fund.php on line 266
+[17-Oct-2022 21:33:37 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/francisreyes/public_html/start-new-fund.php:151) in /home2/francisreyes/public_html/start-new-fund.php on line 267
+[18-Oct-2022 02:38:39 America/Chicago] PHP Warning:  move_uploaded_file(): The second argument to copy() function cannot be a directory in /home2/francisreyes/public_html/start-new-fund.php on line 97
+[18-Oct-2022 02:38:39 America/Chicago] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpiUKnB7' to 'assets/uploads/' in /home2/francisreyes/public_html/start-new-fund.php on line 97
+[18-Oct-2022 02:38:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home2/francisreyes/public_html/start-new-fund.php:102
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/start-new-fund', 'start-new-fund....')
+#2 /home2/francisreyes/public_html/routes.php(22): post('/start-new-fund', 'start-new-fund....')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/start-new-fund.php on line 102
+[18-Oct-2022 02:42:41 America/Chicago] PHP Warning:  move_uploaded_file(/assets/uploads/abuloy_img_20221018634e58f102f2c5.42944063.jpg): failed to open stream: No such file or directory in /home2/francisreyes/public_html/start-new-fund.php on line 97
+[18-Oct-2022 02:42:41 America/Chicago] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpIf53nE' to '/assets/uploads/abuloy_img_20221018634e58f102f2c5.42944063.jpg' in /home2/francisreyes/public_html/start-new-fund.php on line 97
+[18-Oct-2022 02:42:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home2/francisreyes/public_html/start-new-fund.php:102
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/start-new-fund', 'start-new-fund....')
+#2 /home2/francisreyes/public_html/routes.php(22): post('/start-new-fund', 'start-new-fund....')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/start-new-fund.php on line 102
+[18-Oct-2022 02:43:36 America/Chicago] PHP Warning:  move_uploaded_file(https://abuloy.ph/assets/uploads/abuloy_img_20221018634e5928e3bc62.87070074.jpg): failed to open stream: HTTP wrapper does not support writeable connections in /home2/francisreyes/public_html/start-new-fund.php on line 97
+[18-Oct-2022 02:43:36 America/Chicago] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpW3UHIO' to 'https://abuloy.ph/assets/uploads/abuloy_img_20221018634e5928e3bc62.87070074.jpg' in /home2/francisreyes/public_html/start-new-fund.php on line 97
+[18-Oct-2022 02:43:36 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home2/francisreyes/public_html/start-new-fund.php:102
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/start-new-fund', 'start-new-fund....')
+#2 /home2/francisreyes/public_html/routes.php(22): post('/start-new-fund', 'start-new-fund....')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/start-new-fund.php on line 102
+[18-Oct-2022 02:46:12 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home2/francisreyes/public_html/start-new-fund.php:102
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/start-new-fund', 'start-new-fund....')
+#2 /home2/francisreyes/public_html/routes.php(22): post('/start-new-fund', 'start-new-fund....')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/start-new-fund.php on line 102
+[18-Oct-2022 02:53:07 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home2/francisreyes/public_html/start-new-fund.php:101
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/start-new-fund', 'start-new-fund....')
+#2 /home2/francisreyes/public_html/routes.php(22): post('/start-new-fund', 'start-new-fund....')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/start-new-fund.php on line 101
+[18-Oct-2022 02:54:01 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home2/francisreyes/public_html/start-new-fund.php:101
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/start-new-fund', 'start-new-fund....')
+#2 /home2/francisreyes/public_html/routes.php(22): post('/start-new-fund', 'start-new-fund....')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/start-new-fund.php on line 101
+[18-Oct-2022 03:08:35 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in /home2/francisreyes/public_html/start-new-fund.php:101
+Stack trace:
+#0 /home2/francisreyes/public_html/router.php(60): include_once()
+#1 /home2/francisreyes/public_html/router.php(9): route('/start-new-fund', 'start-new-fund....')
+#2 /home2/francisreyes/public_html/routes.php(22): post('/start-new-fund', 'start-new-fund....')
+#3 {main}
+  thrown in /home2/francisreyes/public_html/start-new-fund.php on line 101

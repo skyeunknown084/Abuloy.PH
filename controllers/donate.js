@@ -11,7 +11,11 @@ $(document).ready(function(){
     })	
     $("#donatebtn").prop("disabled", true);
     $("#agreement").click(function () {
+        if($(this).is(":checked")){
         $("#donatebtn").prop("disabled", false);
+        }else{
+        $("#donatebtn").prop("disabled", true);    
+        }
     });
 	$('#donatebtn').on('click', function() {  
         if(document.getElementById('agreement').checked == true && document.getElementById('amount').value > 0){
@@ -32,15 +36,16 @@ $(document).ready(function(){
             location.reload(false);
         }        
     })
-    $('#anonymous').on('click', function() {
+    $('#anonymous').click(function () {
+        // alert("anonymous check here");
         if($(this).is(":checked")){
-            $('#donator_name').val('');             
-            $(document.getElementById('donator_name')).addClass('hide');
-            $(document.getElementById('donator_name')).removeClass('show');             
+            $('#customer_name').val('');             
+            $('#customer_email').val('');             
+            $('#customer_mobile').val('');             
+            $(document.getElementById('gcashFormReq')).addClass('hide');           
             $(document.getElementById('note')).removeClass('hide');             
         }else {
-            $(document.getElementById('donator_name')).removeClass('hide');    
-            $(document.getElementById('donator_name')).addClass('show');
+            $(document.getElementById('gcashFormReq')).removeClass('hide');  
             $(document.getElementById('note')).addClass('hide');   
         }
     })
@@ -52,7 +57,7 @@ $('#process_payment').submit(function(e){
     // var customer_name = $('#account_name').val();
     // console.log(customer_name);
     $.ajax({
-        url:'ajax?action=gcash_payment',
+        url:'/ajax?action=donation_payment',
         data: new FormData($(this)[0]),
         cache: false,
         contentType: false,
@@ -83,12 +88,12 @@ $('#process_payment').submit(function(e){
             // console.log("checkouturl: "+ checkouturl);
         }
     }).done(function(data) { 
-            // console.log(data);
-            response = JSON.parse(data);
-            var getdata = response.data;
-            // console.log(response);        
-            var code = getdata.code;
-            update_code(code);   
+        // console.log(data);
+        response = JSON.parse(data);
+        var getdata = response.data;
+        // console.log(response);        
+        var code = getdata.code;
+        update_code(code);               
     });
 });
 
@@ -102,4 +107,14 @@ function update_code($code) {
             // console.log(data);       
         }
     })
+    
+}
+
+// SHARE TO COPY URL
+const copyBtn = document.getElementById('copy-link-button');
+const copyText = document.getElementById('copy-link-input');
+
+copyBtn.onclick = () => {
+    copyText.select();
+    document.execCommand('copy');
 }

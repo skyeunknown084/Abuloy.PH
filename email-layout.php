@@ -46,3 +46,105 @@
     </div>
 </body>
 </html>
+
+<?php
+
+//check if can login again
+$login_attempt = 2;
+$log_time = date("Y-m-d H:i", time());
+$time = time();
+if($login_attempt == 1){
+    
+    print_r("<br/><br/><br/>Login attempt remaining (2)");
+    echo $log_time . '<br/>';
+    echo $time;
+}elseif($login_attempt == 2){
+    print_r("<br/><br/><br/>Login attempt remaining (1)");
+    echo $log_time . '<br/>';
+    // echo $time; //1661844364 - 1661844336 = 28ms or 28s
+    // $newtime = new DateTime('Y-m-d H:i:s');
+    // echo $newtime;
+    $to_time = strtotime(date('Y-m-d H:i:s'));
+    $from_time = strtotime("2022-08-30 03:40:00");
+    $timeout = round(abs($to_time - $from_time) / 60,2);
+    // echo '<br/>' . $t;
+    echo '<br/>' . $timeout;
+    echo exec('getmac');
+    echo '<br/>' . $_SERVER["WINDIR"];
+    echo '<br/>' . gethostbyaddr($_SERVER['REMOTE_ADDR']);
+    echo '<br/>' . gethostbyname($_SERVER['REMOTE_ADDR']);
+    echo '<br/>' . $_SERVER['HTTP_USER_AGENT'];
+    echo '<br/>' . $_SERVER['REMOTE_ADDR'] . '<br/>';
+    $MAC = exec('getmac');
+  
+    // Storing 'getmac' value in $MAC
+    $MAC = strtok($MAC, ' ');
+      
+    // Updating $MAC value using strtok function, 
+    // strtok is used to split the string into tokens
+    // split character of strtok is defined as a space
+    // because getmac returns transport name after
+    // MAC address   
+    echo "MAC address of Server is: $MAC";
+}elseif($login_attempt == 3){
+    echo time();
+    print_r("<br/><br/><br/>Login attempt remaining (0)");
+    print_r("<br/>Account is Locked! Please try again after 5 mins or try reseting your password");
+    print_r("<a href='/forgot-password'>here</a>");
+    echo $log_time . '<br/>';
+    echo $time;
+
+    
+    
+}
+
+/* detect mobile device*/
+// $ismobile = 1;
+// $container = $_SERVER['HTTP_USER_AGENT'];
+// // A list of mobile devices 
+// $useragents = array ( 
+// 'Blazer' ,
+// 'Palm' ,
+// 'Handspring' ,
+// 'Nokia' ,
+// 'Kyocera',
+// 'Samsung' ,
+// 'Motorola' ,
+// 'Smartphone', 
+// 'Windows CE' ,
+// 'Windows NT' ,
+// 'Blackberry' ,
+// 'Win64',
+// 'WAP' ,
+// 'SonyEricsson',
+// 'PlayStation Portable', 
+// 'LG', 
+// 'MMP',
+// 'OPWV',
+// 'Symbian',
+// 'EPOC',
+// ); 
+
+// foreach ( $useragents as $useragents ) { 
+//  if(strstr($container,$useragents)) {
+//    $ismobile = 1;
+//  }
+// }
+// if ( $ismobile == 1 ) {
+// echo "<p>mobile device</p>";
+// echo $_SERVER['HTTP_USER_AGENT'];
+// }
+
+    $ip   = gethostbyname('abuloy.ph');
+    $long = ip2long($ip);
+
+    if ($long == -1 || $long === FALSE) {
+        echo 'Invalid IP, please try again';
+    } else {
+        echo "<br/>" . $ip   . "\n";            // 192.0.34.166
+        echo "<br/>" . $long . "\n";            // 3221234342 (-1073732954 on 32-bit systems, due to integer overflow)
+        printf("%u\n", ip2long($ip)); // 3221234342
+    }
+
+
+?>

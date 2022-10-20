@@ -1,0 +1,60 @@
+img#cimg{
+    height: 25vh;
+    width: 25vh;
+    object-fit: fill;
+    /* background: url('assets/img/no-logo.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* border-radius: 100% 100%; */
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 767px) {
+    .mobile-donate-photo{
+        display:block !important;
+    }
+    .no-mobile-donate-photo{
+        display:none !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .mobile-donate-photo{
+        display:block !important;
+    }
+    .no-mobile-donate-photo{
+        display:none !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .mobile-donate-photo{
+        display:none !important;
+    }
+    .no-mobile-donate-photo{
+        display:block !important;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .mobile-donate-photo{
+        display:none !important;
+    }
+    .no-mobile-donate-photo{
+        display:block !important;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {
+    .mobile-donate-photo{
+        display:none !important;
+    }
+    .no-mobile-donate-photo{
+        display:block !important;
+    }
+}

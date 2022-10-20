@@ -1,4 +1,4 @@
-<footer class="page-footer font-small text-blackish bg-aquamarine">
+<footer class="page-footer font-small text-blackish bg-aquamarine mt-5">
     <div class="container">
         <div class="row pb-1 pt-4">
             <div class="col-md-12">
@@ -33,7 +33,7 @@
 
         </div>          
     </div>
-    <div class="footer-copyright text-center text-white bg-lavander py-1">© 2021 
+    <div class="footer-copyright text-center text-white bg-lavander py-1">© 2022 
         <a href="https://abuloy.ph/" class="text-aquamarine no-style" ><i class="fa fa-heart" aria-hidden="true"></i> Abuloy.PH</a> All Rights Reserved</br>
         <a href="/terms-and-conditions" class="text-w-aquamarine pt-3 text-center no-style">Terms of Services</a> |
         <a href="/privacy-policy" class="text-w-aquamarine pt-3 text-center no-style">Privacy Policy</a>

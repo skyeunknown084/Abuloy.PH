@@ -24,7 +24,7 @@
         $userNewPasswordConfirm = $mysqli->real_escape_string($_POST['password_confirmation']);
         $password_hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-        $updateqry = "UPDATE abuloy_users SET email_status = 1, user_type = 1, password_hash = ? WHERE email = ?";
+        $updateqry = "UPDATE abuloy_users SET email_status = 1, user_type = 1, log_status = 0, password_hash = ? WHERE email = ?";
         $stmt_update = $mysqli->prepare($updateqry);
         $stmt_update->bind_param('ss', $password_hash, $userEmail);
         $stmt_update->execute();
@@ -46,16 +46,19 @@
                     $_SESSION['user_id'] = $user['id'];
                     $_SESSION['user_email_status'] = $user['email_status'];
                     $_SESSION['user_type'] = $user['user_type'];
+                    $_SESSION['user_log'] = $user['log_status'];
+                    $_SESSION['user_email'] = $user['email'];
 
                     // sendResetEmail($email);
-                    json_encode(['status' => 'success']);
-                    header("Location: /login");
+                    // json_encode(['status' => 'success']);
+                    header("Location: /reset-password-success");
+                    // header("Location: /login");
                     exit;
                     
                 }
                 else{
-                    json_encode(['status' => 'failure']);
-                    print_r('Failed verifying password.');
+                    // json_encode(['status' => 'failure']);
+                    header("Location: /reset-password-failed");
                     exit();
                 }
                 
@@ -70,6 +73,3 @@
         
                    
     }
-    
-?>
-

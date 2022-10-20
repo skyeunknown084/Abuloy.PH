@@ -1,0 +1,96 @@
+.my_new_fund {
+position: relative;
+width: 100%;
+/* max-width: 400px; */
+}
+
+.my_new_fund img.new-fund-photo {
+width: 100%;
+height: auto;
+}
+
+.my_new_fund .photo_to_upload {
+position: absolute;
+top: 50%;
+/* left: 50%; */
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+background-color: #555;
+color: white;
+font-size: 16px;
+padding: 12px 24px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+text-align: center;
+}
+
+.my_new_fund .photo_to_upload:hover {
+background-color: black;
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.donate-photo{
+    width:70%;
+    height: 580px;
+    object-fit: scale-down;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 767px) {
+    .mobile-donate-photo{
+        display:block !important;
+    }
+    .no-mobile-donate-photo{
+        display:none !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .mobile-donate-photo{
+        display:block !important;
+    }
+    .no-mobile-donate-photo{
+        display:none !important;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .mobile-donate-photo{
+        display:none !important;
+    }
+    .no-mobile-donate-photo{
+        display:block !important;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .mobile-donate-photo{
+        display:none !important;
+    }
+    .no-mobile-donate-photo{
+        display:block !important;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {
+    .mobile-donate-photo{
+        display:none !important;
+    }
+    .no-mobile-donate-photo{
+        display:block !important;
+    }
+}
