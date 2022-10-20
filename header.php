@@ -81,14 +81,13 @@
                             <li class="p-0 m-0"><hr class="p-0 my-1"></li>                            
                             <li class="nav-item px-3"><a class="nav-link text-blackish-lavander" href="/donees"> Donate </a></li>
                             <li class="p-0 m-0"><hr class="p-0 my-1"></li>
-                            <li class="nav-item dropdown px-3" id="myDropdown">
-                                <a class="nav-link dropdown-toggle text-blackish-lavander" href="#" data-bs-toggle="dropdown">  Why Abuloy.PH <i class="fa fa-question-circle pe-2"></i> </a>
-                                <ul class="dropdown-menu active show bg-aquamarine text-black px-2 mb-2">
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/about-us">Who We Are? </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/how-it-works">How Abuloy.PH Works? </a></li>
-                                    <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/faq" title="Frequently Ask Questions">FAQs </a></li>
-                                </ul>
-                            </li>
+                            <li class="nav-item px-3"><a class="nav-link text-blackish-lavander" href="/start-new-fund"> Start A New Fund </a></li>
+                            <li class="p-0 m-0"><hr class="p-0 my-1"></li>
+                            <li class="nav-item px-3"><a class="nav-link text-blackish-lavander" href="/about-us">Who Are We <i class="fa fa-question-circle pe-2"></i> </a></li>
+                            <li class="p-0 m-0"><hr class="p-0 my-1"></li>
+                            <li class="nav-item px-3"><a class="nav-link text-blackish-lavander" href="/how-it-works">How Abuloy.PH Works <i class="fa fa-question-circle pe-2"></i></a></li>
+                            <li class="p-0 m-0"><hr class="p-0 my-1"></li>
+                            <li class="nav-item px-3"><a class="nav-link text-blackish-lavander" href="/faq" title="Frequently Ask Questions">FAQs</a></li>
                             <li class="p-0 m-0"><hr class="p-0 my-1"></li>                            
                             <li class="nav-item dropdown px-3" id="myDropdown">
                                 <a class="nav-link dropdown-toggle text-blackish-lavander" href="/contact-us">  Contact Us: <i class="fa fa-angle-double-right pe-2 hide"></i> </a>
