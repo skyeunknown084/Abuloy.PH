@@ -22,11 +22,11 @@
             $description = $row['d_summary'];
             $image = $row['avatar'];
             ?>
-            <title>In Loving Memory of <?= $fname ?> <?= $lname ?></title>
+            <title>In Loving Memory of <?= ucfirst($fname) ?> <?= ucfirst($lname) ?></title>
             <meta name="twitter:card" content="summary" />
             <meta property="og:url"          content="https://abuloy.ph/donate/<?= $code ?>" />
             <meta property="og:type"         content="article" />
-            <meta property="og:title"        content="In Loving Memory of <?= $fname ?> <?= $lname ?>" />
+            <meta property="og:title"        content="In Loving Memory of <?= ucfirst($fname) ?> <?= ucfirst($lname) ?>" />
             <meta property="og:description"  content="<?= htmlspecialchars($description) ?>" />
             <meta property="og:image" content="https://abuloy.ph/assets/uploads/<?= $image ?>" />
         <?php
