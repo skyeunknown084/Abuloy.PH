@@ -5,9 +5,6 @@ $stmt = $mysqli->query("SELECT * FROM abuloy_accounts WHERE token = '$token'");
 $accounts = $stmt->fetch_assoc();
 
 $token = $accounts['token'];
-// $d_firstname = $accounts['d_firstname'];
-// $d_middlename = $accounts['d_middlename'];
-// $d_lastname = $accounts['d_lastname'];
 
 if($accounts){
     // send email
@@ -16,7 +13,7 @@ if($accounts){
     $stmt_update->execute();
 
     session_start();
-    header("Location: /");
+    header("Location: /my-fund/".$token);
     exit;
     
 }

@@ -158,8 +158,8 @@ include './head.php';
                     <div class="row fullscreen align-items-center justify-content-start">
                     <div class="col-lg-12 col-md-12 col-sm-12 m-0">
                             <div class="card">
-                                <div class="card-header bg-lavander text-center py-3" style="height:50px;margin:0;padding:1px;">
-                                    <h5 class="text-white">Frequently Asked Questions</h5>
+                                <div class="text-center py-2">
+                                    <legend class="text-lavander">Frequently Asked Questions</legend>
                                 </div>
                                 <div class="card-body pb-5 mb-4">
                                     <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -260,7 +260,7 @@ include './head.php';
                                                 </button>
                                             </h2>
                                             <div id="faq-collapse-10" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
-                                                <div class="accordion-body">Abuloy Fund will last up to 30 days after that the fund will be automatically expired and will no longer be publish to Abuloy.PH</div>
+                                                <div class="accordion-body">Abuloy Fund will last up to 30 days after that the fund will be automatically expired and will no longer accept donation.</div>
                                             </div>
                                         </div>
                                     </div>

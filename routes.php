@@ -87,7 +87,9 @@ get('/faq', 'views/faq.php');
 //=============================================================
 // User Registered additional pages
 // user list of funds page
+get('/profile', 'views/profile.php');
 get('/my-funds', 'views/my-funds.php');
+get('/my-fund/$token', 'views/my-fund.php');
 // user account page
 get('/account', 'views/account.php');
 // list of user funds created

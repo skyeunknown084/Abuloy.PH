@@ -6,7 +6,7 @@ error_reporting(0);
 <html lang="en">
 <?php
 // include_once './global_call.php';
-include './head.php';
+include './head_donate.php';
 ?>
 <!-- register css -->
 <link rel="stylesheet" href="https://abuloy.ph/assets/dist/css/pages/donate.css">
@@ -26,7 +26,7 @@ include './head.php';
 
         $uid = $_SESSION['user_id'];
         $today = date('Y-m-d');
-        if($_SERVER['REQUEST_METHOD'] === "GET"){
+        if($_SERVER['REQUEST_METHOD'] === "GET" && isset($token)){
             $stmt = $mysqli->prepare("SELECT * FROM abuloy_users WHERE id = ?");
             $stmt->bind_param('d', $uid);
             $result = $stmt->execute();
@@ -52,7 +52,7 @@ include './head.php';
         <div class="container-fluid p-lg-5 p-md-5 pt-5 text-center">
             <div class="row">
             <?php 
-                $expqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE short_code = '$code'");
+                $expqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE token = '$token'");
                 $exp = $expqry->fetch_assoc();
                 $expiry = $exp['expiration']; 
                 if($today > $expiry){ ?>
@@ -66,8 +66,11 @@ include './head.php';
             <?php } ?>
                 <div class="align-center col-lg-12 pb-1">             
                     <div class="col-12 align-right pt-4 pb-2">
+                        <a href="/my-fund-photo" type="button" class="btn btn-lavander px-3 py-2 me-2">
+                            <i class="fa fa-pencil pe-1 text-aquamarine"></i> Update Photo 
+                        </a>
                         <a href="/donees" type="button" class="btn btn-lavander px-3 py-2">
-                            <i class="fa fa-users pe-1 text-aquamarine"></i>  View Other Funds 
+                            <i class="fa fa-users pe-1 text-aquamarine"></i> View Other Funds 
                         </a>
                     </div>                
                 </div>
@@ -78,8 +81,8 @@ include './head.php';
                 <?php
                 $today = date('Y-m-d');
                 // AND expiration > '$today';
-                $acct_sql = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE short_code = ?");
-                $acct_sql->bind_param('s', $code);
+                $acct_sql = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE token = ?");
+                $acct_sql->bind_param('s', $token);
                 $result_acct = $acct_sql->execute();
                 $result_acct = $acct_sql->get_result();
                 if($account = $result_acct->fetch_assoc()){
@@ -191,7 +194,7 @@ include './head.php';
                     </div>
                 </div>
                 <?php 
-                $expqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE short_code = '$code'");
+                $expqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE token = '$token'");
                 $exp = $expqry->fetch_assoc();
                 $expiry = $exp['expiration']; 
                 if($today > $expiry){ ?>
@@ -300,7 +303,7 @@ include './head.php';
                                 <i class="fab fa-whatsapp fa-2x"></i></i>
                                 </a>
                                 <?php 
-                                    $emailshareqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE short_code = '$code'");
+                                    $emailshareqry = $mysqli->query("SELECT * FROM abuloy_accounts WHERE token = '$token'");
                                     if($emailshare = $emailshareqry->fetch_assoc()):
                                         $bodymsg = "Hello, %0D%0A%0D%0APlease share this link below to help spread the news about the passing of ". $emailshare['d_firstname'] ." ". $emailshare['d_lastname'] . 
                                         "%0D%0A%0D%0A
@@ -315,8 +318,8 @@ include './head.php';
                             <div class="col-12 copy-btn-container">
                                 <div class="input-group mb-3">
                                     <?php 
-                                        $linkqry = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE short_code = ?");
-                                        $linkqry->bind_param('s', $code);
+                                        $linkqry = $mysqli->prepare("SELECT * FROM abuloy_accounts WHERE token = ?");
+                                        $linkqry->bind_param('s', $token);
                                         $result_linkqry = $linkqry->execute();
                                         $result_linkqry = $linkqry->get_result();
                                         if($link_url = $result_linkqry->fetch_assoc()){

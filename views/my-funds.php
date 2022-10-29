@@ -72,11 +72,12 @@ include './head_views.php';
                           $goal_amount = $account['d_goal_amount'];
                           $link = $account['url_link'];
                           $code = $account['short_code'];
+                          $token = $account['token'];
                       ?>
                       <div class="col-lg-4 col-md-6 col-sm-12 px-md-2 donee">
-                      <div class="bg-white border shadow-sm mt-3" onclick="location.href='/donate/<?= $code ?>'">
-                          <a target="_blank" href="/donate/<?= $code ?>" class="no-style">
-                              <a target="_blank" href="/donate/<?= $code ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
+                      <div class="bg-white border shadow-sm mt-3" onclick="location.href='/my-fund/<?= $token ?>'">
+                          <a target="_blank" href="/my-fund/<?= $token ?>" class="no-style">
+                              <a target="_blank" href="/my-fund/<?= $token ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                                   <?php if($photo == ''){ $no_image = 'https://abuloy.ph/assets/uploads/no-photo-available.png'; ?>
                                       <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain">
                                   <?php }else{ ?>
@@ -96,7 +97,7 @@ include './head_views.php';
                                   <div class="d-flex justify-content-between align-items-center">
                                       <small class="text-muted hide">location</small>
                                       <div class="btn-group col-12">
-                                      <a href="/donate/<?= $aid ?>" type="button" class="btn btn-sm btn-lavander text-white py-2 px-5 hide">Donate Now</a>
+                                      <a href="/my-fund/<?= $token ?>" type="button" class="btn btn-sm btn-lavander text-white py-2 px-5 hide">Donate Now</a>
                                       </div>
                                   </div>
                                   <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>
@@ -176,11 +177,12 @@ include './head_views.php';
                           $goal_amount = $account['d_goal_amount'];
                           $link = $account['url_link'];
                           $code = $account['short_code'];
+                          $token = $account['token'];
                       ?>
                       <div class="col-lg-4 col-md-6 col-sm-12 px-md-2 donee">
-                      <div class="bg-white border shadow-sm mt-3" onclick="location.href='/donate/<?= $aid ?>'">
-                          <a target="_blank" href="/donate/<?= $aid ?>" class="no-style">
-                              <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
+                      <div class="bg-white border shadow-sm mt-3" onclick="location.href='/my-fund/<?= $token ?>'">
+                          <a target="_blank" href="/my-fund/<?= $token ?>" class="no-style">
+                              <a target="_blank" href="/my-fund/<?= $token ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                                   <?php if($photo == ''){ $no_image = 'https://abuloy.ph/assets/uploads/no-photo-available.png'; ?>
                                       <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain">
                                   <?php }else{ ?>
@@ -200,7 +202,7 @@ include './head_views.php';
                                   <div class="d-flex justify-content-between align-items-center">
                                       <small class="text-muted hide">location</small>
                                       <div class="btn-group col-12">
-                                      <a href="/donate/<?= $aid ?>" type="button" class="btn btn-sm btn-lavander text-white py-2 px-5 hide">Donate Now</a>
+                                      <a href="/my-fund/<?= $token ?>" type="button" class="btn btn-sm btn-lavander text-white py-2 px-5 hide">Donate Now</a>
                                       </div>
                                   </div>
                                   <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>
@@ -280,11 +282,12 @@ include './head_views.php';
                           $goal_amount = $account['d_goal_amount'];
                           $link = $account['url_link'];
                           $code = $account['short_code'];
+                          $token = $account['token'];
                       ?>
                       <div class="col-lg-4 col-md-6 col-sm-12 px-md-2">
-                      <div class="bg-white border shadow-sm mt-3" onclick="location.href='/donate/<?= $aid ?>'">
-                          <a target="_blank" href="/donate/<?= $aid ?>" class="no-style">
-                              <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
+                      <div class="bg-white border shadow-sm mt-3" onclick="location.href='/my-fund/<?= $token ?>'">
+                          <a target="_blank" href="/my-fund/<?= $token ?>" class="no-style">
+                              <a target="_blank" href="/my-fund/<?= $token ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                                   <?php if($photo == ''){ $no_image = 'https://abuloy.ph/assets/uploads/no-photo-available.png'; ?>
                                       <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain">
                                   <?php }else{ ?>
@@ -304,7 +307,7 @@ include './head_views.php';
                                   <div class="d-flex justify-content-between align-items-center">
                                       <small class="text-muted hide">location</small>
                                       <div class="btn-group col-12">
-                                      <a href="/donate/<?= $aid ?>" type="button" class="btn btn-sm btn-lavander text-white py-2 px-5 hide">Donate Now</a>
+                                      <a href="/my-fund/<?= $token ?>" type="button" class="btn btn-sm btn-lavander text-white py-2 px-5 hide">Donate Now</a>
                                       </div>
                                   </div>
                                   <span class="hide"><strong class="text-lavander">₱<?= $goal_amount ?>.00</strong> of <medium class="text-muted">₱<?= $goal_amount ?>.00 target goal</medium></span>

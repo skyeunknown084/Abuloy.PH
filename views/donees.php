@@ -84,12 +84,12 @@ include './head_views.php';
                 <a target="_blank" href="/donate/<?= $code ?>" class="no-style">
                     <a target="_blank" href="/donate/<?= $code ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                         <?php if($photo == ''){ $no_image = 'https://abuloy.ph/assets/uploads/no-photo-available.png'; ?>
-                            <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain">
+                            <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain; content-visibility: auto;">
                         <?php }else{ ?>
-                            <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain">
+                            <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain; content-visibility: auto;">
                         <?php } ?>
                     </a>
-                    <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
+                    <legend class="text-blackish text-center pb-0 mb-0" x="42%" y="90%"><?= ucfirst($fname) ?> <?= ucfirst($lname) ?></legend>
                     <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
                     <div class="card-body py-0 p-lg-3 p-2">
                         <div class="my-2" style="height:59px">
@@ -124,11 +124,13 @@ include './head_views.php';
                             foreach($the_goal_amount as $k => $goal){
                                 $$k = $goal;
                             }
+                            $percent_max_100 = 100;
                             $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
                             ?> 
                             <div class="col-lg-12 align-center mx-auto mt-1">          
                                 <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                <?php if($raised_percent > $percent_max_100){ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $percent_max_100  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
                                         <?php
                                         if($raised_percent < 10){ ?>
                                             <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
@@ -145,6 +147,25 @@ include './head_views.php';
                                         }
                                         ?>                                            
                                     </div>
+                                <?php }else{ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                        <?php
+                                        if($raised_percent < 10){ ?>
+                                            <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 15){ ?>
+                                            <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 21){ ?>
+                                            <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }else{ ?>
+                                        <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                        <?php
+                                        }
+                                        ?>                                            
+                                    </div>
+                                <?php } ?>
                                 </div>
                             </div> 
                         </p>  
@@ -188,12 +209,12 @@ include './head_views.php';
                 <a target="_blank" href="/donate/<?= $aid ?>" class="no-style">
                     <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                         <?php if($photo == ''){ $no_image = 'https://abuloy.ph/assets/uploads/no-photo-available.png'; ?>
-                            <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain">
+                            <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain; content-visibility: auto;">
                         <?php }else{ ?>
-                            <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain">
+                            <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain; content-visibility: auto;">
                         <?php } ?>
                     </a>
-                    <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
+                    <legend class="text-blackish text-center pb-0 mb-0" x="42%" y="90%"><?= ucfirst($fname) ?> <?= ucfirst($lname) ?></legend>
                     <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
                     <div class="card-body py-0 p-lg-3 p-2">
                         <div class="my-2" style="height:59px">
@@ -228,11 +249,13 @@ include './head_views.php';
                             foreach($the_goal_amount as $k => $goal){
                                 $$k = $goal;
                             }
+                            $percent_max_100 = 100;
                             $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
                             ?> 
                             <div class="col-lg-12 align-center mx-auto mt-1">          
                                 <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                <?php if($raised_percent > $percent_max_100){ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $percent_max_100  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
                                         <?php
                                         if($raised_percent < 10){ ?>
                                             <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
@@ -249,6 +272,25 @@ include './head_views.php';
                                         }
                                         ?>                                            
                                     </div>
+                                <?php }else{ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                        <?php
+                                        if($raised_percent < 10){ ?>
+                                            <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 15){ ?>
+                                            <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 21){ ?>
+                                            <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }else{ ?>
+                                        <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                        <?php
+                                        }
+                                        ?>                                            
+                                    </div>
+                                <?php } ?>
                                 </div>
                             </div> 
                         </p>  
@@ -292,12 +334,12 @@ include './head_views.php';
                 <a target="_blank" href="/donate/<?= $aid ?>" class="no-style">
                     <a target="_blank" href="/donate/<?= $aid ?>" class="bd-placeholder-img card-img-top align-center mx-auto bg-solid-silver">
                         <?php if($photo == ''){ $no_image = 'https://abuloy.ph/assets/uploads/no-photo-available.png'; ?>
-                            <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain">
+                            <img src="<?= $no_image ?>" alt="" style="width:75%; height: 275px; object-fit: contain; content-visibility: auto;">
                         <?php }else{ ?>
-                            <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain">
+                            <img src="<?= 'https://abuloy.ph/assets/uploads/'.$photo ?>" alt="" style="width:70%; height: 275px; object-fit: contain; content-visibility: auto;">
                         <?php } ?>
                     </a>
-                    <legend class="text-lavander text-center pb-0 mb-0" x="42%" y="90%"><?= $fname ?> <?= $lname ?></legend>
+                    <legend class="text-blackish text-center pb-0 mb-0" x="42%" y="90%"><?= ucfirst($fname) ?> <?= ucfirst($lname) ?></legend>
                     <text  fill="#eceeef" class="text-lavander text-center"><?php echo date("M d, Y",strtotime($bdate)); ?> - <?php echo date("M d, Y",strtotime($ddate)); ?></text>
                     <div class="card-body py-0 p-lg-3 p-2">
                         <div class="my-2" style="height:59px">
@@ -332,11 +374,13 @@ include './head_views.php';
                             foreach($the_goal_amount as $k => $goal){
                                 $$k = $goal;
                             }
+                            $percent_max_100 = 100;
                             $raised_percent = $goal > 0 ? ($raised * 100) / $goal : 0;
                             ?> 
                             <div class="col-lg-12 align-center mx-auto mt-1">          
                                 <div style="height: 20px; width:100%; background-color: rgb(148,247,207);border-radius:4px;">
-                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                <?php if($raised_percent > $percent_max_100){ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $percent_max_100  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
                                         <?php
                                         if($raised_percent < 10){ ?>
                                             <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
@@ -353,6 +397,25 @@ include './head_views.php';
                                         }
                                         ?>                                            
                                     </div>
+                                <?php }else{ ?>
+                                    <div class="mh-100 py-0 my-0 text-aquamarine text-center d-flex" style="width: <?php echo $raised_percent  ?>%; height: 100px; background-color: rgba(162,101,230,0.8);border-radius:4px;font-size:14px;"> 
+                                        <?php
+                                        if($raised_percent < 10){ ?>
+                                            <span class="text-purple px-4"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 15){ ?>
+                                            <span class="text-purple px-5"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }elseif($raised_percent <= 21){ ?>
+                                            <span class="text-purple px-5 mx-2"><?php echo round($raised_percent,2) ?>%</span> 
+                                        <?php 
+                                        }else{ ?>
+                                        <span class="text-aquamarine mx-auto"><?php echo round($raised_percent,2) ?>%</span>
+                                        <?php
+                                        }
+                                        ?>                                            
+                                    </div>
+                                <?php } ?>
                                 </div>
                             </div> 
                         </p>  

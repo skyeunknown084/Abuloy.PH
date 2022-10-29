@@ -1,15 +1,15 @@
 
 <!-- User with Account -->
     <div class="header bb-aquamarine fixed-top nav-shadow">
-        <div class="beta-nav container-fluid bg-lavander text-white pb-1" style="">
+        <!-- <div class="beta-nav container-fluid bg-lavander text-white pb-1" style="">
             <span class="align-center pt-1">
                 <small>This site is currently running on beta mode</small>
                 <a id="beta-nav-close" class="ms-2" title="close"><i class="fa fa-window-close text-white" aria-hidden="true"></i></a>
             </span>
-        </div>
+        </div> -->
         <nav class="navbar navbar-lg bg-white d-flex" aria-label="Offcanvas navbar large">
             <div class="container-fluid">
-                <a class="navbar-brand nav-brand-box" href="/"><span class="text-aquamarine text-underline fw-700 fs-larger ms-2">Abuloy</span></a>
+                <a class="navbar-brand nav-brand-box" href="/"><span class="text-aquamarine text-underline fw-700 fs-larger ms-2">Abuloy.PH</span></a>
                 <!-- Large Screen/Landscape -->
                 <div class="no-mobile-device">
                     <ul class="nav justify-content-end">
@@ -53,8 +53,8 @@
                                 </span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end gap-1 p-2 rounded-3 mx-0 shadow w-220px">
-                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/my-funds"><i class="fas fa-user pe-2"></i> Profile</a></li>
-                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/donees" title=""><i class="fas fa-coins pe-2"></i> My Abuloy Funds</a></li>
+                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/profile"><i class="fas fa-user pe-2"></i>My Profile</a></li>
+                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/my-funds" title=""><i class="fas fa-coins pe-2"></i> My Abuloy Funds</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item rounded-2 text-blackish-aquamarine" href="/logout"><i class="fa fa-power-off pe-2"></i>  Logout</a></li>
                             </ul>
@@ -81,7 +81,7 @@
                     <!-- <div class="mobile-device offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label"> -->
                     <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbar2Label">
-                    <a class="navbar-brand nav-brand-box py-2" href="/"><span class="text-aquamarine text-underline fw-700 fs-larger ms-2">Abuloy</span></a>
+                    <a class="navbar-brand nav-brand-box py-2" href="/"><span class="text-aquamarine text-underline fw-700 fs-larger ms-2">Abuloy.PH</span></a>
                     </h5>
                     <button type="button" class="btn-close btn-close text-dark-purple mx-2" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -121,13 +121,13 @@
                             </a>
                             <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow w-220px">
                                 <li>
-                                    <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 pe-1" href="/my-funds">
+                                    <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-2 pe-1" href="/profile">
                                         <span class="text-aquamarine py-0 m-0 p-0" style="font-size:15px">
                                             <img src="https://abuloy.ph/assets/uploads/no-photo-available.png" class="img-thumbnail me-2 ms-0 p-0" style="border-radius:50%;height:25px;border:0px" alt=""><span class="text-blackish-aquamarine">My Profile</span>
                                         </span>
                                     </a>
                                 </li>
-                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-1 pe-1" href="/donees" title=""><i class="fas fa-coins ps-2 pe-2"></i> My Abuloy Funds</a></li>
+                                <li> <a class="dropdown-item rounded-2 text-blackish-aquamarine ps-1 pe-1" href="/my-funds" title=""><i class="fas fa-coins ps-2 pe-2"></i> My Abuloy Funds</a></li>
                                 <li><hr class="dropdown-divider p-0 my-1"></li>
                                 <li><a class="dropdown-item rounded-2 text-blackish-aquamarine ps-1 pe-4" href="/logout"><i class="fa fa-power-off ps-2 pe-2 "></i>  Logout</a></li>
                             </ul>
@@ -144,33 +144,33 @@
         $('#searchL').removeClass('hide');
     })
 
-    var setCookie = function(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-    var expires = "expires=" + d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-    }
+    // var setCookie = function(cname, cvalue, exdays) {
+    // var d = new Date();
+    // d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    // var expires = "expires=" + d.toUTCString();
+    // document.cookie = cname + "=" + cvalue + "; " + expires;
+    // }
 
-    var getCookie = function(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-    }
-    return "";
-    }
+    // var getCookie = function(cname) {
+    // var name = cname + "=";
+    // var ca = document.cookie.split(';');
+    // for (var i = 0; i < ca.length; i++) {
+    //     var c = ca[i];
+    //     while (c.charAt(0) == ' ') c = c.substring(1);
+    //     if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    // }
+    // return "";
+    // }
 
-    $(document).ready(function(){
-        console.log(getCookie("closed"));
-        if (getCookie("closed") == "closed") {
-            $(".beta-nav").hide();
-        }
-    })
+    // $(document).ready(function(){
+    //     console.log(getCookie("closed"));
+    //     if (getCookie("closed") == "closed") {
+    //         $(".beta-nav").hide();
+    //     }
+    // })
 
-    $('#beta-nav-close').on('click', function(){
-        $('.beta-nav').remove();
-        setCookie("closed", "closed", 365)
-    })
+    // $('#beta-nav-close').on('click', function(){
+    //     $('.beta-nav').remove();
+    //     setCookie("closed", "closed", 365)
+    // })
 </script>
